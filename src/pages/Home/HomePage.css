@@ -1,1 +1,203 @@
- 
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #2c7a3f;
+    color: white;
+    padding: 16px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .nav-link:hover {
+    color: #fbbf24;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    background-image: url('https://source.unsplash.com/1600x900/?herbs,nature');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 32px;
+    border-radius: 8px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .hero-description {
+    font-size: 20px;
+  }
+  
+  .hero-btn {
+    padding: 12px 24px;
+    background-color: #fbbf24;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .hero-btn:hover {
+    background-color: #f59e0b;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 64px 24px;
+    text-align: center;
+    background-color: #f3f4f6;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c7a3f;
+    margin-bottom: 16px;
+  }
+  
+  .about-description {
+    font-size: 18px;
+    color: #4b5563;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Products Section */
+  .products {
+    padding: 64px 24px;
+    text-align: center;
+  }
+  
+  .product-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .product-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+  
+  .product-description {
+    font-size: 16px;
+    color: #4b5563;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 48px 24px;
+    background-color: #2c7a3f;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact-description {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+  
+  .contact-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .contact-link:hover {
+    color: #fbbf24;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .footer-socials {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .social-link {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .social-link:hover {
+    color: #2c7a3f;
+  }
+  

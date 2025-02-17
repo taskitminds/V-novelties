@@ -1,1 +1,6 @@
- 
+/* src/components/Header.css */
+.header {
+    background-color: #2c7a3f;
+    color: white;
+  }
+   
