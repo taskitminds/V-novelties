@@ -107,16 +107,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="contact">
-        <h3 className="getintouch">Get in Touch</h3>
-        <p className="contact-description">Contact us for more details about our products and services.</p>
-        <div className="contact-info">
-          <a href="#" className="contact-link">+91 9876543210</a>
-          <a href="#" className="contact-link">info@herbal-creations.com</a>
-        </div>
-      </section>
     </div>
   );
 };
