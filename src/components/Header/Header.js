@@ -1,15 +1,21 @@
-// src/components/Header.js
 import React from "react";
-import Navbar from "../Navbar/Navbar";
-import './Header.css'; // Custom styles for header if needed
+import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import './Header.css'; // Import the CSS file for styling
 
 const Header = () => {
   return (
-    <header className="header">
-      <Navbar />
-    </header>
+    <div className="top-banner">
+      <div className="contact-info">
+        <span><FaPhoneAlt className="icon" /> +91 9876543210</span>
+        <span><FaEnvelope className="icon" /> info@herbal-creations.com</span>
+      </div>
+      <div className="social-icons">
+        <a href="#" className="social-link"><FaFacebook /></a>
+        <a href="#" className="social-link"><FaInstagram /></a>
+        <a href="#" className="social-link"><FaLinkedin /></a>
+      </div>
+    </div>
   );
 };
 
 export default Header;
- 

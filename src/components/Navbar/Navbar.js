@@ -12,6 +12,7 @@ const Navbar = () => {
       <div className="nav-links">
         <a href="#" className="nav-link">Home</a>
         <a href="#" className="nav-link">About</a>
+        <a href="#" className="nav-link">Application</a>
         <a href="#" className="nav-link">Products</a>
         <a href="#" className="nav-link">Contact</a>
       </div>

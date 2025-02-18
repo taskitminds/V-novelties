@@ -1,10 +1,10 @@
 import React from "react";
-import HomePage from "./pages/Home/HomePage";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
     <div className="font-sans">
-      <HomePage />
+      <MainLayout />
     </div>
   );
 }
