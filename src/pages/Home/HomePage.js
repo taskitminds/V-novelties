@@ -70,7 +70,7 @@ const HomePage = () => {
             <div className={`carousel-content ${slide.position}`}>
               <h1>{slide.title}</h1>
               <p>{slide.text}</p>
-              <button className="carousel-btn-main">Learn More</button>
+              <button className="carousel-btn-main" onClick={() => window.location.href = '#'}>Learn More</button>
             </div>
           </div>
         ))}
