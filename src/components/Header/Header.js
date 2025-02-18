@@ -1,13 +1,14 @@
 import React from "react";
-import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import './Header.css'; // Import the CSS file for styling
 
 const Header = () => {
   return (
     <div className="top-banner">
       <div className="contact-info">
-        <span><FaPhoneAlt className="icon" /> +91 9876543210</span>
-        <span><FaEnvelope className="icon" /> info@herbal-creations.com</span>
+        <span className="contact-info1"><FaMailBulk className="icon-header" />info@herbal-creations.com  </span>
+        <span> | </span>
+        <span className="contact-info2"><FaPhoneAlt className="icon-header" />+91 9876543210</span>
       </div>
       <div className="social-icons">
         <a href="#" className="social-link"><FaFacebook /></a>

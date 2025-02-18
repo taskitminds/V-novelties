@@ -13,8 +13,6 @@ import Footer from '../components/Footer/Footer';
 const MainLayout = () => {
   return (
     <div>
-      <Header />
-      <Navbar />
       <HomePage />
       <Footer />
     </div>

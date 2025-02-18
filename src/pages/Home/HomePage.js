@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import "./HomePage.css"; // Import the main CSS for HomePage
+import Header from "../../components/Header/Header";
+import Navbar from "../../components/Navbar/Navbar";
 import h1 from "../../assets/images/home/h1.webp";
 import h2 from "../../assets/images/home/h2.webp";
 import h3 from "../../assets/images/home/h3.webp";
@@ -9,12 +12,13 @@ const carouselImages = [h1, h2, h3];
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-slide effect every 3 seconds
+  // Debugging check
+  console.log("Loaded Images:", carouselImages);
+
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 3000);
-
     return () => clearInterval(interval);
   }, [currentIndex]);
 
@@ -28,9 +32,28 @@ const HomePage = () => {
     );
   };
 
+  {/*who we are content*/}
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+  const [typedText, setTypedText] = useState("");
+  const fullText =
+    "Who We Are";
+
+  useEffect(() => {
+    if (inView) {
+      let index = 0;
+      const interval = setInterval(() => {
+        setTypedText(fullText.substring(0, index));
+        index++;
+        if (index > fullText.length) clearInterval(interval);
+      }, 50); // Adjust speed of typing
+    }
+  }, [inView]);
+
   return (
-    <div>
-      {/* Flexbox Carousel Section */}
+    <div className="homepage">
+      {/* Transparent Header and Navbar */}
+      <Header />
+      <Navbar />
       <section className="carousel">
         <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
         <div className="carousel-slider">
@@ -40,16 +63,16 @@ const HomePage = () => {
               src={image}
               alt={`Slide ${index + 1}`}
               className={`carousel-slide ${index === currentIndex ? "active" : ""}`}
+              style={{ display: index === currentIndex ? "block" : "none" }} // Ensure only active image is shown
             />
           ))}
-
         </div>
         <button className="carousel-btn right" onClick={nextSlide}>&#10095;</button>
       </section>
 
       {/* About Section */}
-      <section className="about">
-        <h3 className="section-title">About Us</h3>
+      <section className="about" ref={ref}>
+        <h3 className="section-title typing-animation">{typedText}</h3>
         <p className="about-description">
           Herbal Creations is a trusted manufacturer of herbal extracts, catering to the pharmaceutical and nutraceutical industries worldwide.
         </p>

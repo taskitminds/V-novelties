@@ -1,6 +1,6 @@
 /* Top Banner Styles */
 .top-banner {
-  background-color: #2c7a3f; /* Herbal green color */
+  background-color: rgba(44, 122, 63, 0.9); /* Semi-transparent Herbal Green */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -8,12 +8,25 @@
   padding: 10px 20px;
   font-size: 14px;
   font-family: Arial, sans-serif;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 110; /* Ensures it's above the carousel */
 }
 
 .contact-info {
   display: flex;
   gap: 20px;
+  padding-left: 100px;
+  font-size: 20px;
 }
+
+
+.contact-info span:hover{
+  color: #fbbf24;
+}
+
 
 .contact-info span {
   display: flex;
@@ -21,14 +34,16 @@
   gap: 5px;
 }
 
-.icon {
-  font-size: 16px;
+.icon-header {
+  font-size: 20px;
   vertical-align: middle;
+  
 }
 
 .social-icons {
   display: flex;
   gap: 15px;
+  padding-right: 100px;
 }
 
 .social-link {

@@ -1,44 +1,109 @@
- 
-/* src/components/Navbar.css */
+/* Transparent Navbar */
 .navbar {
-    background-color: #ffffff;
-    color: rgb(106, 106, 106);
-    padding: 16px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon {
-    margin-right: 8px;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 24px;
-  }
+  position: absolute; /* Fix the navbar over the carousel */
+  top: 50px; /* Adjust based on the banner height */
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.85); /* Transparent Navbar */
+  color: rgb(116, 116, 116);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 100; /* Ensures it's above the carousel */
+}
 
-  .nav-links a {
-    color: rgb(106, 106, 106);
-    text-decoration: none;
-    font-size: 16px;
-  }
+/* Logo Animation (Slides in from Left) */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
 
-  .nav-link {
-    color: rgb(106, 106, 106);
-    text-decoration: none;
-    font-size: 16px;
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  
-  .nav-link:hover {
-    color: #2c7a3f;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
+}
+
+/* Navigation Links Animation (Slides in from Right) */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Delay for Each Link */
+.nav-links a:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.nav-links a:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.nav-links a:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.nav-links a:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.nav-links a:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: rgb(44, 122, 63); /* Keep logo visible on images */
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+.icon-nav {
+  margin-right: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  padding-right: 80px;
+}
+
+.nav-links a {
+  color: rgb(44, 122, 63); /* Ensures visibility over images */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link {
+  color: white; /* White text on transparent background */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #fbbf24; /* Highlight color on hover */
+}
