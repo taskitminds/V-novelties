@@ -7,7 +7,11 @@ import h1 from "../../assets/images/home/h1.webp";
 import h2 from "../../assets/images/home/h2.webp";
 import h3 from "../../assets/images/home/h3.webp";
 
-const carouselImages = [h1, h2, h3];
+const carouselImages = [
+  { image: h1, title: "Natural Herbal Solutions", text: "Pure and organic extracts for health & wellness.", position: "left" },
+  { image: h2, title: "Essential Oils & Powders", text: "Premium quality essential oils for all industries.", position: "right" },
+  { image: h3, title: "Sustainable Herbal Products", text: "Eco-friendly and sustainable herbal solutions.", position: "left" },
+];
 
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,20 +59,24 @@ const HomePage = () => {
       <Header />
       <Navbar />
       <section className="carousel">
-        <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
-        <div className="carousel-slider">
-          {carouselImages.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className={`carousel-slide ${index === currentIndex ? "active" : ""}`}
-              style={{ display: index === currentIndex ? "block" : "none" }} // Ensure only active image is shown
-            />
-          ))}
-        </div>
-        <button className="carousel-btn right" onClick={nextSlide}>&#10095;</button>
-      </section>
+      <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
+      <div className="carousel-slider">
+        {carouselImages.map((slide, index) => (
+          <div
+            key={index}
+            className={`carousel-slide ${index === currentIndex ? "active" : ""}`}
+            style={{ backgroundImage: `url(${slide.image})`, display: index === currentIndex ? "flex" : "none" }}
+            >
+            <div className={`carousel-content ${slide.position}`}>
+              <h1>{slide.title}</h1>
+              <p>{slide.text}</p>
+              <button className="carousel-btn-main">Learn More</button>
+            </div>
+          </div>
+        ))}
+      </div>
+      <button className="carousel-btn right" onClick={nextSlide}>&#10095;</button>
+    </section>
 
       {/* About Section */}
       <section className="about" ref={ref}>

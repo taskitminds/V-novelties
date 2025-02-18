@@ -184,9 +184,7 @@ body {
   color: #fbbf24;
 }
 
-
-
-/* Carousel Section */
+/* ======= Carousel Section ======= */
 .carousel {
   position: relative;
   width: 100%;
@@ -198,21 +196,23 @@ body {
 }
 
 .carousel-slider {
-  display: flex;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease-in-out;
+  position: relative;
 }
 
+/* Each Slide */
 .carousel-slide {
-  flex: 0 0 100%;
   position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 1s ease-in-out;
+  opacity: 0;
 }
 
 .carousel-slide.active {
@@ -246,8 +246,64 @@ body {
   right: 20px;
 }
 
-.homepage {
-  position: relative;
+/* Carousel Content */
+.carousel-content {
+  color: white;
+  max-width: 50%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+/* Active Slide Content Animation */
+.carousel-slide.active .carousel-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Position Alternation */
+.carousel-content.left {
+  margin-right: auto;
+  margin-left: 5%;
+}
+
+.carousel-content.right {
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+/* Heading Animation */
+.carousel-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* Paragraph Animation */
+.carousel-content p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Button */
+.carousel-btn-main {
+  padding: 10px 20px;
+  background-color: #fbbf24;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: fadeIn 1.8s ease-in-out forwards;
+}
+
+.carousel-btn-main:hover {
+  background-color: #f59e0b;
 }
 
 /* Responsive */
@@ -259,5 +315,34 @@ body {
   .carousel-btn {
     font-size: 18px;
     padding: 8px 12px;
+  }
+
+  .carousel-content {
+    max-width: 80%;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-content p {
+    font-size: 1rem;
+  }
+
+  .carousel-btn-main {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
