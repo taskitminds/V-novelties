@@ -36,6 +36,65 @@ body {
   margin-bottom: 16px;
 }
 
+/* Vision & Mission - Book Style */
+.book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 64px 24px;
+  background-color: #f3f4f6;
+  position: relative;
+  perspective: 1000px;
+  /* Adds a 3D effect */
+}
+
+.book-page {
+  width: 45%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Left Page (Vision) */
+.left-page {
+  border-right: 2px solid #d3d3d3;
+  transform: rotateY(-5deg);
+}
+
+/* Right Page (Mission) */
+.right-page {
+  transform: rotateY(5deg);
+}
+
+/* Book Hover Effect */
+.book-container:hover .left-page {
+  transform: rotateY(-2deg);
+}
+
+.book-container:hover .right-page {
+  transform: rotateY(2deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .book-page {
+    width: 90%;
+    transform: none;
+    border: none;
+  }
+}
+
+
 /* Products Section */
 .products {
   padding: 64px 24px;
@@ -205,6 +264,7 @@ body {
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

@@ -36,7 +36,7 @@ const HomePage = () => {
     );
   };
 
-  {/*who we are content*/}
+  {/*who we are content*/ }
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
   const [typedText, setTypedText] = useState("");
   const fullText =
@@ -84,23 +84,28 @@ const HomePage = () => {
       <section className="about" ref={ref}>
         <h3 className="section-title typing-animation">{typedText}</h3>
         <p className="about-description">
-        We focus the therapeutic and/or health giving importance of medicinal plants which is renowned as valuable folkloric medicine in southern parts of India which are selectively cornered, fractionated and evaluated for their potential against particular disorders and validate the possible mechanism behind the action as well
+          We focus the therapeutic and/or health giving importance of medicinal plants which is renowned as valuable folkloric medicine in southern parts of India which are selectively cornered, fractionated and evaluated for their potential against particular disorders and validate the possible mechanism behind the action as well
         </p>
       </section>
       <hr />
-      {/* vision and mission section */}
-      <section className="about">
-        <h3 className="section-title">Vision & Mission</h3>
-        <h4 className="section-subtitle">Our Vision</h4>
-        <p className="about-description">
-        Apparently the intent of mission, to isolate the bio-active natural products from plants and microorganisms which are applied to investigate diverse range of applications being experienced as an exemplary agent in major industrial needs.
-        </p>
-        <br />
-        <h4 className="section-subtitle">Our Mission</h4>
-        <p className="about-description">
-        Precisely, extract and isolate the phytochemicals from plants with all its naturalness and preserve the therepeutic and/or health giving properties entirely in order to cherish our customers naturally.
-        </p>
+      {/* Vision and Mission Section */}
+      <section className="book-container">
+        <div className="book-page left-page">
+          <h3 className="section-title">Our Vision</h3>
+          <p className="about-description">
+            Apparently the intent of mission, to isolate the bio-active natural products from plants and microorganisms which are applied to investigate diverse range of applications being experienced as an exemplary agent in major industrial needs.
+          </p>
+        </div>
+        <div className="book-page right-page">
+          <h3 className="section-title">Our Mission</h3>
+          <p className="about-description">
+            Precisely, extract and isolate the phytochemicals from plants with all its naturalness and preserve the therapeutic and/or health-giving properties entirely in order to cherish our customers naturally.
+          <br />
+          <br />
+          </p>
+        </div>
       </section>
+
       {/* Products Section */}
       <section className="products">
         <h3 className="section-title">Our Products</h3>

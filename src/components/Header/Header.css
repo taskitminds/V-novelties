@@ -1,19 +1,22 @@
-/* Top Banner Styles */
+/* Fix Header at the Top */
 .top-banner {
-  background-color: rgba(44, 122, 63, 0.9); /* Semi-transparent Herbal Green */
+  position: fixed; /* Ensures it's fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60pxs;
+  background-color: rgba(44, 122, 63, 0.9);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  padding-bottom: 0px;
   font-size: 14px;
   font-family: Arial, sans-serif;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 110; /* Ensures it's above the carousel */
+  z-index: 110; /* Ensures it stays above navbar */
 }
+
 
 /* Contact Info */
 .contact-info {
@@ -92,5 +95,11 @@
 
   .social-icons {
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 426px) {
+  .top-banner {
+    display: none;
   }
 }
