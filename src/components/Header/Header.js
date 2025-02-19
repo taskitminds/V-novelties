@@ -1,14 +1,15 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import './Header.css'; // Import the CSS file for styling
+import { BiFontSize } from "react-icons/bi";
 
 const Header = () => {
   return (
     <div className="top-banner">
       <div className="contact-info">
-        <span className="contact-info1"><FaMailBulk className="icon-header" />info@herbal-creations.com  </span>
-        <span> | </span>
-        <span className="contact-info2"><FaPhoneAlt className="icon-header" />+91 9876543210</span>
+        <span><FaMailBulk className="icon-header" />info@herbal-creations.com  </span>
+        <span>|</span>
+        <span><FaPhoneAlt className="icon-header" />+91 9876543210</span>
       </div>
       <div className="social-icons">
         <a href="#" className="social-link"><FaFacebook /></a>

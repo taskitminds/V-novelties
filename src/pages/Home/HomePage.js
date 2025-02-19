@@ -15,16 +15,16 @@ const carouselImages = [
 
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Debugging check
-  console.log("Loaded Images:", carouselImages);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [currentIndex, isHovered]);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
@@ -59,33 +59,48 @@ const HomePage = () => {
       <Header />
       <Navbar />
       <section className="carousel">
-      <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
-      <div className="carousel-slider">
-        {carouselImages.map((slide, index) => (
-          <div
-            key={index}
-            className={`carousel-slide ${index === currentIndex ? "active" : ""}`}
-            style={{ backgroundImage: `url(${slide.image})`, display: index === currentIndex ? "flex" : "none" }}
+        <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
+        <div className="carousel-slider">
+          {carouselImages.map((slide, index) => (
+            <div
+              key={index}
+              className={`carousel-slide ${index === currentIndex ? "active" : ""}`}
+              style={{ backgroundImage: `url(${slide.image})`, display: index === currentIndex ? "flex" : "none" }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
-            <div className={`carousel-content ${slide.position}`}>
-              <h1>{slide.title}</h1>
-              <p>{slide.text}</p>
-              <button className="carousel-btn-main" onClick={() => window.location.href = '#'}>Know More</button>
+              <div className={`carousel-content ${slide.position}`}>
+                <h1>{slide.title}</h1>
+                <p>{slide.text}</p>
+                <button className="carousel-btn-main" onClick={() => window.location.href = '#'}>Know More</button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <button className="carousel-btn right" onClick={nextSlide}>&#10095;</button>
-    </section>
+          ))}
+        </div>
+        <button className="carousel-btn right" onClick={nextSlide}>&#10095;</button>
+      </section>
 
-      {/* About Section */}
+      {/* Who we are section */}
       <section className="about" ref={ref}>
         <h3 className="section-title typing-animation">{typedText}</h3>
         <p className="about-description">
-          Herbal Creations is a trusted manufacturer of herbal extracts, catering to the pharmaceutical and nutraceutical industries worldwide.
+        We focus the therapeutic and/or health giving importance of medicinal plants which is renowned as valuable folkloric medicine in southern parts of India which are selectively cornered, fractionated and evaluated for their potential against particular disorders and validate the possible mechanism behind the action as well
         </p>
       </section>
-
+      <hr />
+      {/* vision and mission section */}
+      <section className="about">
+        <h3 className="section-title">Vision & Mission</h3>
+        <h4 className="section-subtitle">Our Vision</h4>
+        <p className="about-description">
+        Apparently the intent of mission, to isolate the bio-active natural products from plants and microorganisms which are applied to investigate diverse range of applications being experienced as an exemplary agent in major industrial needs.
+        </p>
+        <br />
+        <h4 className="section-subtitle">Our Mission</h4>
+        <p className="about-description">
+        Precisely, extract and isolate the phytochemicals from plants with all its naturalness and preserve the therepeutic and/or health giving properties entirely in order to cherish our customers naturally.
+        </p>
+      </section>
       {/* Products Section */}
       <section className="products">
         <h3 className="section-title">Our Products</h3>
@@ -103,6 +118,11 @@ const HomePage = () => {
           <div className="product-card">
             <img src="https://source.unsplash.com/300x200/?leaves,organic" alt="Product 3" className="product-img" />
             <h4 className="product-title">Organic Powders</h4>
+            <p className="product-description">Finely processed organic powders for multiple uses.</p>
+          </div>
+          <div className="product-card">
+            <img src="https://source.unsplash.com/300x200/?leaves,organic" alt="Product 4" className="product-img" />
+            <h4 className="product-title">Organic Product</h4>
             <p className="product-description">Finely processed organic powders for multiple uses.</p>
           </div>
         </div>

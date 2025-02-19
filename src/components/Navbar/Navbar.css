@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 60px;
-  background: rgba(255, 255, 255, 0.85); /* Transparent Navbar */
+  background: rgba(255, 255, 255, 0.65); /* Transparent Navbar */
   color: rgb(116, 116, 116);
   padding: 16px 0;
   display: flex;
@@ -76,6 +76,12 @@
   color: rgb(44, 122, 63); /* Keep logo visible on images */
   text-decoration: none;
   padding-left: 20px;
+  cursor: pointer;
+}
+
+.logo:hover{
+  transition: ease-in-out 0.3s;
+  color: rgb(174, 174, 174); /* Change color on hover */
 }
 
 .icon-nav {
@@ -105,5 +111,12 @@
 }
 
 .nav-link:hover {
-  color: #fbbf24; /* Highlight color on hover */
+  transition: ease-in-out 0.3s;
+  color: rgb(174, 174, 174); /* Change color on hover */
+}
+
+@media (width: 768px) {
+  .nav-links {
+    padding-right: 0; /* Adjust for mobile view */
+  }
 }

@@ -16,9 +16,9 @@ const Navbar = () => {
       </h1>
       <div className="nav-links">
         <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Home</a>
-        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Application</a>
-        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>About</a>
         <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Products</a>
+        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Application</a>
+        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>R&D</a>
         <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Contact</a>
       </div>
     </nav>
