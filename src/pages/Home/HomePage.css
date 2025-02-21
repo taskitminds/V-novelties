@@ -270,3 +270,109 @@ body {
     transform: translateY(0);
   }
 }
+
+
+/* template slider */
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e6f4ea;
+}
+
+.slider-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-text {
+  width: 50%;
+  margin: 50px;
+}
+
+.slider-text h3 {
+  font-style: italic;
+  color: #047857;
+  margin-bottom: 0.5rem;
+}
+
+.slider-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.slider-text p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.view-more-btn {
+  background-color: #047857;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-image img {
+  width: 75%;
+}
+
+/* Ensure buttons are visible */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Style for each dot button */
+.slider-dots button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Active Slide Button */
+.slider-dots .active {
+  background-color: #047857;
+  color: white;
+  border-color: #047857;
+  transform: scale(1.2);
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider-card {
+  display: flex;
+}
+
