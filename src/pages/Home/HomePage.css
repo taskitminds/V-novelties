@@ -24,10 +24,22 @@ body {
 }
 
 .section-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #2c7a3f;
+  display: flex;
   margin-bottom: 16px;
+}
+.section-title-button{
+  margin: 10px;
+  font-size: medium;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 50px;
+  border: green solid 2px;
+}
+.section-title-button:hover{
+ 
+  border: white solid 2px;
+  color: white;
+  background-color: green;
 }
 
 .section-subtitle {
@@ -98,7 +110,10 @@ body {
 /* Products Section */
 .products {
   padding: 64px 24px;
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
 }
 
 .product-cards {
