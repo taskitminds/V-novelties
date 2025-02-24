@@ -222,7 +222,7 @@ const HomePage = () => {
 
       {/* Products Section */}
       <section className="products">
-        <div className="section-title">
+        <div className="product-section-title">
           <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=0)}}>All</button>
           <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=1)}}>Crop Care</button>
           <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=2)}}>Animal Care</button>
