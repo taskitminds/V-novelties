@@ -21,16 +21,16 @@ const carouselImages = [
   id=3 - herbal care
   id=4 - personal care */}
 const products_list = [
-  {image:"https://media.post.rvohealth.io/wp-content/uploads/sites/2/2021/10/Screen-Shot-2021-10-07-at-11.08.27-PM.png",title:"Lemongrass",disc:"Powerful antioxidant anti-inflammatory antifungal and astringent Repels flies and insects safe on all kind of flooring- used as floor cleaning agent helps to relieve stress and anxiety(aromatherapy)",id:3},
-  {image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VXfyJahnX6k5qMq8YlFDWWLhA_VKKhrEQw&s",title:"Palmarosa",disc:"Strongly antimicrobial Plays Effective role in personal care products (skin,care) Aromatherapy, used as ENT infections and relieves stress and anxiety",id:3},
-  {image:"https://mangalorespice.com/cdn/shop/products/AR_01-02.jpg?v=1734783469&width=1445",title:"Vettiver",disc:"Excellent anti-oxidant and anti-inflammatory property Highly benficial in personal care products such as skin care and perfumery Extermination of scars, stretch and other skin marks Promising ingredient for aromatherapy, has improved alertness, concentration power and brain function",id:3},
-  {image:"https://m.media-amazon.com/images/I/71ook9ul8wL._AC_UF1000,1000_QL80_.jpg",title:"Neem seed",disc:"",id:1},
-  {image:"https://www.greenvisionindia.com/wp-content/uploads/2022/09/Azaneem-10000.png",title:"Azardictin",disc:"",id:1},
-  {image:"https://www.secondmedic.com/app/asset/site_images/newproduct/WellnessForever202306174045217.webp",title:"Vcal",disc:"For growth, weight and activeness and Helps prevent problems of thin shell and broken egg and controls lameness",id:2},
-  {image:"https://vherbs.in/wp-content/uploads/2024/07/Image-7-1.png",title:"Vherbcare",disc:"Improves livability. Herbs to supports liver, gallbladder and stimulates bile production. Herbs to anti-inflammatory properties. Detoxifying and toxin binder herbs. Helps indigestion and sluggish liver. Better shell quality and reduced breakages ",id:2},
-  {image:"https://5.imimg.com/data5/SELLER/Default/2023/3/VC/ZO/SK/109952101/95-acacia-concinna-shikakai.jpg",title:"Acacia Concinna",disc:"",id:4},
-  {image:"https://5.imimg.com/data5/CK/BQ/CP/SELLER-44552119/sunsoil-100-natural-onion-allium-cepa-bulb-extract-quercetin-5--500x500.jpg",title:"Allium Cepa",disc:"",id:4},
-  
+  { image: "https://media.post.rvohealth.io/wp-content/uploads/sites/2/2021/10/Screen-Shot-2021-10-07-at-11.08.27-PM.png", title: "Lemongrass", disc: "Powerful antioxidant anti-inflammatory antifungal and astringent Repels flies and insects safe on all kind of flooring- used as floor cleaning agent helps to relieve stress and anxiety(aromatherapy)", id: 3 },
+  { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VXfyJahnX6k5qMq8YlFDWWLhA_VKKhrEQw&s", title: "Palmarosa", disc: "Strongly antimicrobial Plays Effective role in personal care products (skin,care) Aromatherapy, used as ENT infections and relieves stress and anxiety", id: 3 },
+  { image: "https://mangalorespice.com/cdn/shop/products/AR_01-02.jpg?v=1734783469&width=1445", title: "Vettiver", disc: "Excellent anti-oxidant and anti-inflammatory property Highly benficial in personal care products such as skin care and perfumery Extermination of scars, stretch and other skin marks Promising ingredient for aromatherapy, has improved alertness, concentration power and brain function", id: 3 },
+  { image: "https://m.media-amazon.com/images/I/71ook9ul8wL._AC_UF1000,1000_QL80_.jpg", title: "Neem seed", disc: "", id: 1 },
+  { image: "https://www.greenvisionindia.com/wp-content/uploads/2022/09/Azaneem-10000.png", title: "Azardictin", disc: "", id: 1 },
+  { image: "https://www.secondmedic.com/app/asset/site_images/newproduct/WellnessForever202306174045217.webp", title: "Vcal", disc: "For growth, weight and activeness and Helps prevent problems of thin shell and broken egg and controls lameness", id: 2 },
+  { image: "https://vherbs.in/wp-content/uploads/2024/07/Image-7-1.png", title: "Vherbcare", disc: "Improves livability. Herbs to supports liver, gallbladder and stimulates bile production. Herbs to anti-inflammatory properties. Detoxifying and toxin binder herbs. Helps indigestion and sluggish liver. Better shell quality and reduced breakages ", id: 2 },
+  { image: "https://5.imimg.com/data5/SELLER/Default/2023/3/VC/ZO/SK/109952101/95-acacia-concinna-shikakai.jpg", title: "Acacia Concinna", disc: "", id: 4 },
+  { image: "https://5.imimg.com/data5/CK/BQ/CP/SELLER-44552119/sunsoil-100-natural-onion-allium-cepa-bulb-extract-quercetin-5--500x500.jpg", title: "Allium Cepa", disc: "", id: 4 },
+
 ]
 
 const slides = [
@@ -44,7 +44,7 @@ const slides = [
     title: "BRILLIANCE IN ANIMAL CARE",
     subtitle: "Custom-Made Premix With Nutrition And Herbal Healthcare",
     description: "skillfully formulated premix rich in vitamins, minerals and essential nutrients as in nurse of cattle and poultry.an accustomed formulation and high quality raw materials. premix-vitamin, minerals, aminoacids enables the essential intake to the different phases of breeding secure the health of the poultry. Direct farm technical support and diet management. Specialized dairy cattle vitamin and minerals premix has increase the cow performance and high milk yield and reduce the stress. Highly nutritious vita-minerals premix ensures bio security and herd health.",
-       image: "https://www.hillspet.hk/content/dam/cp-sites/hills/hills-pet/global/general/thumbnails/HP_about_animalwelfare_section1_md.jpg",
+    image: "https://www.hillspet.hk/content/dam/cp-sites/hills/hills-pet/global/general/thumbnails/HP_about_animalwelfare_section1_md.jpg",
   },
   {
     title: "EXCELLENCE IN HERBAL SOLUTIONS",
@@ -161,8 +161,8 @@ const HomePage = () => {
           <h3 className="section-title">Our Mission</h3>
           <p className="about-description">
             Precisely, extract and isolate the phytochemicals from plants with all its naturalness and preserve the therapeutic and/or health-giving properties entirely in order to cherish our customers naturally.
-          <br />
-          <br />
+            <br />
+            <br />
           </p>
         </div>
       </section>
@@ -170,70 +170,70 @@ const HomePage = () => {
       {/* Templates of slides section*/}
       <div className="slider-container">
 
-  <div className="slider-card">
-  <div className="slider-text">
-    <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
-            className="w-1/2 pr-8"
-          >
-            
-      <h3>{slides[currentSlide].subtitle}</h3>
-      <h1>{slides[currentSlide].title}</h1>
-      <p>{slides[currentSlide].description}</p>
-      <button className="view-more-btn">View More</button>
-    
-          </motion.div>
-        </AnimatePresence>
+        <div className="slider-card">
+          <div className="slider-text">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className="w-1/2 pr-8"
+              >
+
+                <h3>{slides[currentSlide].subtitle}</h3>
+                <h1>{slides[currentSlide].title}</h1>
+                <p>{slides[currentSlide].description}</p>
+                <button className="view-more-btn">View More</button>
+
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="slider-image">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentSlide}
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].title}
+                className="w-3/4 object-contain"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.1 }}
+                transition={{ duration: 0.5 }}
+              />
+            </AnimatePresence>
+          </div>
         </div>
 
-        <div className="slider-image">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={currentSlide}
-              src={slides[currentSlide].image}
-              alt={slides[currentSlide].title}
-              className="w-3/4 object-contain"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.1 }}
-              transition={{ duration: 0.5 }}
-            />
-          </AnimatePresence>
-          </div>
-  </div>
-
-  <div className="slider-dots">
-  {slides.map((_, index) => (
-    <button
-      key={index}
-      className={currentSlide === index ? "active" : ""}
-      onClick={() => setCurrentSlide(index)}
-    >
-      {index + 1}
-    </button>
-  ))}
-</div>
-</div>
+        <div className="slider-dots">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={currentSlide === index ? "active" : ""}
+              onClick={() => setCurrentSlide(index)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Products Section */}
       <section className="products">
         <div className="product-section-title">
-          <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=0)}}>All</button>
-          <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=1)}}>Crop Care</button>
-          <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=2)}}>Animal Care</button>
-          <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=3)}}>Herbal Care</button>
-          <button className="section-title-button" onClick={()=>{setProductSlide(productSlide=4)}}>Personal Care</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 0) }}>All</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 1) }}>Crop Care</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 2) }}>Animal Care</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 3) }}>Herbal Care</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 4) }}>Personal Care</button>
         </div>
         <div className="product-cards">
           {
-            products_list.map((prt,index)=>(
-                productSlide==0?<Product img={prt.image} title={prt.title} discr={prt.disc}/>:productSlide!=0 && productSlide==prt.id?<Product img={prt.image} title={prt.title} discr={prt.disc}/>:false
-                
+            products_list.map((prt, index) => (
+              productSlide == 0 ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : productSlide != 0 && productSlide == prt.id ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : false
+
             ))
           }
         </div>
@@ -251,5 +251,5 @@ export default HomePage; // Export HomePage component as default
 
 
 
-{/*<Product img="https://i.pinimg.com/236x/bf/58/96/bf5896dc6968b3f82e24de4b03791e8e.jpg" title='Tulasi' discr='This is tulasi'/> */}
+{/*<Product img="https://i.pinimg.com/236x/bf/58/96/bf5896dc6968b3f82e24de4b03791e8e.jpg" title='Tulasi' discr='This is tulasi'/> */ }
 

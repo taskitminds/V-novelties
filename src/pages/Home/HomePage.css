@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
 }
 
-.section-title{
+.section-title {
   font-size: 36px;
   font-weight: bold;
   color: #2c7a3f;
@@ -33,7 +33,7 @@ body {
 }
 
 
-.section-title-button{
+.section-title-button {
   margin: 10px;
   font-size: medium;
   font-weight: 500;
@@ -41,11 +41,20 @@ body {
   border-radius: 50px;
   border: green solid 2px;
 }
-.section-title-button:hover{
- 
+
+.section-title-button:hover {
+
   border: white solid 2px;
   color: white;
   background-color: green;
+}
+
+@media (max-width: 426px) {
+  .section-title-button {
+    margin: 5px;
+    font-size: small;
+    padding: 5px;
+  }
 }
 
 .section-subtitle {
@@ -117,9 +126,12 @@ body {
 .products {
   padding: 64px 24px;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  /* Stack children vertically */
+  justify-content: center;
+  /* Center vertically */
+  align-items: center;
+  /* Center horizontally */
 }
 
 .product-section-title {
@@ -269,9 +281,9 @@ body {
 /* Button */
 .carousel-btn-main {
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: rgba(44, 122, 63);
   border: none;
-  color: rgb(168, 168, 168);
+  color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
@@ -280,7 +292,7 @@ body {
 }
 
 .carousel-btn-main:hover {
-  background-color: rgba(44, 122, 63);
+  background-color: rgb(168, 168, 168);
 }
 
 
@@ -304,7 +316,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: #e6f4ea;
 }
 
@@ -400,4 +412,47 @@ body {
 
 .slider-card {
   display: flex;
+}
+
+@media (max-width: 769px) {
+  .slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    /* Align text slightly to the left */
+    width: 100%;
+  }
+
+  .slider-card {
+    flex-direction: column-reverse;
+    /* Moves image above text */
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .slider-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .slider-text {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .slider-dots {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
 }
