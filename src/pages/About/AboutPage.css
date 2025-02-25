@@ -41,11 +41,11 @@
 
 
   /* Section Styling */
-  section {
+  /* section {
     padding: 40px 5%;
     border-bottom: 1px solid #ddd;
   }
-  
+   */
   section h2,
   section h3 {
     color: var(--dark);
@@ -58,7 +58,7 @@
     font-size: 16px;
   }
   .a{
-    padding-top: 100px;
+    padding-top: 200px;
     text-align: center;
   }
   
