@@ -15,11 +15,7 @@ const carouselImages = [
   { image: h3, title: "Sustainable Herbal Products", text: "Eco-friendly and sustainable herbal solutions.", position: "left" },
 ];
 
-{/*id=0 - all
-  id=1 - crop care
-  id=2 - animal care
-  id=3 - herbal care
-  id=4 - personal care */}
+
 const products_list = [
   { image: "https://media.post.rvohealth.io/wp-content/uploads/sites/2/2021/10/Screen-Shot-2021-10-07-at-11.08.27-PM.png", title: "Lemongrass", disc: "Powerful antioxidant anti-inflammatory antifungal and astringent Repels flies and insects safe on all kind of flooring- used as floor cleaning agent helps to relieve stress and anxiety(aromatherapy)", id: 3 },
   { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VXfyJahnX6k5qMq8YlFDWWLhA_VKKhrEQw&s", title: "Palmarosa", disc: "Strongly antimicrobial Plays Effective role in personal care products (skin,care) Aromatherapy, used as ENT infections and relieves stress and anxiety", id: 3 },
@@ -97,7 +93,7 @@ const HomePage = () => {
     );
   };
 
-  {/*who we are content*/ }
+  /*who we are content*/ 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
   const [typedText, setTypedText] = useState("");
   const fullText =
@@ -232,7 +228,7 @@ const HomePage = () => {
         <div className="product-cards">
           {
             products_list.map((prt, index) => (
-              productSlide == 0 ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : productSlide != 0 && productSlide == prt.id ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : false
+              productSlide === 0 ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : productSlide !== 0 && productSlide === prt.id ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : false
 
             ))
           }
@@ -251,5 +247,5 @@ export default HomePage; // Export HomePage component as default
 
 
 
-{/*<Product img="https://i.pinimg.com/236x/bf/58/96/bf5896dc6968b3f82e24de4b03791e8e.jpg" title='Tulasi' discr='This is tulasi'/> */ }
+/*<Product img="https://i.pinimg.com/236x/bf/58/96/bf5896dc6968b3f82e24de4b03791e8e.jpg" title='Tulasi' discr='This is tulasi'/> */ 
 

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FaLeaf } from "react-icons/fa";
+import { Link } from "react-router-dom"; // Import Link from React Router
 import "./Navbar.css";
 
 const Navbar = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    setAnimate(true); // Trigger animation when the component mounts
+    setAnimate(true);
   }, []);
 
   useEffect(() => {
@@ -33,11 +34,12 @@ const Navbar = () => {
         <FaLeaf className="icon-nav" /> V Novelties
       </h1>
       <div className="nav-links">
-        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Home</a>
-        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Products</a>
-        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Application</a>
-        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>R&D</a>
-        <a href="#" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Contact</a>
+        <Link to="/" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Home</Link>
+        <Link to="/about" className={`nav-link ${animate ? "slide-in-right" : ""}`}>About us</Link>
+        <Link to="/products" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Products</Link>
+        <Link to="/application" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Application</Link>
+        <Link to="/research" className={`nav-link ${animate ? "slide-in-right" : ""}`}>R&D</Link>
+        <Link to="/contact" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Contact</Link>
       </div>
     </nav>
   );

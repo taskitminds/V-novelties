@@ -1,7 +1,7 @@
 import React from "react";
-import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
+import { FaPhoneAlt, /*FaEnvelope*/  FaFacebook, FaInstagram, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import './Header.css'; // Import the CSS file for styling
-import { BiFontSize } from "react-icons/bi";
+// import { BiFontSize } from "react-icons/bi";
 
 const Header = () => {
   return (

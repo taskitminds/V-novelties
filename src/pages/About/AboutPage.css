@@ -1,1 +1,183 @@
- 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Root Variables */
+  :root {
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --text-color: #212529;
+    --background-color: #fff;
+    --font-family: "Poppins", Helvetica, Arial, sans-serif;
+  }
+  
+  /* Global Styles */
+  body {
+    font-size: 10.5pt;
+    line-height: 1.7;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-align: left;
+  }
+  
+  /* About Us Page */
+  .about-us {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Breadcrumb Navigation */
+
+
+
+  /* Section Styling */
+  section {
+    padding: 40px 5%;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  section h2,
+  section h3 {
+    color: var(--dark);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    text-align: justify;
+    font-size: 16px;
+  }
+  .a{
+    padding-top: 100px;
+    text-align: center;
+  }
+  
+  /* Who We Are */
+  .who-we-are {
+    padding-top: 100px;
+    text-align: center;
+  }
+  
+  /* Our Vision */
+  .our-vision {
+    text-align: center;
+  }
+  
+  /* Mission */
+  .mission {
+    text-align: center;
+  }
+  
+  /* Quality Control */
+  .quality-control {
+    text-align: center;
+  }
+  
+  /* Image Styling */
+  .about-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contact Information */
+  .contact-info {
+    text-align: left;
+  }
+  
+  .contact-info address {
+    font-style: normal;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Useful Links */
+  .useful-links {
+    text-align: left;
+  }
+  
+  .useful-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .useful-links li {
+    margin-bottom: 10px;
+  }
+  
+  .useful-links a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .useful-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Our Consortium */
+  .our-consortium {
+    text-align: left;
+  }
+  
+  .our-consortium ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .our-consortium li {
+    margin-bottom: 10px;
+  }
+  
+  /* Header & Footer */
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  footer {
+    background: var(--dark);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    section {
+      padding: 30px 3%;
+    }
+  
+    section h2,
+    section h3 {
+      font-size: 20px;
+    }
+  
+    .breadcrumb {
+      padding-top: 100px;
+      padding-left: 20px;
+      font-size: 12px;
+    }
+  
+    .about-image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
