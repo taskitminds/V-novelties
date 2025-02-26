@@ -2,13 +2,13 @@ import React from 'react';
 import Header from '../../components/Header/Header'; // Ensure the Header component exists
 import './AboutPage.css';
 import Navbar from '../../components/Navbar/Navbar'; // Ensure the Navbar component exists
-
+import   "../../assets/images/about/abb.webp";
 const AboutUs = () => {
   return (
     <div className="about-us">
       <Header />
       <Navbar />
-        <h1 className='a'>About Us</h1>
+        <h1 className='a'>About  Us</h1>
       <section className="who-we-are">
         <h2>Who We Are</h2>
         <img src="https://via.placeholder.com/800x400" alt="Company Overview" className="about-image" />

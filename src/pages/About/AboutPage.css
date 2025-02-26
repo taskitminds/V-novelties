@@ -58,8 +58,15 @@
     font-size: 16px;
   }
   .a{
-    padding-top: 200px;
+    background-color: #F6EEE1;
+    /* background-image: (""); */
+    padding-top: 150px;
     text-align: center;
+    padding-bottom: 100px;
+    font-size:46px;
+    font-weight: 300;
+    font-family:Georgia, 'Times New Roman', Times, serif
+    
   }
   
   /* Who We Are */
