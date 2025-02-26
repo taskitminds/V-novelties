@@ -1,3 +1,12 @@
+/* =========================
+ ✅ Navbar Styles
+========================= */
+/* Hide menu icon on desktop */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
 /* Adjust Navbar Position */
 .navbar {
   position: fixed;
@@ -14,7 +23,6 @@
   z-index: 99; /* Lower than header */
   transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 
 /* Solid Navbar on Scroll */
 .navbar-solid {
@@ -103,7 +111,7 @@
   cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
   transition: ease-in-out 0.3s;
   color: rgb(174, 174, 174); /* Change color on hover */
 }
@@ -138,26 +146,75 @@
   transition: ease-in-out 0.3s;
   color: rgb(174, 174, 174); /* Change color on hover */
 }
+/* =========================
+ ✅ Mobile (Hamburger Menu) - Classic Look
+========================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 28px; /* Reduced size */
+    color: rgb(60, 90, 60); /* Softer green for a classic look */
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 1100;
+  }
 
-@media (width: 768px) {
   .nav-links {
-    padding-right: 0; /* Adjust for mobile view */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden */
+    height: 100vh;
+    width: 70%;
+    max-width: 260px;
+    background: rgba(245, 245, 245, 0.95); /* Soft white shade */
+    box-shadow: 6px 0 12px rgba(0, 0, 0, 0.08); /* Soft shadow for elegance */
+    padding-top: 50px;
+    transition: left 0.5s ease-in-out;
+    align-items: center;
+    z-index: 1000;
+    border-right: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+  }
+
+  /* Show menu when clicked */
+  .nav-links.show {
+    left: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px; /* Reduced size for a clean look */
+    font-weight: 500;
+    color: rgb(50, 80, 50); /* Classic deep green */
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06); /* Soft separator */
+    transition: background 0.3s ease-in-out;
+  }
+
+  .nav-links a:hover {
+    background: rgba(200, 200, 200, 0.2); /* Subtle hover effect */
   }
 }
 
+/* ✅ Small Screens Below 426px */
 @media (max-width: 426px) {
   .navbar {
-    position: fixed;
     top: 0;
-    padding: 0 12px;
-    /* Adjust padding for smaller screens */
+    padding: 0 10px; /* Adjust padding for a compact look */
   }
-  .nav-links {
-    display: none;
-    /* Hide navigation links */
-  }
+
   .logo {
-    padding-left: 12px;
-    /* Adjust padding for smaller screens */
+    padding-left: 10px; /* Adjust padding */
+    font-size: 18px; /* Smaller font for balance */
+  }
+
+  .menu-icon {
+    top: 10px; /* Position menu icon properly */
   }
 }
