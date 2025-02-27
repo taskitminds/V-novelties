@@ -3,15 +3,17 @@ import Header from '../../components/Header/Header'; // Ensure the Header compon
 import './AboutPage.css';
 import Navbar from '../../components/Navbar/Navbar'; // Ensure the Navbar component exists
 import   "../../assets/images/about/abb.webp";
+import   "../../assets/images/about/cimg.png";
+
+
 const AboutUs = () => {
   return (
     <div className="about-us">
       <Header />
       <Navbar />
-        <h1 className='a'>About  Us</h1>
+        <h1 className='a'><h1 className='typing'>About  Us</h1></h1>
       <section className="who-we-are">
-        <h2>Who We Are</h2>
-        <img src="https://via.placeholder.com/800x400" alt="Company Overview" className="about-image" />
+        <h2 className='ab'>Who We Are</h2>
         <p>
           Established in 1979 at Nainital, Uttarakhand, Herbal Creations is a rapidly emerging manufacturer, exporter, and supplier of phytochemicals and herbal extracts, holding ISO 9001:2008 certification. Under the leadership of Managing Director Mr. Sugam Saraswat, we have gained expertise in this domain. The company adheres to GMP measures in all its processes.
         </p>
