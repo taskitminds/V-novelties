@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/Header/Header'; // Ensure the Header component exists
 import './AboutPage.css';
 import Navbar from '../../components/Navbar/Navbar'; // Ensure the Navbar component exists
-import   "../../assets/images/about/abb.webp";
+import   "../../assets/images/about/asdf.png";
 import   "../../assets/images/about/cimg.png";
 
 
@@ -14,18 +14,26 @@ const AboutUs = () => {
         <h1 className='a'><h1 className='typing'>About  Us</h1></h1>
       <section className="who-we-are">
         <h2 className='ab'>Who We Are</h2>
-        <p>
-          Established in 1979 at Nainital, Uttarakhand, Herbal Creations is a rapidly emerging manufacturer, exporter, and supplier of phytochemicals and herbal extracts, holding ISO 9001:2008 certification. Under the leadership of Managing Director Mr. Sugam Saraswat, we have gained expertise in this domain. The company adheres to GMP measures in all its processes.
+        <p className='aab'>
+        We focus the therapeutic and/or health giving importance of medicinal plants which is renowned as valuable folkloric medicine in southern parts of India which are selectively cornered, fractionated and evaluated for their potential against particular disorders and validate the possible mechanism behind the action as well.
         </p>
       </section>
 
-      <section className="our-vision">
-        <h2>Our Vision</h2>
-        <img src="https://via.placeholder.com/800x400" alt="Our Vision" className="about-image" />
-        <p>
-          Our vision is to set the highest standards in customer satisfaction, product development, manufacturing, and delivery, aiming to be a global industry leader. Our GMPs ensure the purity, consistent composition, and quality of all our finished products.
-        </p>
-      </section>
+      <section className="our-mission">
+  <div className="content">
+    <h2 className="c">Our Vission</h2>
+    <p>
+    Apparently the intent of mission, to isolate the bio-active natural products from plants and microorganisms which are applied to investigate diverse range of applications being experienced as an exemplary agent in major industrial needs.
+    
+    </p>
+  </div>
+  <img 
+    src="https://via.placeholder.com/800x400" 
+    alt="Our Mission" 
+    className="bout-image"
+  />
+</section>
+
 
       <section className="mission">
         <h3>Mission</h3>
