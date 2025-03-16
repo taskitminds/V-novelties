@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { FaLeaf } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { FaLeaf, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [animate, setAnimate] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     setAnimate(true);
@@ -23,9 +24,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -33,13 +32,20 @@ const Navbar = () => {
       <h1 className={`logo ${animate ? "slide-in-left" : ""}`}>
         <FaLeaf className="icon-nav" /> V Novelties
       </h1>
-      <div className="nav-links">
-        <Link to="/" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Home</Link>
-        <Link to="/about" className={`nav-link ${animate ? "slide-in-right" : ""}`}>About us</Link>
-        <Link to="/products" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Products</Link>
-        <Link to="/application" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Application</Link>
-        <Link to="/research" className={`nav-link ${animate ? "slide-in-right" : ""}`}>R&D</Link>
-        <Link to="/contact" className={`nav-link ${animate ? "slide-in-right" : ""}`}>Contact</Link>
+
+      {/* Menu Icon for Mobile */}
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      </div>
+
+      {/* Navigation Links */}
+      <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>About us</Link>
+        <Link to="/products" className="nav-link" onClick={() => setMenuOpen(false)}>Products</Link>
+        <Link to="/application" className="nav-link" onClick={() => setMenuOpen(false)}>Application</Link>
+        <Link to="/research" className="nav-link" onClick={() => setMenuOpen(false)}>R&D</Link>
+        <Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>Contact</Link>
       </div>
     </nav>
   );

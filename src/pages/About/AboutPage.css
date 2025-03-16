@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
   }
   
   /* Root Variables */
@@ -33,7 +33,7 @@
   /* About Us Page */
   .about-us {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
   }
   
   /* Breadcrumb Navigation */
@@ -41,11 +41,11 @@
 
 
   /* Section Styling */
-  section {
+  /* section {
     padding: 40px 5%;
     border-bottom: 1px solid #ddd;
   }
-  
+   */
   section h2,
   section h3 {
     color: var(--dark);
@@ -57,90 +57,116 @@
     text-align: justify;
     font-size: 16px;
   }
-  .a{
-    padding-top: 100px;
+  .a {
+    background-color: #F6EEE1;
+    /* background-image: url("../../assets/images/about/abb.webp"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    margin: 0;
+    width: 100vw;
+    height: min-content;
+    padding-left: 0;
+    
+    padding-top: 150px;
     text-align: center;
-  }
+    padding-bottom: 100px;
+    
+    font-size: 28px; /* Balanced size for elegance */
+    font-weight: 10; /* Extra light for a modern look */
+    font-family: "Poppins", "Inter", sans-serif; /* Clean, geometric modern font */
+    color: #222; /* Slightly softer black for a premium feel */
+    
+    letter-spacing: 0.8px; /* Subtle spacing to enhance readability */
+    word-spacing: 1.5px; /* Keeps text flowing naturally */
+    
+    text-transform: capitalize; /* Gives a refined, professional look */
+    
+    box-sizing: border-box;
+}
+
+
+
+/* Typing Effect */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) forwards;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.ab {
+position: relative;
+display: inline-block;
+font-size: 42px;
+font-weight: bold;
+text-align: center;
+font-family: Poppins, sans-serif;
+color:#2c7a3f;  /* Adjust text color */
+padding-bottom: 40px; /* Adds spacing below the text */
+}
+
+.ab::after {
+content: "";
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom:9px;
+ /* Adjusts spacing between text and image */
+background-image: url("../../assets/images/about/cimg.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+display:inline-flex;
+height: 40px; /* Adjust the height of the image */
+width:100%; /* Adjust width as needed */
+}
+
+.aab{
+padding-left: 100px;
+padding-right: 100px;
+font-display: swap;
+font-family: 'Poppins', sans-serif;
+font-size:20px;
+text-align: center;
+}
+
   
   /* Who We Are */
-  .who-we-are {
-    padding-top: 100px;
-    text-align: center;
-  }
-  
-  /* Our Vision */
-  .our-vision {
-    text-align: center;
-  }
-  
-  /* Mission */
-  .mission {
-    text-align: center;
-  }
-  
-  /* Quality Control */
-  .quality-control {
-    text-align: center;
+
+  .c{
+    padding-bottom: 20px;
   }
   
   /* Image Styling */
   .about-image {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Contact Information */
-  .contact-info {
-    text-align: left;
-  }
-  
-  .contact-info address {
-    font-style: normal;
-    line-height: 1.8;
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-  
-  /* Useful Links */
-  .useful-links {
-    text-align: left;
-  }
-  
-  .useful-links ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .useful-links li {
-    margin-bottom: 10px;
-  }
-  
-  .useful-links a {
-    color: var(--primary);
-    text-decoration: none;
-  }
-  
-  .useful-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Our Consortium */
-  .our-consortium {
-    text-align: left;
-  }
-  
-  .our-consortium ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .our-consortium li {
-    margin-bottom: 10px;
-  }
-  
+    width: 150px; /* Adjust based on size preference */
+    display: block;
+    height: 40px;
+    margin: 20px auto; /* Centers the image */
+    opacity: 0.8; /* Gives a soft look */
+}
+
+
   /* Header & Footer */
   header {
     background: var(--primary);
@@ -176,8 +202,381 @@
     }
   
     .about-image {
-      max-width: 100%;
-      height: auto;
+      max-width: 10%;
     }
   }
   
+
+/* ✅ Hide Menu Icon on Large Screens */
+.menu-icon {
+  display: none;
+}
+
+/* ✅ Styles for Small Screens (up to 768px) */
+@media (max-width: 768px) {
+  /* Show Menu Icon */
+  .menu-icon {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  /* Mobile Navigation Menu */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1050;
+  }
+
+  /* When Menu is Open */
+  .nav-links.show {
+    left: 0;
+  }
+
+  /* Menu Items */
+  .nav-links a {
+    padding: 15px;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+  }
+
+  /* Overlay Effect */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 900;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Adjust Content Spacing */
+  .about-us {
+    padding: 20px;
+    text-align: center;
+  }
+
+  section {
+    padding: 30px 3%;
+  }
+
+  section h2, section h3 {
+    font-size: 20px;
+  }
+
+  .breadcrumb {
+    padding-top: 80px;
+    padding-left: 15px;
+    font-size: 12px;
+  }
+
+  .about-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-info, .useful-links, .our-consortium {
+    text-align: center;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px 0;
+  }
+}
+
+
+
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 254px;
+  transition: 200ms;
+}
+
+#card {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 700ms;
+  background: #191919;
+}
+
+.title {
+  opacity: 0;
+  transition-duration: 300ms;
+  position: absolute;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+.tracker:hover ~ #card .title {
+  opacity: 1;
+}
+
+#prompt {
+  font-size: 30px;
+  font-weight: bold;
+  transition: 300ms;
+  color: white;
+}
+
+.tracker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.tracker:hover ~ #card {
+  filter: brightness(1.1);
+}
+
+.canvas {
+  perspective: 800px;
+  inset: 0;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+
+
+/* who we are */
+/* WhoWeAreStyles.css */
+/* WhoWeAreStyles.css */
+/* WhoWeAreStyles.css */
+
+/* Container for the entire "Who We Are" section */
+.who-we-are {
+  padding: 50px 0; /* Adds spacing above and below the section */
+  display: flex; /* Aligns children in a row */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  background-color: transparent; /* Transparent background */
+}
+
+/* Main container holding the canvas */
+.container {
+  position: relative; /* Enables positioning of child elements */
+  width: 99.8%; /* Almost full-width for responsiveness */
+  max-width: 1400px; /* Maximum width to maintain a clean layout */
+  margin: auto; /* Centers the container horizontally */
+}
+
+/* Canvas for centering card and tracker */
+.canvas {
+  position: relative; /* Enables absolute positioning of child elements */
+  display: flex; /* Aligns children in a row */
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Centers children vertically */
+}
+
+/* The small dot element - could be used for animations or tracking */
+.tracker {
+  position: absolute; /* Positioned relative to its parent */
+  width: 6px; /* Small circular size */
+  height: 6px;
+  background-color: #E6F4EA; /* Light grey color */
+  border-radius: 50%; /* Makes the element circular */
+}
+
+/* Main card element */
+.card {
+  width: 90%; /* Makes the card take up most of the available width */
+  padding: 20px; /* Internal padding for spacing */
+  background: linear-gradient(180deg, #32CD32, #7FFF00); /* Dark background color for contrast */
+  border-radius: 20px; /* Smooth rounded corners */
+  position: relative; /* Allows the use of ::before and ::after pseudo-elements */
+  display: flex; /* Flexbox layout for content alignment */
+  flex-direction: column; /* Stacks content vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  overflow: hidden; /* Hides anything overflowing the card's boundaries */
+}
+
+/* Title text styling within the card */
+.card h2 {
+  z-index: 1; /* Ensures text is displayed above the card's background */
+  color: white; /* White text color for good contrast */
+  font-size: 2em; /* Large font size for emphasis */
+  margin-bottom: 10px; /* Spacing below the title */
+}
+
+/* Paragraph text styling within the card */
+.card p {
+  z-index: 1; /* Keeps text above the card background */
+  color: white; /* White text for readability */
+  text-align: center; /* Centers the text */
+}
+
+/* Animated border around the card */
+.card::before {
+  content: ''; /* Generates a pseudo-element */
+  position: absolute; /* Positioned relative to the card */
+  width: 100%; /* Nearly covers the card's width */
+  height: 130%; /* Extends slightly beyond the card’s height */
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255)); /* Gradient animation colors */
+  animation: rotBGimg 3s linear infinite; /* Continuous rotation animation */
+  transition: all 0.2s linear; /* Smooth transition when animated */
+}
+
+/* Inner overlay for the card */
+.card::after {
+  content: ''; /* Generates a pseudo-element */
+  position: absolute; /* Positioned relative to the card */
+  inset: 5px; /* Slightly smaller than the card to create an inner border effect */
+  background: #07182E; /* Same as card background for consistency */
+  border-radius: 15px; /* Rounded corners to match the card’s style */
+}
+
+/* Animation for rotating the gradient background */
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg); /* Starts at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Completes a full rotation */
+  }
+}
+/* Container for the sections with centered alignment */
+.sections-container { 
+  padding: 50px 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: transparent; 
+}
+
+
+/* Styling for main content containers with fixed width and height */
+.our-mission,  
+.mission {  
+  width: 1200px; 
+  height: 270px; 
+  padding: 0 20px; 
+  background: linear-gradient(180deg, #32CD32, #7FFF00); 
+  border-radius: 20px; 
+  position: relative; 
+  margin: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  overflow: hidden; 
+  box-sizing: border-box; 
+}
+
+/* Animated border effect using a gradient background */
+.our-mission::before,  
+.mission::before {  
+  content: ''; 
+  position: absolute; 
+  width: 100%; 
+  height: 130%; 
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255)); 
+  animation: rotBGimg 3s linear infinite; 
+  transition: all 0.2s linear; 
+}
+
+/* Dark overlay inside the section with rounded corners */
+.our-mission::after,  
+.mission::after {  
+  content: ''; 
+  position: absolute; 
+  inset: 5px; 
+  background: #07182E; 
+  border-radius: 15px; 
+}
+
+/* Text styling for headings */
+.our-mission h2,  
+.mission h2 {  
+  z-index: 1; 
+  color: white; 
+  font-size: 2em; 
+  margin: 20px 0 30px 0; /* Adds a 10px gap between heading and paragraph */
+  text-align: center; 
+}
+
+/* Text styling for paragraphs */
+.our-mission p,  
+.mission p {  
+  z-index: 1; 
+  color: white; 
+  text-align: center; 
+  padding: 0 15px; 
+  padding-bottom: 20px; 
+  font-size: 1.4em; /* Increases the text size */
+  line-height: 1.6; /* Increases the height of the text */
+}
+
+
+/* Keyframes for rotating the gradient background */
+@keyframes rotBGimg {  
+  from { transform: rotate(0deg); }  
+  to { transform: rotate(360deg); }  
+}  
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-fall {
+  position: absolute;
+  top: -10vh; /* Start from outside the viewport */
+  animation: fall 6s linear infinite;
+}
+
+/* Banana Leaf Styling */
+.leaf-bg {
+  background: url("../../assets/images/about/banana_leaf2.webp") no-repeat center center/cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  display: inline-block;
+  font-family: 'Great Vibes', cursive; /* Elegant cursive font */
+}
+
