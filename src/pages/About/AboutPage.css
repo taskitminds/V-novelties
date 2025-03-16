@@ -66,6 +66,7 @@
     
     margin: 0;
     width: 100vw;
+    height: min-content;
     padding-left: 0;
     
     padding-top: 150px;
@@ -548,3 +549,34 @@ text-align: center;
   from { transform: rotate(0deg); }  
   to { transform: rotate(360deg); }  
 }  
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-fall {
+  position: absolute;
+  top: -10vh; /* Start from outside the viewport */
+  animation: fall 6s linear infinite;
+}
+
+/* Banana Leaf Styling */
+.leaf-bg {
+  background: url("../../assets/images/about/banana_leaf2.webp") no-repeat center center/cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  display: inline-block;
+  font-family: 'Great Vibes', cursive; /* Elegant cursive font */
+}
+
