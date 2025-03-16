@@ -59,7 +59,7 @@
   }
   .a {
     background-color: #F6EEE1;
-    background-image: url("../../assets/images/about/abb.webp");
+    /* background-image: url("../../assets/images/about/abb.webp"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -110,107 +110,50 @@
 
 /* Blinking Cursor */
 @keyframes blink {
-    50% { border-color: transparent; }
+  50% { border-color: transparent; }
 }
 
 .ab {
-  position: relative;
-  display: inline-block;
-  font-size: 42px;
-  font-weight: bold;
-  text-align: center;
-  font-family: Poppins, sans-serif;
-  color:#2c7a3f;  /* Adjust text color */
-  padding-bottom: 40px; /* Adds spacing below the text */
+position: relative;
+display: inline-block;
+font-size: 42px;
+font-weight: bold;
+text-align: center;
+font-family: Poppins, sans-serif;
+color:#2c7a3f;  /* Adjust text color */
+padding-bottom: 40px; /* Adds spacing below the text */
 }
 
 .ab::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom:9px;
-   /* Adjusts spacing between text and image */
-  background-image: url("../../assets/images/about/cimg.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display:inline-flex;
-  height: 40px; /* Adjust the height of the image */
-  width:100%; /* Adjust width as needed */
+content: "";
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom:9px;
+ /* Adjusts spacing between text and image */
+background-image: url("../../assets/images/about/cimg.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+display:inline-flex;
+height: 40px; /* Adjust the height of the image */
+width:100%; /* Adjust width as needed */
 }
 
 .aab{
-  padding-left: 100px;
-  padding-right: 100px;
-  font-display: swap;
-  font-family: 'Poppins', sans-serif;
-  font-size:20px;
-  text-align: center;
+padding-left: 100px;
+padding-right: 100px;
+font-display: swap;
+font-family: 'Poppins', sans-serif;
+font-size:20px;
+text-align: center;
 }
 
   
   /* Who We Are */
-  .who-we-are {
-    padding-top: 60px;
-    text-align: center;
-    font-weight: 200;
-    font-size: 28px;
-    font-family: Poppins, sans-serif;
-    color: #282828;
-    margin-bottom: 0;
-    padding-bottom: 1.875pc;
-    background-size: auto;
 
-  }
   .c{
     padding-bottom: 20px;
-  }
-  /* Our Vision */
-  .our-mission {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f5f9f5; /* Light greenish background */
-    padding: 50px;
-    padding-bottom: 160px;
-    border-radius: 10px;
-    max-width: 90%;
-    margin: 40px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .our-mission .content {
-    flex: 1;
-    padding-right: 30px;
-  }
-  
-  .our-mission .c {
-    color: #2c7a3f;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .our-mission p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  .our-mission .bout-image {
-    width: 50%;
-    border-radius: 8px;
-    padding-left: 240px;
-  }  
-  
-  /* Mission */
-  .mission {
-    text-align: center;
-  }
-  
-  /* Quality Control */
-  .quality-control {
-    text-align: center;
   }
   
   /* Image Styling */
@@ -222,56 +165,7 @@
     opacity: 0.8; /* Gives a soft look */
 }
 
-  
-  /* Contact Information */
-  .contact-info {
-    text-align: left;
-  }
-  
-  .contact-info address {
-    font-style: normal;
-    line-height: 1.8;
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-  
-  /* Useful Links */
-  .useful-links {
-    text-align: left;
-  }
-  
-  .useful-links ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .useful-links li {
-    margin-bottom: 10px;
-  }
-  
-  .useful-links a {
-    color: var(--primary);
-    text-decoration: none;
-  }
-  
-  .useful-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Our Consortium */
-  .our-consortium {
-    text-align: left;
-  }
-  
-  .our-consortium ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .our-consortium li {
-    margin-bottom: 10px;
-  }
-  
+
   /* Header & Footer */
   header {
     background: var(--primary);
@@ -414,3 +308,243 @@
     padding: 15px 0;
   }
 }
+
+
+
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 254px;
+  transition: 200ms;
+}
+
+#card {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 700ms;
+  background: #191919;
+}
+
+.title {
+  opacity: 0;
+  transition-duration: 300ms;
+  position: absolute;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+.tracker:hover ~ #card .title {
+  opacity: 1;
+}
+
+#prompt {
+  font-size: 30px;
+  font-weight: bold;
+  transition: 300ms;
+  color: white;
+}
+
+.tracker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.tracker:hover ~ #card {
+  filter: brightness(1.1);
+}
+
+.canvas {
+  perspective: 800px;
+  inset: 0;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+
+
+/* who we are */
+/* WhoWeAreStyles.css */
+/* WhoWeAreStyles.css */
+/* WhoWeAreStyles.css */
+
+/* Container for the entire "Who We Are" section */
+.who-we-are {
+  padding: 50px 0; /* Adds spacing above and below the section */
+  display: flex; /* Aligns children in a row */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  background-color: transparent; /* Transparent background */
+}
+
+/* Main container holding the canvas */
+.container {
+  position: relative; /* Enables positioning of child elements */
+  width: 99.8%; /* Almost full-width for responsiveness */
+  max-width: 1400px; /* Maximum width to maintain a clean layout */
+  margin: auto; /* Centers the container horizontally */
+}
+
+/* Canvas for centering card and tracker */
+.canvas {
+  position: relative; /* Enables absolute positioning of child elements */
+  display: flex; /* Aligns children in a row */
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Centers children vertically */
+}
+
+/* The small dot element - could be used for animations or tracking */
+.tracker {
+  position: absolute; /* Positioned relative to its parent */
+  width: 6px; /* Small circular size */
+  height: 6px;
+  background-color: #E6F4EA; /* Light grey color */
+  border-radius: 50%; /* Makes the element circular */
+}
+
+/* Main card element */
+.card {
+  width: 90%; /* Makes the card take up most of the available width */
+  padding: 20px; /* Internal padding for spacing */
+  background: linear-gradient(180deg, #32CD32, #7FFF00); /* Dark background color for contrast */
+  border-radius: 20px; /* Smooth rounded corners */
+  position: relative; /* Allows the use of ::before and ::after pseudo-elements */
+  display: flex; /* Flexbox layout for content alignment */
+  flex-direction: column; /* Stacks content vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  overflow: hidden; /* Hides anything overflowing the card's boundaries */
+}
+
+/* Title text styling within the card */
+.card h2 {
+  z-index: 1; /* Ensures text is displayed above the card's background */
+  color: white; /* White text color for good contrast */
+  font-size: 2em; /* Large font size for emphasis */
+  margin-bottom: 10px; /* Spacing below the title */
+}
+
+/* Paragraph text styling within the card */
+.card p {
+  z-index: 1; /* Keeps text above the card background */
+  color: white; /* White text for readability */
+  text-align: center; /* Centers the text */
+}
+
+/* Animated border around the card */
+.card::before {
+  content: ''; /* Generates a pseudo-element */
+  position: absolute; /* Positioned relative to the card */
+  width: 100%; /* Nearly covers the card's width */
+  height: 130%; /* Extends slightly beyond the card’s height */
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255)); /* Gradient animation colors */
+  animation: rotBGimg 3s linear infinite; /* Continuous rotation animation */
+  transition: all 0.2s linear; /* Smooth transition when animated */
+}
+
+/* Inner overlay for the card */
+.card::after {
+  content: ''; /* Generates a pseudo-element */
+  position: absolute; /* Positioned relative to the card */
+  inset: 5px; /* Slightly smaller than the card to create an inner border effect */
+  background: #07182E; /* Same as card background for consistency */
+  border-radius: 15px; /* Rounded corners to match the card’s style */
+}
+
+/* Animation for rotating the gradient background */
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg); /* Starts at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Completes a full rotation */
+  }
+}
+/* Container for the sections with centered alignment */
+.sections-container { 
+  padding: 50px 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: transparent; 
+}
+
+
+/* Styling for main content containers with fixed width and height */
+.our-mission,  
+.mission {  
+  width: 1200px; 
+  height: 270px; 
+  padding: 0 20px; 
+  background: linear-gradient(180deg, #32CD32, #7FFF00); 
+  border-radius: 20px; 
+  position: relative; 
+  margin: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  overflow: hidden; 
+  box-sizing: border-box; 
+}
+
+/* Animated border effect using a gradient background */
+.our-mission::before,  
+.mission::before {  
+  content: ''; 
+  position: absolute; 
+  width: 100%; 
+  height: 130%; 
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255)); 
+  animation: rotBGimg 3s linear infinite; 
+  transition: all 0.2s linear; 
+}
+
+/* Dark overlay inside the section with rounded corners */
+.our-mission::after,  
+.mission::after {  
+  content: ''; 
+  position: absolute; 
+  inset: 5px; 
+  background: #07182E; 
+  border-radius: 15px; 
+}
+
+/* Text styling for headings */
+.our-mission h2,  
+.mission h2 {  
+  z-index: 1; 
+  color: white; 
+  font-size: 2em; 
+  margin: 20px 0 30px 0; /* Adds a 10px gap between heading and paragraph */
+  text-align: center; 
+}
+
+/* Text styling for paragraphs */
+.our-mission p,  
+.mission p {  
+  z-index: 1; 
+  color: white; 
+  text-align: center; 
+  padding: 0 15px; 
+  padding-bottom: 20px; 
+  font-size: 1.4em; /* Increases the text size */
+  line-height: 1.6; /* Increases the height of the text */
+}
+
+
+/* Keyframes for rotating the gradient background */
+@keyframes rotBGimg {  
+  from { transform: rotate(0deg); }  
+  to { transform: rotate(360deg); }  
+}  
