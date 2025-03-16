@@ -457,7 +457,7 @@ text-align: center;
   content: ''; /* Generates a pseudo-element */
   position: absolute; /* Positioned relative to the card */
   inset: 5px; /* Slightly smaller than the card to create an inner border effect */
-  background: #07182E; /* Same as card background for consistency */
+  background: linear-gradient(135deg, #3BAF85, #1A7338); /* Same as card background for consistency */
   border-radius: 15px; /* Rounded corners to match the card’s style */
 }
 
