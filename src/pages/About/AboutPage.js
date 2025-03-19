@@ -9,8 +9,6 @@ import "../../assets/images/about/cimg.png";
 const AboutUs = () => {
   return (
     <div className="about-us">
-      <Header />
-      <Navbar />
       <div className="a relative text-center py-6 overflow-hidden">
         {/* Banana Leaf Background */}
         <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
