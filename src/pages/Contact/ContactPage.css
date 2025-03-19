@@ -9,7 +9,7 @@ body {
 }
 
 /* Main Container - Holds both the form and the information section */
-.contact-content {
+.container nooselect {
     display: flex; /* Aligns children (form and info box) side by side */
     justify-content: center; /* Centers the children horizontally */
     align-items: center; /* Centers the children vertically */

@@ -262,7 +262,7 @@ text-align: center;
 /* Main container holding the canvas */
 .container {
   position: relative; /* Enables positioning of child elements */
-  width: 99.8%; /* Almost full-width for responsiveness */
+  width: 99.7%; /* Almost full-width for responsiveness */
   max-width: 1400px; /* Maximum width to maintain a clean layout */
   margin: auto; /* Centers the container horizontally */
 }
