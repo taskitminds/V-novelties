@@ -1,1 +1,173 @@
+/* Resetting default styles for the entire document */
+body {
+    margin: 0; /* Removes default margin of the body */
+    padding: 0; /* Removes default padding of the body */
+    padding-top: 30px; /* Adds padding at the top of the page */
+    box-sizing: border-box; /* Ensures padding and borders are included in total width and height */
+    font-family: Arial, sans-serif; /* Sets the default font style */
+    background-color: #f7f7f7; /* Applies a light gray background to the entire page */
+}
+
+/* Main Container - Holds both the form and the information section */
+.contact-content {
+    display: flex; /* Aligns children (form and info box) side by side */
+    justify-content: center; /* Centers the children horizontally */
+    align-items: center; /* Centers the children vertically */
+    gap: 40px; /* Adds space between the form and the info box */
+    max-width: 1200px; /* Limits the maximum width of the container */
+    margin: 50px auto; /* Adds vertical margin and centers the container */
+}
+
+/* Form Section */
+.contact-form-container {
+    background-color: white; /* Sets background color to white for the form */
+    padding: 40px; /* Adds padding around the form content */
+    border-radius: 20px; /* Rounds the corners of the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Adds a subtle shadow for a raised effect */
+    flex: 1; /* Makes the form container take more space compared to the info box */
+}
+
+/* Form Section Heading */
+.contact-form-container h2 {
+    color: rgb(44, 122, 63); /* Sets the heading color to green */
+    font-size: 32px; /* Sets a large font size for the heading */
+    font-weight: bold; /* Makes the heading bold */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+/* Form Section Paragraph */
+.contact-form-container p {
+    color: #666; /* Sets text color to gray */
+    margin-bottom: 30px; /* Adds space below the paragraph */
+    font-size: 14px; /* Sets a smaller font size */
+}
+
+/* Form Inputs and Textarea */
+.contact-form-container form input,
+.contact-form-container form textarea {
+    width: 100%; /* Makes input and textarea full width */
+    padding: 15px; /* Adds padding inside inputs and textarea */
+    margin-bottom: 20px; /* Adds space below each input */
+    border-radius: 12px; /* Rounds the corners of inputs */
+    border: 1px solid #ddd; /* Adds a light gray border */
+    background-color: #f1f1f1; /* Sets a light gray background */
+    font-size: 14px; /* Sets the text size inside inputs */
+}
+
+/* Textarea Specific Styles */
+.contact-form-container form textarea {
+    height: 120px; /* Sets a fixed height for the textarea */
+    resize: none; /* Prevents resizing of the textarea */
+}
+
+/* Submit Button Styles */
+.contact-form-container button {
+    background-color: rgb(44, 125, 63); /* Sets a green background color for the button */
+    color: white; /* Sets the button text color to white */
+    padding: 15px; /* Adds padding to the button */
+    border: none; /* Removes default border */
+    border-radius: 12px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    width: 100%; /* Makes the button full-width */
+    font-size: 16px; /* Sets a medium text size */
+    font-weight: bold; /* Makes the button text bold */
+    transition: background-color 0.3s; /* Smoothly changes background color on hover */
+}
+
+/* Submit Button Hover Effect */
+.contact-form-container button:hover {
+    background-color: #004080; /* Changes the background color when hovering over the button */
+}
+
+/* Info Section - Right Side */
+.contact-info-box {
+    background-color: rgb(44, 122, 63); /* Sets the background color to green */
+    color: white; /* Sets text color to white */
+    padding: 40px; /* Adds padding around the box */
+    border-radius: 20px; /* Rounds the corners of the box */
+    flex: 0.7; /* Makes the box smaller than the form section */
+}
+
+/* Info Section Heading */
+.contact-info-box h2 {
+    font-size: 28px; /* Sets the heading font size */
+    font-weight: bold; /* Makes the heading text bold */
+    margin-bottom: 30px; /* Adds space below the heading */
+}
+
+/* Contact Info Text */
+.contact-info-box p {
+    display: flex; /* Aligns icon and text horizontally */
+    align-items: center; /* Centers icon and text vertically */
+    margin-bottom: 20px; /* Adds space between each contact detail */
+    font-size: 15px; /* Sets the text size */
+}
+
+/* Clickable Links (Phone, Email, Address) */
+.contact-info-box a {
+    color: white; /* Sets link color to white */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s; /* Smoothly changes color when hovered */
+}
+
+/* Hover Effect for Links */
+.contact-info-box a:hover {
+    color: #ccc; /* Changes link color to light gray on hover */
+}
+
+/* Social Media Icons Container */
+.contact-info-box .social-links {
+    margin-top: 20px; /* Adds space above the social media icons */
+}
+
+/* Individual Social Media Icons */
+.contact-info-box .social-links i {
+    font-size: 22px; /* Sets size of social media icons */
+    margin-right: 12px; /* Adds space between icons */
+    cursor: pointer; /* Shows pointer cursor on hover */
+    transition: color 0.3s; /* Smoothly changes color when hovered */
+}
+
+/* Hover Effect for Icons */
+.contact-info-box .social-links i:hover {
+    color: #ccc; /* Changes icon color to light gray on hover */
+}
+
+
+
+/* Align icons and text properly */
+.contact-info-box p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* Adds space between icon and text */
+.contact-info-box p svg {
+    margin-right: 10px;
+}
+
+/* Styling for clickable links (Map, Mail, Phone) */
+/* Styling for clickable links (Map, Mail, Phone) */
+.contact-link {
+    display: inline-flex; /* Use inline-flex to align items horizontally */
+    align-items: center;  /* Ensures icon and text are vertically aligned */
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+/* Ensures icons are centered with the text */
+.contact-link svg {
+    margin-right: 1px;
+    vertical-align: middle;
+}
+
+
+/* Hover Effect for Links */
+.contact-link:hover {
+    color: #ccc;
+}
+
 
