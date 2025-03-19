@@ -44,7 +44,7 @@ const AboutUs = () => {
 
 
       <section className="who-we-are">
-        <div className="container nooselect">
+        <div className="container noselect">
           <div className="canvas">
             {Array.from({ length: 25 }, (_, index) => (
               <div key={index} className={`tracker tr-${index + 1}`} />))}
