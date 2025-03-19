@@ -97,7 +97,7 @@ const HomePage = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
   const [typedText, setTypedText] = useState("");
   const fullText =
-    "Who We Are";
+    "V Novelties";
 
   useEffect(() => {
     if (inView) {
