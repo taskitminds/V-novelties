@@ -218,3 +218,61 @@
     top: 10px; /* Position menu icon properly */
   }
 }
+
+
+/* Show menu icon for screens smaller than desktop */
+@media (max-width: 1024px) {  /* 1024px is the breakpoint for tablets and below */
+  .menu-icon {
+    display: block; /* Ensure hamburger icon is visible */
+    cursor: pointer;
+    font-size: 28px;
+    color: rgb(60, 90, 60);
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden */
+    height: 100vh;
+    width: 70%;
+    max-width: 260px;
+    background: rgba(245, 245, 245, 0.95);
+    box-shadow: 6px 0 12px rgba(0, 0, 0, 0.08);
+    padding-top: 50px;
+    transition: left 0.5s ease-in-out;
+    align-items: center;
+    z-index: 1000;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Show menu when clicked */
+  .nav-links.show {
+    left: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(50, 80, 50);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background 0.3s ease-in-out;
+  }
+
+  .nav-links a:hover {
+    background: rgba(200, 200, 200, 0.2);
+  }
+}
+
+
+
