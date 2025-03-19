@@ -10,8 +10,6 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-page">
-      <Header />
-      <Navbar />
       <div className="contact-content">
         {/* Form Section */}
         <div className="contact-form-container">

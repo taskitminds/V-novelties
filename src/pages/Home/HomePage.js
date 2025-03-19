@@ -113,8 +113,6 @@ const HomePage = () => {
   return (
     <div className="homepage">
       {/* Transparent Header and Navbar */}
-      <Header />
-      <Navbar />
       <section className="carousel">
         <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
         <div className="carousel-slider">
