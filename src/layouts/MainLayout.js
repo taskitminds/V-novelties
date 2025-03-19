@@ -8,6 +8,7 @@ import ProductsPage from "../pages/Products/ProductsPage";
 import ApplicationPage from "../pages/Application/ApplicationPage";
 import ContactPage from "../pages/Contact/ContactPage";
 import Header from "../components/Header/Header";
+import ProductList from "../pages/Products/ProductsPage";
 
 const MainLayout = () => {
   return (

@@ -1,64 +1,79 @@
-// ProductPage.js
-import React from 'react';
-import styles from './ProductsPage.css';
+import React from "react";
+import "./ProductsPage.css"; // Import CSS for styling
+import h1 from "../../assets/images/home/h1.webp";
+import h2 from "../../assets/images/home/h2.webp";
+import h3 from "../../assets/images/home/h3.webp";
+import { useState, useEffect } from "react";
 
-// Sample images (replace with actual image paths or URLs)
-// import sampleImage1 from './images/sample1.jpg';
-// import sampleImage2 from './images/sample2.jpg';
-// Add more sample images as needed
-
-const products = [
-  {
-    name: 'Abhal (Juniper)',
-    description: `Juniper is an herb; the Juniper berry extract is used to make medicine. It's used to treat urinary tract infections, kidney and bladder stones, snakebite, diabetes, and cancer. Applied to the skin for treating wounds and soreness in joints and muscles. Also used in beauty products like lipstick, foundation, hair conditioners, bath oils, and eye shadow.`,
-    benefits: [
-      'Potent diuretic enhancing urine flow.',
-      'Stimulates bile flow and digestive enzymes.',
-      'Contains antioxidants and phytochemicals.',
-      'Improves insulin production, reducing blood sugar levels.',
-    ],
-    // image: sampleImage1,
-  },
-  {
-    name: 'Apium Graveolens (Ajmoda)',
-    description: `Apium Graveolens seed extract is used in Ayurvedic medicine to treat flu, colds, water retention, digestive issues, spleen and liver disorders, and various types of arthritis. The whole plant, including roots, oil, and seeds, is used in medicine.`,
-    benefits: [
-      'Anti-inflammatory properties help reduce inflammation.',
-      'Beneficial in treating bronchitis, asthma, and chronic skin disorders.',
-      'Aids in digestion and improves liver health.',
-      'Used to treat anxiety, arthritis, high blood pressure, and insomnia.',
-    ],
-    // image: sampleImage2,
-  },
-  // Add more products as needed
+const carouselImages = [
+  { image: h1, title: "Natural Herbal Solutions", text: "Pure and organic extracts for health & wellness.", position: "left" },
+  { image: h2, title: "Essential Oils & Powders", text: "Premium quality essential oils for all industries.", position: "right" },
+  { image: h3, title: "Sustainable Herbal Products", text: "Eco-friendly and sustainable herbal solutions.", position: "left" },
 ];
 
-const ProductPage = () => {
+const products_list = [
+  { image: "https://media.post.rvohealth.io/wp-content/uploads/sites/2/2021/10/Screen-Shot-2021-10-07-at-11.08.27-PM.png", title: "Lemongrass", disc: "Powerful antioxidant anti-inflammatory antifungal and astringent Repels flies and insects safe on all kind of flooring- used as floor cleaning agent helps to relieve stress and anxiety(aromatherapy)", id: 3 },
+  { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VXfyJahnX6k5qMq8YlFDWWLhA_VKKhrEQw&s", title: "Palmarosa", disc: "Strongly antimicrobial Plays Effective role in personal care products (skin,care) Aromatherapy, used as ENT infections and relieves stress and anxiety", id: 3 },
+  { image: "https://mangalorespice.com/cdn/shop/products/AR_01-02.jpg?v=1734783469&width=1445", title: "Vettiver", disc: "Excellent anti-oxidant and anti-inflammatory property Highly benficial in personal care products such as skin care and perfumery Extermination of scars, stretch and other skin marks Promising ingredient for aromatherapy, has improved alertness, concentration power and brain function", id: 3 },
+  { image: "https://m.media-amazon.com/images/I/71ook9ul8wL._AC_UF1000,1000_QL80_.jpg", title: "Neem seed", disc: "", id: 1 },
+  { image: "https://www.greenvisionindia.com/wp-content/uploads/2022/09/Azaneem-10000.png", title: "Azardictin", disc: "", id: 1 },
+  { image: "https://www.secondmedic.com/app/asset/site_images/newproduct/WellnessForever202306174045217.webp", title: "Vcal", disc: "For growth, weight and activeness and Helps prevent problems of thin shell and broken egg and controls lameness", id: 2 },
+  { image: "https://vherbs.in/wp-content/uploads/2024/07/Image-7-1.png", title: "Vherbcare", disc: "Improves livability. Herbs to supports liver, gallbladder and stimulates bile production. Herbs to anti-inflammatory properties. Detoxifying and toxin binder herbs. Helps indigestion and sluggish liver. Better shell quality and reduced breakages ", id: 2 },
+  { image: "https://5.imimg.com/data5/SELLER/Default/2023/3/VC/ZO/SK/109952101/95-acacia-concinna-shikakai.jpg", title: "Acacia Concinna", disc: "", id: 4 },
+  { image: "https://5.imimg.com/data5/CK/BQ/CP/SELLER-44552119/sunsoil-100-natural-onion-allium-cepa-bulb-extract-quercetin-5--500x500.jpg", title: "Allium Cepa", disc: "", id: 4 },
+
+]
+
+const Product = ({ img, title, discr }) => {
   return (
-    <div className={styles.productPage}>
-      <header className={styles.header}>
-        <h1>Herbal Product Extract Supplier</h1>
-        <p>Your trusted source for high-quality herbal extracts.</p>
-      </header>
-      <section className={styles.products}>
-        {products.map((product, index) => (
-          <div key={index} className={styles.product}>
-            <img src={product.image} alt={product.name} className={styles.productImage} />
-            <div className={styles.productDetails}>
-              <h2>{product.name}</h2>
-              <p>{product.description}</p>
-              <h3>Benefits:</h3>
-              <ul>
-                {product.benefits.map((benefit, idx) => (
-                  <li key={idx}>{benefit}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+    <div className="product-card">
+      <img src={img} alt={title} className="product-img" />
+      <h4 className="product-title">{title}</h4>
+      <p className="product-description">{discr}</p>
+    </div>
+  );
+};
+
+const ProductsPage = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  var [productSlide, setProductSlide] = useState(0);
+
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [currentIndex, isHovered]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
+  };
+
+  return (
+    <div className="products-container">
+      <h1 className="navbar_prd_title">Our Products</h1>
+      <section className="products">
+        <div className="product-section-title">
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 0) }}>All</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 1) }}>Crop Care</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 2) }}>Animal Care</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 3) }}>Herbal Care</button>
+          <button className="section-title-button" onClick={() => { setProductSlide(productSlide = 4) }}>Personal Care</button>
+        </div>
+        <div className="product-cards">
+          {
+            products_list.map((prt, index) => (
+              productSlide === 0 ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : productSlide !== 0 && productSlide === prt.id ? <Product img={prt.image} title={prt.title} discr={prt.disc} /> : false
+
+            ))
+          }
+        </div>
       </section>
     </div>
   );
 };
 
-export default ProductPage;
+export default ProductsPage;
