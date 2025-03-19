@@ -36,16 +36,7 @@
     /* padding: 20px; */
   }
   
-  /* Breadcrumb Navigation */
 
-
-
-  /* Section Styling */
-  /* section {
-    padding: 40px 5%;
-    border-bottom: 1px solid #ddd;
-  }
-   */
   section h2,
   section h3 {
     color: var(--dark);
@@ -58,7 +49,7 @@
     font-size: 16px;
   }
   .a {
-    background-color: #F6EEE1;
+    /* background-color: #F6EEE1; */
     /* background-image: url("../../assets/images/about/abb.webp"); */
     background-size: cover;
     background-position: center;
@@ -69,9 +60,9 @@
     height: min-content;
     padding-left: 0;
     
-    padding-top: 150px;
+    padding-top: 140px;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     
     font-size: 28px; /* Balanced size for elegance */
     font-weight: 10; /* Extra light for a modern look */
@@ -184,130 +175,10 @@ text-align: center;
     font-size: 14px;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    section {
-      padding: 30px 3%;
-    }
-  
-    section h2,
-    section h3 {
-      font-size: 20px;
-    }
-  
-    .breadcrumb {
-      padding-top: 100px;
-      padding-left: 20px;
-      font-size: 12px;
-    }
-  
-    .about-image {
-      max-width: 10%;
-    }
-  }
-  
 
 /* ✅ Hide Menu Icon on Large Screens */
 .menu-icon {
   display: none;
-}
-
-/* ✅ Styles for Small Screens (up to 768px) */
-@media (max-width: 768px) {
-  /* Show Menu Icon */
-  .menu-icon {
-    display: block;
-    font-size: 26px;
-    cursor: pointer;
-    color: #333;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 1001;
-  }
-
-  /* Mobile Navigation Menu */
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 75%;
-    height: 100vh;
-    background: #fff;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
-    transition: left 0.3s ease-in-out;
-    padding-top: 60px;
-    z-index: 1050;
-  }
-
-  /* When Menu is Open */
-  .nav-links.show {
-    left: 0;
-  }
-
-  /* Menu Items */
-  .nav-links a {
-    padding: 15px;
-    text-align: center;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-  }
-
-  /* Overlay Effect */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 900;
-  }
-
-  .overlay.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /* Adjust Content Spacing */
-  .about-us {
-    padding: 20px;
-    text-align: center;
-  }
-
-  section {
-    padding: 30px 3%;
-  }
-
-  section h2, section h3 {
-    font-size: 20px;
-  }
-
-  .breadcrumb {
-    padding-top: 80px;
-    padding-left: 15px;
-    font-size: 12px;
-  }
-
-  .about-image {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .contact-info, .useful-links, .our-consortium {
-    text-align: center;
-  }
-
-  footer {
-    font-size: 12px;
-    padding: 15px 0;
-  }
 }
 
 
@@ -391,7 +262,7 @@ text-align: center;
 /* Main container holding the canvas */
 .container {
   position: relative; /* Enables positioning of child elements */
-  width: 99.8%; /* Almost full-width for responsiveness */
+  width: 99.7%; /* Almost full-width for responsiveness */
   max-width: 1400px; /* Maximum width to maintain a clean layout */
   margin: auto; /* Centers the container horizontally */
 }
@@ -417,7 +288,9 @@ text-align: center;
 .card {
   width: 90%; /* Makes the card take up most of the available width */
   padding: 20px; /* Internal padding for spacing */
-  background: linear-gradient(180deg, #32CD32, #7FFF00); /* Dark background color for contrast */
+  background-image: linear-gradient(180deg, rgb(0, 123, 255), rgb(114, 0, 218));
+
+  /* Dark background color for contrast */
   border-radius: 20px; /* Smooth rounded corners */
   position: relative; /* Allows the use of ::before and ::after pseudo-elements */
   display: flex; /* Flexbox layout for content alignment */
@@ -448,7 +321,8 @@ text-align: center;
   position: absolute; /* Positioned relative to the card */
   width: 100%; /* Nearly covers the card's width */
   height: 130%; /* Extends slightly beyond the card’s height */
-  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255)); /* Gradient animation colors */
+  background-image: linear-gradient(180deg, rgb(255, 69, 58), rgb(255, 165, 0));
+ /* Gradient animation colors */
   animation: rotBGimg 3s linear infinite; /* Continuous rotation animation */
   transition: all 0.2s linear; /* Smooth transition when animated */
 }
@@ -458,7 +332,7 @@ text-align: center;
   content: ''; /* Generates a pseudo-element */
   position: absolute; /* Positioned relative to the card */
   inset: 5px; /* Slightly smaller than the card to create an inner border effect */
-  background: #07182E; /* Same as card background for consistency */
+  background: rgb(44, 122, 63); /* Same as card background for consistency */
   border-radius: 15px; /* Rounded corners to match the card’s style */
 }
 
@@ -487,7 +361,7 @@ text-align: center;
   width: 1200px; 
   height: 270px; 
   padding: 0 20px; 
-  background: linear-gradient(180deg, #32CD32, #7FFF00); 
+  background-image: linear-gradient(180deg, rgb(255, 69, 58), rgb(255, 165, 0));
   border-radius: 20px; 
   position: relative; 
   margin: 20px; 
@@ -517,7 +391,7 @@ text-align: center;
   content: ''; 
   position: absolute; 
   inset: 5px; 
-  background: #07182E; 
+  background:rgb(44, 122, 63);
   border-radius: 15px; 
 }
 
@@ -579,4 +453,18 @@ text-align: center;
   display: inline-block;
   font-family: 'Great Vibes', cursive; /* Elegant cursive font */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

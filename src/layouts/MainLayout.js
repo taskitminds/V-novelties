@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import HomePage from "../pages/Home/HomePage";
@@ -8,6 +8,7 @@ import ProductsPage from "../pages/Products/ProductsPage";
 import ApplicationPage from "../pages/Application/ApplicationPage";
 import ContactPage from "../pages/Contact/ContactPage";
 import Header from "../components/Header/Header";
+import ProductList from "../pages/Products/ProductsPage";
 
 const MainLayout = () => {
   return (

@@ -93,7 +93,7 @@ const HomePage = () => {
     );
   };
 
-  /*who we are content*/ 
+  /*who we are content*/
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
   const [typedText, setTypedText] = useState("");
   const fullText =
@@ -141,27 +141,13 @@ const HomePage = () => {
       <section className="about" ref={ref}>
         <h3 className="section-title typing-animation">{typedText}</h3>
         <p className="about-description">
-          We focus the therapeutic and/or health giving importance of medicinal plants which is renowned as valuable folkloric medicine in southern parts of India which are selectively cornered, fractionated and evaluated for their potential against particular disorders and validate the possible mechanism behind the action as well
+          Since 2022, V novelties is dedicated to offer you the services as where your product search ends.  Our professionalism lies in manufacturing of products available in distinct customized specifications as per the requirements of clients / enduser.           V novelties is a competently governed firm committed in trading and manufacturing of Food Ingredients, Herbal extracts, Nutraceuticals, Agricultural& Pharmaceutical raw materials and final products
+          <br/>
+          We at V novelties preserve good business relationships with compliance to ethical business policies so as to maximize our patrons.
+          Our enlightenments into the market have sustained us to perform the industry better.
         </p>
       </section>
       <hr />
-      {/* Vision and Mission Section */}
-      <section className="book-container">
-        <div className="book-page left-page">
-          <h3 className="section-title">Our Vision</h3>
-          <p className="about-description">
-            Apparently the intent of mission, to isolate the bio-active natural products from plants and microorganisms which are applied to investigate diverse range of applications being experienced as an exemplary agent in major industrial needs.
-          </p>
-        </div>
-        <div className="book-page right-page">
-          <h3 className="section-title">Our Mission</h3>
-          <p className="about-description">
-            Precisely, extract and isolate the phytochemicals from plants with all its naturalness and preserve the therapeutic and/or health-giving properties entirely in order to cherish our customers naturally.
-            <br />
-            <br />
-          </p>
-        </div>
-      </section>
 
       {/* Templates of slides section*/}
       <div className="slider-container">
@@ -247,5 +233,5 @@ export default HomePage; // Export HomePage component as default
 
 
 
-/*<Product img="https://i.pinimg.com/236x/bf/58/96/bf5896dc6968b3f82e24de4b03791e8e.jpg" title='Tulasi' discr='This is tulasi'/> */ 
+/*<Product img="https://i.pinimg.com/236x/bf/58/96/bf5896dc6968b3f82e24de4b03791e8e.jpg" title='Tulasi' discr='This is tulasi'/> */
 

@@ -18,8 +18,9 @@ body {
 
 .about-description {
   font-size: 18px;
+  text-align: center;
   color: #4b5563;
-  max-width: 800px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
