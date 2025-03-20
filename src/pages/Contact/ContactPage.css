@@ -313,146 +313,101 @@ body {
 
 
 
-
-
-
-
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    padding-top: 65px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-}
-
-/* Main Container */
-.contact-us-page {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Contact Content Container */
-.contact-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 50px auto;
-}
-
-/* Form Section */
-.contact-form-container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    flex: 1;
-}
-
-.contact-form-container h2 {
-    color: rgb(44, 122, 63);
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.contact-form-container p {
-    color: #666;
-    margin-bottom: 30px;
-    font-size: 14px;
-}
-
-/* Form Inputs and Textarea */
-.contact-form-container form input,
-.contact-form-container form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    background-color: #f1f1f1;
-    font-size: 14px;
-}
-
-/* Textarea Specific Styles */
-.contact-form-container form textarea {
-    height: 120px;
-    resize: none;
-}
-
-/* Submit Button */
-.contact-form-container button {
-    background-color: rgb(44, 125, 63);
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.contact-form-container button:hover {
-    background-color: #004080;
-}
-
-/* Info Section */
-.contact-info-box {
-    background-color: rgb(44, 122, 63);
-    color: white;
-    padding: 40px;
-    border-radius: 20px;
-    flex: 0.7;
-}
-
-.contact-info-box h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/* Contact Details */
-.contact-info-box p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 15px;
-}
-
-/* Contact Links */
-.contact-link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-}
-
-.contact-link:hover {
-    color: #ccc;
-}
-
-.contact-link svg {
-    margin-right: 10px;
-}
-
-/* Social Media Icons */
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links i {
-    font-size: 22px;
-    margin-right: 12px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.social-links i:hover {
-    color: #ccc;
-}
+/*
+* ✅ Styles for Small Screens (up to 768px) */
+ @media (max-width: 768px) {
+   /* Show Menu Icon */
+   .menu-icon {
+     display: block;
+     font-size: 26px;
+     cursor: pointer;
+     color: #333;
+     position: absolute;
+     top: 15px;
+     right: 20px;
+     z-index: 1001;
+   }
+ 
+   /* Mobile Navigation Menu */
+   .nav-links {
+     display: flex;
+     flex-direction: column;
+     position: fixed;
+     top: 0;
+     left: -100%;
+     width: 75%;
+     height: 100vh;
+     background: #fff;
+     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+     transition: left 0.3s ease-in-out;
+     padding-top: 60px;
+     z-index: 1050;
+   }
+ 
+   /* When Menu is Open */
+   .nav-links.show {
+     left: 0;
+   }
+ 
+   /* Menu Items */
+   .nav-links a {
+     padding: 15px;
+     text-align: center;
+     display: block;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+     font-size: 18px;
+   }
+ 
+   /* Overlay Effect */
+   .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.3);
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity 0.3s ease-in-out;
+     z-index: 900;
+   }
+ 
+   .overlay.show {
+     opacity: 1;
+     visibility: visible;
+   }
+ 
+   /* Adjust Content Spacing */
+   .about-us {
+     padding: 20px;
+     text-align: center;
+   }
+ 
+   section {
+     padding: 30px 3%;
+   }
+ 
+   section h2, section h3 {
+     font-size: 20px;
+   }
+ 
+   .breadcrumb {
+     padding-top: 80px;
+     padding-left: 15px;
+     font-size: 12px;
+   }
+ 
+   .about-image {
+     max-width: 100%;
+     height: auto;
+   }
+ 
+   .contact-info, .useful-links, .our-consortium {
+     text-align: center;
+   }
+ 
+   footer {
+     font-size: 12px;
+     padding: 15px 0;
+   }
+ }
