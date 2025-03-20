@@ -20,9 +20,9 @@
 }
 
 .rnd-text-container h1 {
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin-bottom: 10px;
-    color: #8AC926;
+    color:  rgb(44, 122, 63);
 }
 
 .leaf-decorator {
@@ -32,8 +32,9 @@
 
 .rnd-text-container p,
 .rnd-text-container ul {
+    padding-top: 8px;
     font-size: 1.2rem;
-    line-height: 1.8;
+    line-height: 1.7;
     text-align: justify;
 }
 
@@ -53,11 +54,38 @@
     position: relative;
     flex: 1;
     text-align: center;
+    padding-top: 70px;
 }
 
 .rnd-image-container img {
     width: 550px;
-    height: 400px;
+    height: 460px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
