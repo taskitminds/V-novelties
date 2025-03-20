@@ -1,192 +1,162 @@
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #e0f7fa;
-}
-
-/* Container Styling */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-}
-
-/* Clouds Styling */
-.clouds-container {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  margin-bottom: 40px;
-}
-
-.cloud {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  background: white;
-  border-radius: 10%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cloud:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-}
-
-.cloud-title {
-  padding: 20px;
-  font-size: 1.2rem;
-  color: #00796b;
-}
-
-/* Sector Container */
-.sector-container {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-/* Sector Title */
-.sector-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Cards Container */
-.cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-/* Flip Card Styling */
-.flip-card {
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-.flip-card-front {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flip-card-back {
-  background-color: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  transform: rotateY(180deg);
-}
-
-/* Image Styling */
-.image-style {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
-/* Typing Effect */
-.typing {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) forwards;
-}
-
-/* Typing Animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-
-/* Typing Animation */
-@keyframes typing {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e0f7fa;
+  }
+  
+  /* Container Styling */
+  .application-app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  /* Clouds Styling */
+  .application-clouds-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 40px;
+  }
+  
+  .application-cloud {
+    position: relative;
+    width: 400px; /* Increased width */
+    height: auto; /* Allow height to adjust based on content */
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px; /* Increased padding for more space */
+    text-align: center;
+    overflow: hidden;
+    word-break: break-word; /* Ensures text wraps properly */
+  }
+  
+  .application-cloud:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .application-cloud-title {
+    font-size: 1.1rem;
+    color: #00796b;
+  }
+  
+  /* Sector Container */
+  .application-sector-container {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  /* Sector Title */
+  .application-sector-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Cards Container */
+  .application-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Flip Card Styling */
+  .application-flip-card {
+    perspective: 1000px;
+  }
+  
+  .application-flip-card-inner {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .application-flip-card:hover .application-flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .application-flip-card-front, .application-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .application-flip-card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .application-flip-card-back {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transform: rotateY(180deg);
+  }
+  
+  /* Image Styling */
+  .application-image-style {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  /* Typing Effect */
+  .application-typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: application-typing 3s steps(20, end) forwards;
+  }
+  
+  /* Typing Animation */
+  @keyframes application-typing {
     from { width: 0; }
     to { width: 100%; }
-}
-
-/* Blinking Cursor */
-@keyframes blink {
+  }
+  
+  /* Blinking Cursor */
+  @keyframes application-blink {
     50% { border-color: transparent; }
-}
-
-.a {
-  background-color: #F6EEE1;
-  background-image: url("../../assets/images/about/abb.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  }
   
-  margin: 0;
-  width: 100vw;
-  padding-left: 0;
+  /* Header Styling */
+  .application-a {
+    background-color: #F6EEE1;
+    background-image: url("../../assets/images/about/abb.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 100vw;
+    padding-left: 0;
+    padding-top: 150px;
+    text-align: center;
+    padding-bottom: 100px;
+    font-size: 28px;
+    font-weight: 10;
+    font-family: "Poppins", "Inter", sans-serif;
+    color: #222;
+    letter-spacing: 0.8px;
+    word-spacing: 1.5px;
+    text-transform: capitalize;
+    box-sizing: border-box;
+  }
   
-  padding-top: 150px;
-  text-align: center;
-  padding-bottom: 100px;
-  
-  font-size: 28px; /* Balanced size for elegance */
-  font-weight: 10; /* Extra light for a modern look */
-  font-family: "Poppins", "Inter", sans-serif; /* Clean, geometric modern font */
-  color: #222; /* Slightly softer black for a premium feel */
-  
-  letter-spacing: 0.8px; /* Subtle spacing to enhance readability */
-  word-spacing: 1.5px; /* Keeps text flowing naturally */
-  
-  text-transform: capitalize; /* Gives a refined, professional look */
-  
-  box-sizing: border-box;
-}
-
-/* Clouds Styling */
-.cloud {
-  position: relative;
-  width: 400px; /* Increased width */
-  height: auto; /* Allow height to adjust based on content */
-  background: white;
-  border-radius: 50px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 30px; /* Increased padding for more space */
-  text-align: center;
-  overflow: hidden;
-  word-break: break-word; /* Ensures text wraps properly */
-}
-
-.cloud-title {
-  font-size: 1.1rem;
-  color: #00796b;
-}
