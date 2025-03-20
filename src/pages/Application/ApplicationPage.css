@@ -1,312 +1,192 @@
- 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e0f7fa;
 }
 
-.header {
-    background-color: #2b7a33;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Container Styling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 
-.contact-info {
-    display: flex;
-    align-items: center;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.nav {
-    background-color: #f5f5f5;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    color: #2b7a33;
-    font-weight: bold;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.logo img {
-    margin-right: 10px;
-}
-
-.menu {
-    display: flex;
-    gap: 20px;
-}
-
-.menu a {
-    color: #2b7a33;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.menu a:hover {
-    text-decoration: underline;
-}
-
-.page-title {
-    text-align: center;
-    color: #2b7a33;
-    margin: 40px 0;
-    font-size: 36px;
-}
-
-.cloud-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 10%;
-    flex-wrap: wrap;
+/* Clouds Styling */
+.clouds-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 40px;
 }
 
 .cloud {
-    background-color: white;
-    border-radius: 30px;
-    padding: 25px 40px;
-    width: 40%;
-    min-width: 300px;
-    margin: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    position: relative;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border-radius: 10%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cloud:before {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    bottom: -10px;
-    left: 20px;
+.cloud:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
 }
 
-.cloud:after {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    bottom: -20px;
-    left: 50px;
+.cloud-title {
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #00796b;
 }
 
-.cloud p {
-    color: #2b7a33;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
+/* Sector Container */
+.sector-container {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin: 60px 5%;
+/* Sector Title */
+.sector-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.card {
-    background-color: white;
-    border-radius: 10px;
-    width: 300px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Cards Container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+/* Flip Card Styling */
+.flip-card {
+  perspective: 1000px;
 }
 
-.card-image {
-    height: 180px;
-    overflow: hidden;
+.flip-card-inner {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.card:hover .card-image img {
-    transform: scale(1.1);
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
-.card-content {
-    padding: 20px;
+.flip-card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-title {
-    color: #2b7a33;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.flip-card-back {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transform: rotateY(180deg);
 }
 
-.card-description {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.6;
+/* Image Styling */
+.image-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Typing Effect */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) forwards;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 
-/* From Uiverse.io by dylanharriscameron */ 
-.card {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    border-radius: 14px;
-    z-index: 1111;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-  }
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.a {
+  background-color: #F6EEE1;
+  background-image: url("../../assets/images/about/abb.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
-  .bg {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 90%;
-    height: 240px;
-    z-index: 2;
-    background: rgba(255, 255, 255, .95);
-    backdrop-filter: blur(24px);
-    border-radius: 10px;
-    overflow: hidden;
-    outline: 2px solid white;
-  }
+  margin: 0;
+  width: 100vw;
+  padding-left: 0;
   
-  .blob {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ff0000;
-    opacity: 1;
-    filter: blur(12px);
-    animation: blob-bounce 5s infinite ease;
-  }
+  padding-top: 150px;
+  text-align: center;
+  padding-bottom: 100px;
   
-  @keyframes blob-bounce {
-    0% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
-    }
+  font-size: 28px; /* Balanced size for elegance */
+  font-weight: 10; /* Extra light for a modern look */
+  font-family: "Poppins", "Inter", sans-serif; /* Clean, geometric modern font */
+  color: #222; /* Slightly softer black for a premium feel */
   
-    25% {
-      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
-    }
+  letter-spacing: 0.8px; /* Subtle spacing to enhance readability */
+  word-spacing: 1.5px; /* Keeps text flowing naturally */
   
-    50% {
-      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
-    }
+  text-transform: capitalize; /* Gives a refined, professional look */
   
-    75% {
-      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
-    }
-  
-    100% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
-    }
-  }
-  
+  box-sizing: border-box;
+}
 
-  .card {
-    width: 195px;
-    height: 285px;
-    background: #313131;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    transition: 0.2s ease-in-out;
-    position: relative;
-    cursor: pointer;
-  }
+/* Clouds Styling */
+.cloud {
+  position: relative;
+  width: 400px; /* Increased width */
+  height: auto; /* Allow height to adjust based on content */
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px; /* Increased padding for more space */
+  text-align: center;
+  overflow: hidden;
+  word-break: break-word; /* Ensures text wraps properly */
+}
 
-  .img {
-    height: 60%;
-    position: absolute;
-    transition: 0.2s ease-in-out;
-    z-index: 1;
-  }
-
-  .textBox {
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: end;
-    width: 100%;
-    height: 100%;
-    gap: 0em;
-    padding: 1em;
-    z-index: 5;
-    transition: 0.2s ease-in-out;
-  }
-
-  .textBox > .head {
-    font-size: 1em;
-    font-weight: bold;
-  }
-
-  .textBox > .price {
-    font-size: 1em;
-    font-weight: bold;
-  }
-
-  .textBox > .discription {
-    font-size: 0.8em;
-    color: lightgrey;
-    font-weight: light;
-  }
-
-  .card:hover > .textBox {
-    opacity: 1;
-    gap: 0.5em;
-  }
-
-  .card:hover > .img {
-    filter: blur(3px);
-    animation: anim 3s infinite ease-in-out;
-  }
-
-  @keyframes anim {
-    50% {
-      transform: translateY(-10%) rotate(5deg);
-    }
-  }
-
-  .card:hover {
-    transform: scale(1.04);
-  }
+.cloud-title {
+  font-size: 1.1rem;
+  color: #00796b;
+}
