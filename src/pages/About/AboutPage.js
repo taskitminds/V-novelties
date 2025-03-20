@@ -1,7 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header/Header'; // Ensure the Header component exists
 import './AboutPage.css';
-import Navbar from '../../components/Navbar/Navbar'; // Ensure the Navbar component exists
 import "../../assets/images/about/asdf.png";
 import "../../assets/images/about/cimg.png";
 
