@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import "./HomePage.css"; // Import the main CSS for HomePage
-import Header from "../../components/Header/Header";
-import Navbar from "../../components/Navbar/Navbar";
 import h1 from "../../assets/images/home/h1.webp";
 import h2 from "../../assets/images/home/h2.webp";
 import h3 from "../../assets/images/home/h3.webp";
