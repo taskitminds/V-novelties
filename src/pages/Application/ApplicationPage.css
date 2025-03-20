@@ -1,172 +1,192 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e0f7fa;
 }
 
-.rareHeader {
-    background-color: #2b7a33;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Container Styling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 
-.rareContactInfo {
-    display: flex;
-    align-items: center;
+/* Clouds Styling */
+.clouds-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 40px;
 }
 
-.rareSocialIcons {
-    display: flex;
-    gap: 10px;
+.cloud {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border-radius: 10%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.rareNav {
-    background-color: #f5f5f5;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
+.cloud:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
 }
 
-.rareLogo {
-    display: flex;
-    align-items: center;
-    color: #2b7a33;
-    font-weight: bold;
-    font-size: 24px;
-    text-decoration: none;
+.cloud-title {
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #00796b;
 }
 
-.rareLogo img {
-    margin-right: 10px;
+/* Sector Container */
+.sector-container {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.rareMenu {
-    display: flex;
-    gap: 20px;
+/* Sector Title */
+.sector-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.rareMenu a {
-    color: #2b7a33;
-    text-decoration: none;
-    font-weight: 500;
+/* Cards Container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
-.rareMenu a:hover {
-    text-decoration: underline;
+/* Flip Card Styling */
+.flip-card {
+  perspective: 1000px;
 }
 
-.rarePageTitle {
-    text-align: center;
-    color: #2b7a33;
-    margin: 40px 0;
-    font-size: 36px;
+.flip-card-inner {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.rareCloudContainer {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 10%;
-    flex-wrap: wrap;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.rareCloud {
-    background-color: white;
-    border-radius: 30px;
-    padding: 25px 40px;
-    width: 40%;
-    min-width: 300px;
-    margin: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    position: relative;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
-.rareCloud:before {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    bottom: -10px;
-    left: 20px;
+.flip-card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.rareCloud:after {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    bottom: -20px;
-    left: 50px;
+.flip-card-back {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transform: rotateY(180deg);
 }
 
-.rareCloud p {
-    color: #2b7a33;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
+/* Image Styling */
+.image-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
-.rareCardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin: 60px 5%;
+/* Typing Effect */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) forwards;
 }
 
-.rareCard {
-    background-color: white;
-    border-radius: 10px;
-    width: 300px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-.rareCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
-.rareCardImage {
-    height: 180px;
-    overflow: hidden;
+/* Blinking Cursor */
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
-.rareCardImage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+.a {
+  background-color: #F6EEE1;
+  background-image: url("../../assets/images/about/abb.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  margin: 0;
+  width: 100vw;
+  padding-left: 0;
+  
+  padding-top: 150px;
+  text-align: center;
+  padding-bottom: 100px;
+  
+  font-size: 28px; /* Balanced size for elegance */
+  font-weight: 10; /* Extra light for a modern look */
+  font-family: "Poppins", "Inter", sans-serif; /* Clean, geometric modern font */
+  color: #222; /* Slightly softer black for a premium feel */
+  
+  letter-spacing: 0.8px; /* Subtle spacing to enhance readability */
+  word-spacing: 1.5px; /* Keeps text flowing naturally */
+  
+  text-transform: capitalize; /* Gives a refined, professional look */
+  
+  box-sizing: border-box;
 }
 
-.rareCard:hover .rareCardImage img {
-    transform: scale(1.1);
+/* Clouds Styling */
+.cloud {
+  position: relative;
+  width: 400px; /* Increased width */
+  height: auto; /* Allow height to adjust based on content */
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px; /* Increased padding for more space */
+  text-align: center;
+  overflow: hidden;
+  word-break: break-word; /* Ensures text wraps properly */
 }
 
-.rareCardContent {
-    padding: 20px;
-}
-
-.rareCardTitle {
-    color: #2b7a33;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.rareCardDescription {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.6;
+.cloud-title {
+  font-size: 1.1rem;
+  color: #00796b;
 }
