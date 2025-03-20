@@ -1,7 +1,5 @@
 import React from 'react';
 import './ContactPage.css';
-import Navbar from '../../components/Navbar/Navbar';
-import Header from '../../components/Header/Header';
 import { Mail, MapPin, Phone, User } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 

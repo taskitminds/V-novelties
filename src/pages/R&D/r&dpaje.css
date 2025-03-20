@@ -1,0 +1,51 @@
+/* R&D Page Styling */
+.rnd-page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.rnd-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title Styling */
+.rnd-title {
+    font-size: 2.8rem;
+    color: #b30000;
+    margin-bottom: 25px;
+}
+
+/* Subtitle Styling */
+.rnd-subtitle {
+    font-size: 2rem;
+    color: #007f00;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Section Container */
+.rnd-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+/* Paragraph Styling */
+.rnd-section p {
+    font-size: 1.1rem;
+    color: #b30000;
+    line-height: 1.8;
+}

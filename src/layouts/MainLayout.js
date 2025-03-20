@@ -9,6 +9,7 @@ import ApplicationPage from "../pages/Application/ApplicationPage";
 import ContactPage from "../pages/Contact/ContactPage";
 import Header from "../components/Header/Header";
 import ProductList from "../pages/Products/ProductsPage";
+import RandD from "../pages/R&D/r&dpaje";
 
 const MainLayout = () => {
   return (
@@ -21,6 +22,7 @@ const MainLayout = () => {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/application" element={<ApplicationPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/research" element={<RandD />} />
       </Routes>
       <Footer />
     </Router>
