@@ -5,11 +5,11 @@ import styled from 'styled-components';
 var listcard = [{title:"",image:"",des:""}]
 
 
-const Card = (title,image,des) => {
+const Card = ({title,image,des}) => {
   return (
     <StyledWrapper>
-      <div className="card">
-        <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.37 1277.39" clipRule="evenodd" fillRule="evenodd" imageRendering="optimizeQuality" textRendering="geometricPrecision" shapeRendering="geometricPrecision" version="1.1" height="100%" width="100%" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" className="img">
+      <div className="rareCard">
+        <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.37 1277.39" clipRule="evenodd" fillRule="evenodd" imageRendering="optimizeQuality" textRendering="geometricPrecision" shapeRendering="geometricPrecision" version="1.1" height="100%" width="100%" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" className="rareImage">
           <g id="Layer_x0020_1">
             <metadata id="CorelCorpID_0Corel-Layer" />
             <g id="_1421394342400">
@@ -24,10 +24,10 @@ const Card = (title,image,des) => {
             </g>
           </g>
         </svg>
-        <div className="textBox">
-          <p className="head">{title}</p>
-          <p className="discription">{des}</p>
-          <p className="price">1.654,34€</p>
+        <div className="rareTextBox">
+          <p className="rareHead">{title}</p>
+          <p className="rareDescription">{des}</p>
+          <p className="rarePrice">1.654,34€</p>
         </div>
       </div>
     </StyledWrapper>
@@ -35,7 +35,7 @@ const Card = (title,image,des) => {
 }
 
 const StyledWrapper = styled.div`
-  .card {
+  .rareCard {
     width: 195px;
     height: 285px;
     background: #313131;
@@ -50,14 +50,14 @@ const StyledWrapper = styled.div`
     cursor: pointer;
   }
 
-  .img {
+  .rareImage {
     height: 60%;
     position: absolute;
     transition: 0.2s ease-in-out;
     z-index: 1;
   }
 
-  .textBox {
+  .rareTextBox {
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -71,28 +71,28 @@ const StyledWrapper = styled.div`
     transition: 0.2s ease-in-out;
   }
 
-  .textBox > .head {
+  .rareTextBox > .rareHead {
     font-size: 1em;
     font-weight: bold;
   }
 
-  .textBox > .price {
+  .rareTextBox > .rarePrice {
     font-size: 1em;
     font-weight: bold;
   }
 
-  .textBox > .discription {
+  .rareTextBox > .rareDescription {
     font-size: 0.8em;
     color: lightgrey;
     font-weight: light;
   }
 
-  .card:hover > .textBox {
+  .rareCard:hover > .rareTextBox {
     opacity: 1;
     gap: 0.5em;
   }
 
-  .card:hover > .img {
+  .rareCard:hover > .rareImage {
     filter: blur(3px);
     animation: anim 3s infinite ease-in-out;
   }
@@ -103,34 +103,34 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .card:hover {
+  .rareCard:hover {
     transform: scale(1.04);
-  }`;
-
+  }
+`;
 
 
 export default function ApplicationPage() {
   return (
     <>
-    <h1 class="page-title">Application</h1>
+    <h1 className="rarePageTitle">Application</h1>
     
-    <div class="cloud-container">
-        <div class="cloud">
+    <div className="rareCloudContainer">
+        <div className="rareCloud">
             <p><strong>Industries, be in the service of/perform duties on</strong></p>
         </div>
-        <div class="cloud">
+        <div className="rareCloud">
             <p><strong>Formulated products that serve a vast range of industries but unbounded</strong></p>
         </div>
     </div>
     {
-    <div class="card-container">
+    <div className="rareCardContainer">
         {
             listcard.map((cad,index)=>(
-                <Card title={cad.title} image={cad.image} des={cad.des}/>
+                <Card title={cad.title} image={cad.image} des={cad.des} key={index}/>
             ))
         }
     </div>
 }
     </>
   )
-}
+} 
