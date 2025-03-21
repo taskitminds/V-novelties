@@ -81,7 +81,7 @@ const ContactUs = () => {
             </a>
           </p>
 
-          <p><User size={24} /> &nbsp; name</p>
+          <p><User size={24} /> &nbsp; P KAMALA KANNAN</p>
 
           {/* Phone - Opens Dial Pad */}
           <p>
