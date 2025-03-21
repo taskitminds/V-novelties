@@ -11,7 +11,7 @@ import Header from "../components/Header/Header";
 import RandD from "../pages/R&D/r&dpaje";
 
 const MainLayout = () => {
-  return (
+  return ( 
     <Router>
       <Header />
       <Navbar />

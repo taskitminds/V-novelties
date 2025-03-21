@@ -74,6 +74,56 @@
 
 
 
+/*media query*/
+/* Ultra Small Devices (Smart Watches, Older Mobiles) */
+@media only screen and (max-width: 320px) {
+    /* Styles for ultra-small devices */
+}
+
+/* Very Small Devices (Small Smartphones) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    /* Styles for very small devices */
+}
+
+/* Small Devices (Standard Smartphones) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    /* Styles for standard smartphones */
+}
+
+/* Large Mobile Devices (Phablets, Larger Phones) */
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    /* Styles for large mobile devices */
+}
+
+/* Small Tablets (Landscape Mobile, Small Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles for small tablets */
+}
+
+/* Medium Devices (Tablets) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for tablets */
+}
+
+/* Large Devices (Laptops, Desktops) */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    /* Styles for laptops and desktops */
+}
+
+/* Extra Large Devices (Large Desktops, Monitors) */
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+    /* Styles for large desktops */
+}
+
+/* Ultra Large Devices (4K Displays, Smart TVs) */
+@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+    /* Styles for 4K Displays */
+}
+
+/* Massive Screens (8K Displays and Above) */
+@media only screen and (min-width: 2560px) {
+    /* Styles for massive screens */
+}
 
 
 
