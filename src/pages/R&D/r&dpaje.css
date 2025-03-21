@@ -1,141 +1,153 @@
+/* Container - Main Card Styling */
+.rnd-container {
+    position: relative; /* Ensures child elements are positioned relative to this parent */
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px; /* Maximum width of the container */
+    margin: auto;
+    padding: 90px; /* Spacing inside the container */
+    
+    /* Background Styling */
+    background: 
+        linear-gradient(115deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), /* Dark overlay for better text visibility */
+        url('../../assets/images/home/r&d.webp'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Styling Enhancements */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Drop shadow for depth */
+    overflow: hidden; /* Ensures content doesn't exceed the container */
+    transition: transform 0.4s, box-shadow 0.4s; /* Smooth transition effects */
+}
+
+/* Parallax Effect - Creates a background depth illusion */
+.rnd-container::after {
+    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Copies the background of parent */
+    background-size: 120%; /* Slightly enlarged background for better effect */
+    background-position: center;
+    z-index: -1; /* Makes sure this layer is behind the content */
+    filter: blur(5px); /* Blurs the background */
+    transform: scale(1.1); /* Slightly enlarges for better visual effect */
+    transition: all 6s ease; /* Smooth transformation */
+}
+
+/* Zoom-in Effect - Makes background scale slightly on hover */
+.rnd-container:hover::after {
+    transform: scale(1.05); /* Creates zoom effect */
+}
+
+/* Glassmorphism Effect - Text Container */
+.rnd-text-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.12); /* Slightly transparent white background */
+    backdrop-filter: blur(12px); /* Glassmorphism blur effect */
+    border-radius: 15px; /* Rounded corners */
+    padding: 40px; /* Spacing inside the text container */
+    z-index: 2; /* Ensures it's on top of the background */
+    text-align: left;
+    color: white; /* Text color */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Border for visual enhancement */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
+    transition: background 0.4s, box-shadow 0.4s; /* Smooth transition effects */
+}
+
+/* Text Title */
+.rnd-text-container h1 {
+    font-size: 3rem; /* Large heading size */
+    margin-bottom: 25px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #2c7a3f, #57d169); /* Gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Text gradient effect */
+}
+
+/* List Styling */
+.rnd-text-container ul {
+    list-style-type: none;
+    padding-left: 0; /* Removes default padding */
+    font-size: 1.2rem; /* Increases text size */
+    line-height: 1.8; /* Better readability */
+}
+
+/* Bullet Points */
+.rnd-text-container ul li {
+    margin-bottom: 15px; /* Space between each list item */
+    padding-left: 28px; /* Space for icon */
+    position: relative;
+}
+
+/* Leaf Icon for Each Bullet Point */
+.rnd-text-container ul li::before {
+    content: "🌿"; /* Adds a leaf icon */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Interactive Shadows - Enhances glow effect on hover */
+.rnd-text-container:hover {
+    background: rgba(255, 255, 255, 0.15); /* Slightly more transparent */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Stronger shadow effect */
+}
+
+/* Responsive Styling for Tablets */
+@media (max-width: 991px) {
+    .rnd-container {
+        padding: 60px;
+    }
+    .rnd-text-container h1 {
+        font-size: 2.5rem;
+    }
+    .rnd-text-container ul {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+    .rnd-container {
+        padding: 40px;
+    }
+    .rnd-text-container h1 {
+        font-size: 2rem;
+    }
+    .rnd-text-container ul {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Devices (Mobile) */
+@media (max-width: 576px) {
+    .rnd-container {
+        padding: 30px;
+    }
+    .rnd-text-container {
+        padding: 20px;
+    }
+    .rnd-text-container h1 {
+        font-size: 1.8rem;
+    }
+    .rnd-text-container ul {
+        font-size: 0.9rem;
+    }
+}
+
 /* Main Page Styling */
 .rnd-page {
-    padding: 60px 20px;
+    padding-top: 60px; /* This will push the background 60px down */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
 }
-
-/* Container */
-.rnd-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1300px;
-    margin: auto;
-    gap: 30px;
-}
-
-/* Text Container */
-.rnd-text-container {
-    flex: 1.5;
-    padding-right: 30px;
-}
-
-.rnd-text-container h1 {
-    font-size: 2.3rem;
-    margin-bottom: 10px;
-    color:  rgb(44, 122, 63);
-}
-
-.leaf-decorator {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.rnd-text-container p,
-.rnd-text-container ul {
-    padding-top: 8px;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    text-align: justify;
-}
-
-/* Styling the list */
-.rnd-text-container ul {
-    list-style-type: disc;
-    padding-left: 40px;  /* Increased padding for better indentation */
-    margin-bottom: 30px;
-}
-
-.rnd-text-container ul li {
-    margin-bottom: 15px; /* Slightly increased for better readability */
-}
-
-/* Image Container */
-.rnd-image-container {
-    position: relative;
-    flex: 1;
-    text-align: center;
-    padding-top: 70px;
-}
-
-.rnd-image-container img {
-    width: 550px;
-    height: 460px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-
-
-
-
-
-
-
-
-
-
-/*media query*/
-/* Ultra Small Devices (Smart Watches, Older Mobiles) */
-@media only screen and (max-width: 320px) {
-    /* Styles for ultra-small devices */
-}
-
-/* Very Small Devices (Small Smartphones) */
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-    /* Styles for very small devices */
-}
-
-/* Small Devices (Standard Smartphones) */
-@media only screen and (min-width: 481px) and (max-width: 576px) {
-    /* Styles for standard smartphones */
-}
-
-/* Large Mobile Devices (Phablets, Larger Phones) */
-@media only screen and (min-width: 577px) and (max-width: 767px) {
-    /* Styles for large mobile devices */
-}
-
-/* Small Tablets (Landscape Mobile, Small Tablets) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* Styles for small tablets */
-}
-
-/* Medium Devices (Tablets) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    /* Styles for tablets */
-}
-
-/* Large Devices (Laptops, Desktops) */
-@media only screen and (min-width: 1200px) and (max-width: 1599px) {
-    /* Styles for laptops and desktops */
-}
-
-/* Extra Large Devices (Large Desktops, Monitors) */
-@media only screen and (min-width: 1600px) and (max-width: 1919px) {
-    /* Styles for large desktops */
-}
-
-/* Ultra Large Devices (4K Displays, Smart TVs) */
-@media only screen and (min-width: 1920px) and (max-width: 2559px) {
-    /* Styles for 4K Displays */
-}
-
-/* Massive Screens (8K Displays and Above) */
-@media only screen and (min-width: 2560px) {
-    /* Styles for massive screens */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
