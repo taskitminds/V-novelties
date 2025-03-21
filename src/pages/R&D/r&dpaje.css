@@ -151,3 +151,71 @@
     padding-bottom: 40px;
 }
 
+
+/* Large Desktops (Above 1200px) */
+@media (min-width: 1200px) {
+    .rnd-container {
+        padding: 90px;
+    }
+    .rnd-text-container h1 {
+        font-size: 3rem;
+    }
+    .rnd-text-container ul {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktops & Tablets (991px - 1200px) */
+@media (min-width: 991px) and (max-width: 1200px) {
+    .rnd-container {
+        padding: 80px;
+    }
+    .rnd-text-container h1 {
+        font-size: 2.8rem;
+    }
+    .rnd-text-container ul {
+        font-size: 1.15rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .rnd-container {
+        padding: 60px;
+    }
+    .rnd-text-container h1 {
+        font-size: 2.5rem;
+    }
+    .rnd-text-container ul {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Devices (576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .rnd-container {
+        padding: 40px;
+    }
+    .rnd-text-container h1 {
+        font-size: 2rem;
+    }
+    .rnd-text-container ul {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Devices (Below 576px) */
+@media (max-width: 576px) {
+    .rnd-container {
+        padding: 30px;
+    }
+    .rnd-text-container {
+        padding: 20px;
+    }
+    .rnd-text-container h1 {
+        font-size: 1.8rem;
+    }
+    .rnd-text-container ul {
+        font-size: 0.9rem;
+    }
+}
