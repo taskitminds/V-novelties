@@ -98,7 +98,7 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 485px) {
   .top-banner {
     display: none;
   }

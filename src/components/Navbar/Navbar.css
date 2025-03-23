@@ -203,7 +203,7 @@
 }
 
 /* ✅ Small Screens Below 426px */
-@media (max-width: 426px) {
+@media (max-width: 480px) {
   .navbar {
     top: 0;
     padding: 0 10px; /* Adjust padding for a compact look */
