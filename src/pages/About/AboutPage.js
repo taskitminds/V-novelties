@@ -4,6 +4,7 @@ import "../../assets/images/about/asdf.png";
 import "../../assets/images/about/cimg.png";
 
 
+
 const AboutUs = () => {
   return (
     <div className="about-us">
