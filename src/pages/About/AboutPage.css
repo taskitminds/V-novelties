@@ -357,7 +357,7 @@ text-align: center;
 /* Main container holding the canvas */
 .container {
   position: relative; /* Enables positioning of child elements */
-  width: 99.7%; /* Almost full-width for responsiveness */
+  width: 1200px; /* Almost full-width for responsiveness */
   max-width: 1400px; /* Maximum width to maintain a clean layout */
   margin: auto; /* Centers the container horizontally */
 }
@@ -381,7 +381,7 @@ text-align: center;
 
 /* Main card element */
 .card {
-  width: 90%; /* Makes the card take up most of the available width */
+  width:  calc(100% - 0px); /* Makes the card take up most of the available width */
   padding: 20px; /* Internal padding for spacing */
   background-image: linear-gradient(180deg, rgb(0, 123, 255), rgb(114, 0, 218));
 
@@ -517,10 +517,10 @@ text-align: center;
 @keyframes rotBGimg {  
   from { transform: rotate(0deg); }  
   to { transform: rotate(360deg); }  
-}  
+} 
 
 
-@keyframes fall {
+ @keyframes fall {
   0% {
     transform: translateY(-10vh) rotate(0deg);
     opacity: 1;
@@ -529,7 +529,7 @@ text-align: center;
     transform: translateY(100vh) rotate(360deg);
     opacity: 0;
   }
-}
+} 
 
 .animate-fall {
   position: absolute;
@@ -550,15 +550,23 @@ text-align: center;
 }
 
 
-/* Ultra Small Devices (Smart Watches, Older Mobiles) */
+
 @media only screen and (max-width: 320px) {
 
   * {
     box-sizing: border-box;
+    max-width: 100%;
   }
 
-  body {
+  .animate-fall {
+    display: none !important; /* Completely hides the leaf */
+  }
+
+  body, html {
     overflow-x: hidden; /* Prevents unwanted horizontal scroll */
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   .container {
@@ -570,20 +578,24 @@ text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px; /* Adds space between cards */
+    width: 100%;
   }
 
   .about-us {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
-    margin: 0;
+    padding-top: 5px; /* Reduced space at top */
+    margin-bottom: 20px; /* Adds space below About Us section */
   }
 
   .a {
     margin: 0;
-    padding: 0;
-  }
+    padding-top: 10px;
+    margin-bottom: 20px; /* Adds space between "About Us" and the box below */
+}
+
 
   .a h1 {
     font-size: 2rem;
@@ -591,13 +603,21 @@ text-align: center;
     -webkit-font-smoothing: antialiased;
   }
 
+  .typing {
+    animation: none; /* Disables typing animation */
+    border-right: none; /* Removes the blinking cursor */
+    white-space: normal; /* Allows text wrapping */
+    display: inline; /* Ensures the text remains visible */
+  }
+
   /* Mission Section */
   .mission {
     width: calc(100% - 20px);
-    margin-bottom: 5px;
+    max-width: 1200px;
     text-align: center;
     padding: 12px 15px;
-
+    height: auto;
+    margin-bottom: -20px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     position: relative;
@@ -625,9 +645,10 @@ text-align: center;
   /* Our Mission Section */
   .our-mission {
     width: calc(100% - 20px);
-    margin-bottom: 5px;
+    max-width: 100%;
     text-align: center;
     padding: 12px 15px;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     position: relative;
@@ -651,51 +672,68 @@ text-align: center;
     padding: 0 10px;
     color: #FAFAFA;
   }
+
+  /* Who We Are Section */
   .who-we-are {
-    width: calc(100% - 20px);
-    margin-left: 3%;
-    margin-right: -18%;
-    margin-bottom: 1px; /* Increased margin for better separation */
+    width: 100%;
+    max-width: 100%;
     text-align: center;
     padding: 1px;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    background: transparent;
     position: relative;
     z-index: 1;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    word-wrap: break-word; /* Fixed: Properly wraps text */
-    overflow-wrap: break-word; /* Improved compatibility */
-}
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 
-/* Heading styling */
-.who-we-are h2 {
+  /* Heading styling */
+  .who-we-are h2 {
     font-size: 1.3rem;
     margin-bottom: 8px;
     font-weight: bold;
     color: #FAFAFA;
-    -webkit-font-smoothing: antialiased; /* Makes text smoother on some devices */
-}
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* Paragraph styling */
-.who-we-are p {
+  /* Paragraph styling */
+  .who-we-are p {
     font-size: 0.95rem;
     line-height: 1.8;
     margin: 5px 0;
     text-align: justify;
     padding: 0 10px;
     color: #FAFAFA;
-    word-break: break-word; /* Prevents text overflow */
+    word-break: break-word;
+  }
+
+  /* Adjusting Word Spacing */
+  .mission p,
+  .our-mission p,
+  .who-we-are p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 5px 0;
+    text-align: center;
+    padding: 0 10px;
+    color: #FAFAFA;
+    word-break: break-word;
+    word-spacing: -0.5px;
+  }
+
+  .leaf-bg {
+    background: url("../../assets/images/about/banana_leaf2.webp") no-repeat center center/cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    font-family: 'Great Vibes', cursive;
+  }
 }
-}
-
-
-
-
-
-
-
-
-
 
 /* Very Small Devices (Small Smartphones) */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
