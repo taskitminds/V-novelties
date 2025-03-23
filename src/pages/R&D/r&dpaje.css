@@ -219,3 +219,20 @@
         font-size: 0.9rem;
     }
 }
+
+
+@media only screen and (min-width: 320px)  {
+    /* Styles for very small devices */
+    .rnd-container {
+        padding: 20px;
+    }
+    .rnd-text-container {
+        padding: 20px;
+    }
+    .rnd-text-container h1 {
+        font-size: 1.2rem;
+    }
+    .rnd-text-container ul {
+        font-size: 0.8rem;
+    }
+}

@@ -86,7 +86,7 @@ const ContactUs = () => {
           {/* Phone - Opens Dial Pad */}
           <p>
             <a 
-              href="tel:+918248280830" 
+              href="tel:+918248280830"
               className="contact-link"
             >
               <Phone size={24} /> &nbsp; +91-82482 80830

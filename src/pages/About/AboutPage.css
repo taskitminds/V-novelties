@@ -550,6 +550,198 @@ text-align: center;
 }
 
 
+/* Ultra Small Devices (Smart Watches, Older Mobiles) */
+@media only screen and (max-width: 320px) {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden; /* Prevents unwanted horizontal scroll */
+  }
+
+  .container {
+    width: 100%;
+    height: 30%;
+  }
+
+  .sections-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .a {
+    margin: 0;
+    padding: 0;
+  }
+
+  .a h1 {
+    font-size: 2rem;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Mission Section */
+  .mission {
+    width: calc(100% - 20px);
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 12px 15px;
+
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow-wrap: break-word;
+  }
+
+  .mission h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #FAFAFA;
+  }
+
+  .mission p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 5px 0;
+    text-align: justify;
+    padding: 0 10px;
+    color: #FAFAFA;
+  }
+
+  /* Our Mission Section */
+  .our-mission {
+    width: calc(100% - 20px);
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow-wrap: break-word;
+  }
+
+  .our-mission h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #FAFAFA;
+  }
+
+  .our-mission p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 5px 0;
+    text-align: justify;
+    padding: 0 10px;
+    color: #FAFAFA;
+  }
+  .who-we-are {
+    width: calc(100% - 20px);
+    margin-left: 3%;
+    margin-right: -18%;
+    margin-bottom: 1px; /* Increased margin for better separation */
+    text-align: center;
+    padding: 1px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    word-wrap: break-word; /* Fixed: Properly wraps text */
+    overflow-wrap: break-word; /* Improved compatibility */
+}
+
+/* Heading styling */
+.who-we-are h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #FAFAFA;
+    -webkit-font-smoothing: antialiased; /* Makes text smoother on some devices */
+}
+
+/* Paragraph styling */
+.who-we-are p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 5px 0;
+    text-align: justify;
+    padding: 0 10px;
+    color: #FAFAFA;
+    word-break: break-word; /* Prevents text overflow */
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* Very Small Devices (Small Smartphones) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  /* Styles for very small devices */
+}
+
+/* Small Devices (Standard Smartphones) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+  /* Styles for standard smartphones */
+}
+
+/* Large Mobile Devices (Phablets, Larger Phones) */
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  /* Styles for large mobile devices */
+}
+
+/* Small Tablets (Landscape Mobile, Small Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Styles for small tablets */
+}
+
+/* Medium Devices (Tablets) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for tablets */
+}
+
+/* Large Devices (Laptops, Desktops) */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  /* Styles for laptops and desktops */
+}
+
+/* Extra Large Devices (Large Desktops, Monitors) */
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  /* Styles for large desktops */
+}
+
+/* Ultra Large Devices (4K Displays, Smart TVs) */
+@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+  /* Styles for 4K Displays */
+}
+
+/* Massive Screens (8K Displays and Above) */
+@media only screen and (min-width: 2560px) {
+  /* Styles for massive screens */
+}
+
 
 
 
