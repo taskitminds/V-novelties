@@ -1,33 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import "./ApplicationPage.css";
+//import "../../assets/images/application/";
 
 const sectors = [
   {
     name: 'Agriculture',
     images: [
-      { src: 'https://media.istockphoto.com/id/506164764/photo/tractor-spraying-soybean-field.jpg', text: 'Sustainable Farming Practices' },
-      { src: 'https://media.istockphoto.com/id/1270570904/photo/harvesting-machine-approaching-wheat.jpg', text: 'Crop Management Solutions' },
-      { src: 'https://media.istockphoto.com/id/615269462/photo/tractor-mowing-green-field.jpg', text: 'Advanced Irrigation Techniques' },
-      { src: 'https://media.istockphoto.com/id/1447011226/photo/hydroponic-robot-farming.jpg', text: 'Organic Farming Methods' }
+      { src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFncmljdWx0dXJlfGVufDB8fDB8fHww', text: 'Sustainable Farming Practices' },
+      { src: 'https://www.shutterstock.com/image-photo/drone-shot-tractor-spraying-lush-600nw-2464594961.jpg', text: 'Crop Management Solutions' },
+      { src: 'https://media.istockphoto.com/id/506164764/photo/tractor-spraying-soybean-field.jpg?s=612x612&w=0&k=20&c=h27yHr07QNSghYS20iwYBCGjZIa2HlXqrZDkM0ZsYEw=', text: 'Advanced Irrigation Techniques' },
+      { src: 'https://t3.ftcdn.net/jpg/03/40/70/04/360_F_340700428_AquH6hbzeMOYLQ6g6kfWAMuUvfw60Zd1.jpg', text: 'Organic Farming Methods' }
     ]
   },
   {
     name: 'Dairy',
     images: [
-      { src: '/images/dairy1.jpg', text: 'High-Quality Milk Production' },
-      { src: '/images/dairy2.jpg', text: 'Dairy Farm Management' },
-      { src: '/images/dairy3.jpg', text: 'Innovative Dairy Products' },
-      { src: '/images/dairy4.jpg', text: 'Sustainable Dairy Farming' }
+      { src: 'https://t4.ftcdn.net/jpg/01/45/60/21/360_F_145602173_05uVexifBuCvWIKvsHGWNuIpPtp5ShkI.jpg', text: 'High-Quality Milk Production' },
+      { src: 'https://img.freepik.com/premium-photo/still-life-with-dairy-product_772702-4885.jpg?semt=ais_hybrid', text: 'Dairy Farm Management' },
+      { src: 'https://media.istockphoto.com/id/1297005860/photo/raw-milk-being-poured-into-container.jpg?s=612x612&w=0&k=20&c=5Xumh49_zYs9GjLkGpZXM41tS17K8M-svN9jLMv0JpE=', text: 'Innovative Dairy Products' },
+      { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQydcpjZgoRb33Z6HWMx-ohiEyxKAy1K0B57q3kHONs2C84SCa8xXWMgP9c5MLg-j0Joos&usqp=CAU', text: 'Sustainable Dairy Farming' }
     ]
   },
   {
     name: 'Food',
     images: [
-      { src: '/images/food1.jpg', text: 'Healthy Food Production' },
-      { src: '/images/food2.jpg', text: 'Organic Ingredients' },
-      { src: '/images/food3.jpg', text: 'Quality Control' },
-      { src: '/images/food4.jpg', text: 'Food Safety Standards' }
+      { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUPZ8Hv38DtbZs2gqhTLkKT-MgbmHTHpdHVw&s', text: 'Healthy Food Production' },
+      { src: 'https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?s=612x612&w=0&k=20&c=v48RE0ZNWpMZOlSp13KdF1yFDmidorO2pZTu2Idmd3M=', text: 'Organic Ingredients' },
+      { src: 'https://images.squarespace-cdn.com/content/v1/57879a6cbebafb879f256735/1712832754805-I7IJ7FRXF629FN3PIS3O/KC310124-27.jpg', text: 'Quality Control' },
+      { src: 'https://t3.ftcdn.net/jpg/02/60/12/88/360_F_260128861_Q2ttKHoVw2VrmvItxyCVBnEyM1852MoJ.jpg', text: 'Food Safety Standards' }
     ]
   },
 ];
@@ -42,8 +43,16 @@ const ApplicationPage = () => {
   }, []);
 
   return (
-    <div className="application-app-container">
-      <h1 className='application-a'><span className='application-typing'>Application</span></h1>
+    <div className="appli">
+      <div className="a relative text-center py-6 overflow-hidden">
+        {/* Banana Leaf Background */}
+        <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
+          {/* About Us Title */}
+          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
+            Application
+          </h1>
+        </div>
+        </div>
 
       {/* Cloud Templates */}
       <motion.div

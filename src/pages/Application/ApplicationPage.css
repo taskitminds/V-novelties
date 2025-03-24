@@ -4,6 +4,11 @@ body {
     box-sizing: border-box;
     background-color: #e0f7fa;
   }
+
+  .appli {
+    width: 100%;
+   padding: 20px; 
+  }
   
   /* Container Styling */
   .application-app-container {
@@ -159,4 +164,69 @@ body {
     text-transform: capitalize;
     box-sizing: border-box;
   }
-  
+
+  /* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .appli {
+    padding: 10px;
+  }
+
+  .a {
+    margin-bottom: 15px;
+  }
+
+  .typing {
+    font-size: 2rem;
+  }
+
+  .application-clouds-container {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .application-cloud {
+    padding: 8px 15px;
+    margin: 8px;
+    font-size: 0.9rem;
+  }
+
+  .application-sector-title {
+    font-size: 1.5rem;
+  }
+
+  .application-cards-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    gap: 10px;
+    scrollbar-width: thin;
+  }
+
+  .application-cards-container::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .application-cards-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+
+  .application-flip-card {
+    min-width: 250px; /* Maintain the same width for all cards */
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+  }
+
+  .application-flip-card-inner {
+    height: 220px; /* Adjusted height for better visibility */
+  }
+
+  .application-image-style {
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  .application-flip-card-back {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}
