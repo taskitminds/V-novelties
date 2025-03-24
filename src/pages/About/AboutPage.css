@@ -551,68 +551,75 @@ text-align: center;
   font-family: 'Great Vibes', cursive; /* Elegant cursive font */
 }
 
-
-
+/* Media query for devices with a screen width between 320px and 485px (small mobile devices) */
 @media only screen and (min-width: 320px) and (max-width: 485px) {
 
+  /* General box sizing settings */
   * {
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: 100%; /* Prevents elements from exceeding screen width */
   }
 
+  /* Hide falling animation elements on small screens */
   .animate-fall {
-    display: none !important; /* Completely hides the leaf */
+    display: none !important; /* Completely hides the leaf animation */
   }
 
+  /* General settings for body and html */
   body, html {
-    overflow-x: hidden; /* Prevents unwanted horizontal scroll */
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
     margin: 0;
     padding: 0;
     width: 100%;
   }
 
+  /* Main container styling */
   .container {
     width: 100%;
     height: 30%;
   }
 
+  /* Sections container with centered flex layout */
   .sections-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Adds space between cards */
+    gap: 20px; /* Adds space between section cards */
     width: 100%;
   }
 
+  /* About Us section styling */
   .about-us {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5px; /* Reduced space at top */
-    margin-bottom: 20px; /* Adds space below About Us section */
+    padding-top: 5px; /* Reduced space at the top */
+    margin-bottom: 20px; /* Adds space below the About Us section */
   }
 
+  /* Additional styling for 'About Us' heading */
   .a {
     margin: 0;
     padding-top: 10px;
-    margin-bottom: 20px; /* Adds space between "About Us" and the box below */
-}
-
-
-  .a h1 {
-    font-size: 2rem;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
+    margin-bottom: 20px; /* Adds space between "About Us" and content below */
   }
 
+  /* Styling for h1 tags within the About Us section */
+  .a h1 {
+    font-size: 3rem;
+    margin: 0;
+    -webkit-font-smoothing: antialiased; /* Improves font rendering */
+  }
+
+  /* Typing effect adjustment */
   .typing {
     animation: none; /* Disables typing animation */
-    border-right: none; /* Removes the blinking cursor */
+    border-right: none; /* Removes blinking cursor */
     white-space: normal; /* Allows text wrapping */
-    display: inline; /* Ensures the text remains visible */
+    display: inline; /* Ensures text remains visible */
   }
 
-  /* Mission Section */
+  /* Mission section styling */
   .mission {
     width: calc(100% - 20px);
     max-width: 1200px;
@@ -621,26 +628,26 @@ text-align: center;
     height: auto;
     margin-bottom: -20px;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow effect */
     position: relative;
     z-index: 1;
     border: 1px solid rgba(255, 255, 255, 0.2);
     overflow-wrap: break-word;
-    font-family: 'Tangerine', serif;
+    
     font-size: 48px;
-    text-shadow: 4px 4px 4px #aaa;
+    text-shadow: 4px 4px 4px #aaa; /* Text shadow for better visibility */
   }
 
+  /* Heading within Mission section */
   .mission h2 {
-    font-size: 1.3rem;
+    font-size: 28px;
     margin-bottom: 8px;
     font-weight: bold;
     color: #FAFAFA;
-    font-family: 'Tangerine', serif;
-    font-size: 28px;
     text-shadow: 4px 4px 4px #aaa;
   }
 
+  /* Paragraphs within Mission section */
   .mission p {
     font-size: 0.95rem;
     line-height: 1.8;
@@ -648,9 +655,10 @@ text-align: center;
     text-align: justify;
     padding: 0 10px;
     color: #FAFAFA;
+    font-family: 'Roboto', sans-serif;
   }
 
-  /* Our Mission Section */
+  /* Our Mission section styling */
   .our-mission {
     width: calc(100% - 20px);
     max-width: 100%;
@@ -663,20 +671,19 @@ text-align: center;
     z-index: 1;
     border: 1px solid rgba(255, 255, 255, 0.2);
     overflow-wrap: break-word;
-    
-    
-  }
-
-  .our-mission h2 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #FAFAFA;
-    font-family: 'Tangerine', serif;
-    font-size: 28px;
     text-shadow: 4px 4px 4px #aaa;
   }
 
+  /* Heading within Our Mission section */
+  .our-mission h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #FAFAFA;
+    text-shadow: 4px 4px 4px #aaa;
+  }
+
+  /* Paragraphs within Our Mission section */
   .our-mission p {
     font-size: 0.95rem;
     line-height: 1.8;
@@ -684,39 +691,38 @@ text-align: center;
     text-align: justify;
     padding: 0 10px;
     color: #FAFAFA;
-        
-    
+    font-family: 'Roboto', sans-serif;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-  /* Who We Are Section */
+  /* Who We Are section styling */
   .who-we-are {
     width: 100%;
     max-width: 100%;
     text-align: center;
     padding: 1px;
     border-radius: 12px;
-    box-shadow: none;
     background: transparent;
     position: relative;
     z-index: 1;
     border: 1px solid rgba(255, 255, 255, 0.2);
     word-wrap: break-word;
     overflow-wrap: break-word;
+    text-shadow: 4px 4px 4px #aaa;
+    
   }
 
-  /* Heading styling */
+  /* Heading within Who We Are section */
   .who-we-are h2 {
-    font-size: 1.3rem;
+    font-size: 28px;
     margin-bottom: 8px;
     font-weight: bold;
     color: #FAFAFA;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Tangerine', serif;
-  font-size: 28px;
-  text-shadow: 4px 4px 4px #aaa;
+    text-shadow: 4px 4px 4px #aaa;
   }
 
-  /* Paragraph styling */
+  /* Paragraphs within Who We Are section */
   .who-we-are p {
     font-size: 0.95rem;
     line-height: 1.8;
@@ -725,9 +731,10 @@ text-align: center;
     padding: 0 10px;
     color: #FAFAFA;
     word-break: break-word;
+    font-family: 'Roboto', sans-serif;
   }
 
-  /* Adjusting Word Spacing */
+  /* Common styling for paragraphs across all sections */
   .mission p,
   .our-mission p,
   .who-we-are p {
@@ -738,20 +745,20 @@ text-align: center;
     padding: 0 10px;
     color: #FAFAFA;
     word-break: break-word;
-    word-spacing: -0.5px;
+    word-spacing: -0.5px; /* Adjusts word spacing for readability */
   }
 
+  /* Leaf background styling */
   .leaf-bg {
     background: url("../../assets/images/about/banana_leaf2.webp") no-repeat center center/cover;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* Makes text appear as a cutout over the background */
     background-clip: text;
-    color: transparent;
+    color: transparent; /* Hides the text color, making only the background visible */
     font-size: 2rem;
     font-weight: bold;
     display: inline-block;
     font-family: 'Great Vibes', cursive;
   }
 }
-
 
 
