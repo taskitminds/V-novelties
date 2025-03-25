@@ -5,95 +5,105 @@
     justify-content: center;
     align-items: center;
     max-width: 1300px;
+    width: 95vw;
     margin: auto;
     padding: 6vh 5vw;
-    min-height: 300px;
-    height: 800px;
+    min-height: 400px;
+    height: auto;
 
-    /* Background Optimization */
+    /* Background Image */
     background: 
-        linear-gradient(115deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), 
-        url('../../assets/images/home/r&d.webp') center/cover ;
+        linear-gradient(115deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+        url('../../assets/images/home/r&d.webp') center/cover no-repeat;
     
-    /* Styling Enhancements */
     border-radius: 1px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    will-change: transform, box-shadow;
 }
 
-/* ✨ Parallax Background Effect */
-.rnd-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    background-size: 120%;
-    filter: blur(4px);
-    transform: scale(1.1);
-    z-index: -1;
-    transition: transform 0.8s ease-in-out;
-}
-
-.rnd-container:hover::after {
-    transform: scale(1.05);
-}
-
-/* 🎨 Glassmorphism Effect */
+/* 🎨 Glassmorphism Text Container */
 .rnd-text-container {
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 40px;
     text-align: left;
-    color: white;
+    color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: background 0.4s, box-shadow 0.4s;
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 95%;
+    width: 85vw;
+    transition: background 0.4s, box-shadow 0.4s, transform 0.3s ease;
 }
 
 .rnd-text-container:hover {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 /* 🔥 Stylish Title */
 .rnd-text-container h1 {
-    font-size: 3.0rem;
+    font-size: clamp(2rem, 5vw, 2.4rem);
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
     background: linear-gradient(90deg, #2c7a3f, #57d169);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
 }
 
 /* 📝 List Styling */
 .rnd-text-container ul {
     list-style: none;
-    padding-left: 0;
-    font-size: 1.2rem;
+    padding: 0;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     line-height: 1.8;
 }
 
-/* 🌿 Enhanced Bullet Points */
+/* 🍃 Animated Bullet Points */
 .rnd-text-container ul li {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
+.rnd-text-container ul li:hover {
+    transform: translateX(5px);
+}
+
+/* 🟢 Leaf Icon Styling */
 .rnd-text-container ul li::before {
     content: "🌿";
     font-size: 1.4rem;
+    color: #57d169;
+    display: inline-block;
+    min-width: 20px;
 }
 
+/* 📱 Responsive Styles for Small Screens */
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .rnd-container {
+        padding: 4vh 3vw;
+    }
 
+    .rnd-text-container {
+        padding: 20px;
+        max-width: 98%;
+        width: 90vw;
+    }
 
+    .rnd-text-container h1 {
+        font-size: 1.8rem;
+    }
 
+    .rnd-text-container ul {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
