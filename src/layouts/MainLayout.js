@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import HomePage from "../pages/Home/HomePage";
@@ -11,8 +11,8 @@ import Header from "../components/Header/Header";
 import RandD from "../pages/R&D/r&dpaje";
 
 const MainLayout = () => {
-  return ( 
-    <Router>
+  return (
+    <>
       <Header />
       <Navbar />
       <Routes>
@@ -24,7 +24,7 @@ const MainLayout = () => {
         <Route path="/research" element={<RandD />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 };
 
