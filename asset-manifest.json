@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/herbal/static/css/main.444d9d4b.css",
-    "main.js": "/herbal/static/js/main.7e508c11.js",
+    "main.js": "/herbal/static/js/main.d01f6c55.js",
     "static/js/453.76ffd99f.chunk.js": "/herbal/static/js/453.76ffd99f.chunk.js",
     "static/media/r&d.webp": "/herbal/static/media/r&d.1d94cc8d535704724f2f.webp",
     "static/media/h3.webp": "/herbal/static/media/h3.d73e877b193814fe323e.webp",
@@ -13,11 +13,11 @@
     "static/media/banana_leaf2.webp": "/herbal/static/media/banana_leaf2.9868ece469f1e7936c27.webp",
     "index.html": "/herbal/index.html",
     "main.444d9d4b.css.map": "/herbal/static/css/main.444d9d4b.css.map",
-    "main.7e508c11.js.map": "/herbal/static/js/main.7e508c11.js.map",
+    "main.d01f6c55.js.map": "/herbal/static/js/main.d01f6c55.js.map",
     "453.76ffd99f.chunk.js.map": "/herbal/static/js/453.76ffd99f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.444d9d4b.css",
-    "static/js/main.7e508c11.js"
+    "static/js/main.d01f6c55.js"
   ]
 }
