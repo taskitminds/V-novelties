@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // ✅ Only use Routes, no Router
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import HomePage from "../pages/Home/HomePage";
@@ -11,7 +11,7 @@ import Header from "../components/Header/Header";
 import RandD from "../pages/R&D/r&dpaje";
 
 const MainLayout = () => {
-  return (
+  return ( 
     <>
       <Header />
       <Navbar />
