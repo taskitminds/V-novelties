@@ -2,7 +2,12 @@
   "name": "herbal",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://taskitminds.github.io/herbal/",
+  "homepage": "https://www.vnovelties.com",
+  "about": "https://www.vnovelties.com/about",
+  "products": "https://www.vnovelties.com/products",
+  "application": "https://www.vnovelties.com/application",
+  "r&d": "https://www.vnovelties.com/R&D",
+  "contact": "https://www.vnovelties.com/contact",
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@testing-library/dom": "^10.4.0",
