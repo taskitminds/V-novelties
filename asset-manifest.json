@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/herbal/static/css/main.444d9d4b.css",
-    "main.js": "/herbal/static/js/main.d01f6c55.js",
-    "static/js/453.76ffd99f.chunk.js": "/herbal/static/js/453.76ffd99f.chunk.js",
-    "static/media/r&d.webp": "/herbal/static/media/r&d.1d94cc8d535704724f2f.webp",
-    "static/media/h3.webp": "/herbal/static/media/h3.d73e877b193814fe323e.webp",
-    "static/media/h2.webp": "/herbal/static/media/h2.e5eca971e93f0cd4d42f.webp",
-    "static/media/h1.webp": "/herbal/static/media/h1.959216dcb8ccbe83e0e5.webp",
-    "static/media/asdf.png": "/herbal/static/media/asdf.43680c9d71cf1285c647.png",
-    "static/media/abb.webp": "/herbal/static/media/abb.2d83d0a3202e5fb363d8.webp",
-    "static/media/cimg.png": "/herbal/static/media/cimg.e445667131ae7d50c392.png",
-    "static/media/banana_leaf2.webp": "/herbal/static/media/banana_leaf2.9868ece469f1e7936c27.webp",
-    "index.html": "/herbal/index.html",
-    "main.444d9d4b.css.map": "/herbal/static/css/main.444d9d4b.css.map",
-    "main.d01f6c55.js.map": "/herbal/static/js/main.d01f6c55.js.map",
-    "453.76ffd99f.chunk.js.map": "/herbal/static/js/453.76ffd99f.chunk.js.map"
+    "main.css": "/static/css/main.91905617.css",
+    "main.js": "/static/js/main.2c3f732c.js",
+    "static/js/453.76ffd99f.chunk.js": "/static/js/453.76ffd99f.chunk.js",
+    "static/media/r&d.webp": "/static/media/r&d.1d94cc8d535704724f2f.webp",
+    "static/media/h3.webp": "/static/media/h3.d73e877b193814fe323e.webp",
+    "static/media/h2.webp": "/static/media/h2.e5eca971e93f0cd4d42f.webp",
+    "static/media/h1.webp": "/static/media/h1.959216dcb8ccbe83e0e5.webp",
+    "static/media/asdf.png": "/static/media/asdf.43680c9d71cf1285c647.png",
+    "static/media/abb.webp": "/static/media/abb.2d83d0a3202e5fb363d8.webp",
+    "static/media/cimg.png": "/static/media/cimg.e445667131ae7d50c392.png",
+    "static/media/banana_leaf2.webp": "/static/media/banana_leaf2.9868ece469f1e7936c27.webp",
+    "index.html": "/index.html",
+    "main.91905617.css.map": "/static/css/main.91905617.css.map",
+    "main.2c3f732c.js.map": "/static/js/main.2c3f732c.js.map",
+    "453.76ffd99f.chunk.js.map": "/static/js/453.76ffd99f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.444d9d4b.css",
-    "static/js/main.d01f6c55.js"
+    "static/css/main.91905617.css",
+    "static/js/main.2c3f732c.js"
   ]
 }
