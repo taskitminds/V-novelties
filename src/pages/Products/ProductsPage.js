@@ -640,36 +640,74 @@ export default function DryExtracts() {
   };
 
   return (
-    <div className="appli">
-      
-      <div className="a relative text-center py-6 overflow-hidden">
-        {/* Banana Leaf Background */}
-        <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
-          {/* About Us Title */}
-          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg nfont">
-            Herbal Care
-          </h1>
-        </div>
-        <div className="absolute inset-0 pointer-events-none">
-          {Array.from({ length: 10 }).map((_, index) => (
-            <span
-              key={index}
-              className="absolute text-green-500 text-xl opacity-70 animate-fall"
-              style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 4}s`,
-                fontSize: `${Math.random() * 1.5 + 1}rem`,
-              }}
-            >
-              🍃
-              🍂
-            </span>
-          ))}
-        </div>
-        </div>   
     <div className="productcontainer">
-      
+      <h2 className="producttitle">HERBAL CARE</h2>
       {herbal_care.map((extract, index) => (
+        <div key={index} className="productfield">
+          <button onClick={() => toggleHerbalContent(index)}>{extract.title}</button>
+          {openHerbalIndex === index && (
+            <div className="productcontent active">
+              {extract.content.map((section, i) => (
+                <div key={i}>
+                  <h3 className="productheading">{section.heading}</h3>
+                  <ul>
+                    {section.points.map((point, j) => (
+                      <li key={j}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+
+      <h2 className="producttitle">PERSONAL CARE COSMETICS</h2>
+      {personal_care_cosemetics.map((extract, index) => (
+        <div key={index} className="productfield">
+          <button onClick={() => togglePersonalContent(index)}>{extract.title}</button>
+          {openPersonalIndex === index && (
+            <div className="productcontent active">
+              {extract.content.map((section, i) => (
+                <div key={i}>
+                  <h3 className="productheading">{section.heading}</h3>
+                  <h4>{section.subheading}</h4>
+                  <ul>
+                    {section.points.map((point, j) => (
+                      <li key={j}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+
+      <h2 className="producttitle">ANIMAL CARE</h2>
+      {animal_care.map((extract, index) => (
+        <div key={index} className="productfield">
+          <button onClick={() => toggleAnimalContent(index)}>{extract.title}</button>
+          {openAnimalIndex === index && (
+            <div className="productcontent active">
+              {extract.content.map((section, i) => (
+                <div key={i}>
+                  <h3 className="productheading">{section.heading}</h3>
+                  <ul>
+                    {section.points.map((point, j) => (
+                      <li key={j}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+
+      <h2 className="producttitle">AGRI CARE</h2>
+      <center><h3 className="productheading"><b>Green chemistry Greener fields</b></h3></center>
+      {agri_care.map((extract, index) => (
         <div key={index} className="productfield">
           <button onClick={() => toggleAgriContent(index)}>{extract.title}</button>
           {openAgriIndex === index && (
@@ -688,8 +726,6 @@ export default function DryExtracts() {
           )}
         </div>
       ))}
-    </div>
-
     </div>
   );
 }
