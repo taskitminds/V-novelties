@@ -2,43 +2,97 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <meta name="google-site-verification" content="XS84Rlezl3aMjxgKPtTOAgXMWzmQIni8NSpq0FWZJiQ" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="V Novelties - Leading supplier of Food Ingredients, Herbal Extracts, Nutraceuticals, Agricultural & Pharmaceutical Raw Materials in India." />
+    <meta name="keywords" content="Food Ingredients supplier, Herbal Extracts exporter, Nutraceuticals distributor, Pharmaceutical Raw Materials supplier in India, Agricultural Raw Materials exporter" />
+    <meta name="author" content="V Novelties" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="XS84Rlezl3aMjxgKPtTOAgXMWzmQIni8NSpq0FWZJiQ" />
+
+    <!-- Open Graph Meta Tags (For Social Media) -->
+    <meta property="og:title" content="V Novelties - Leading Supplier in India" />
+    <meta property="og:description" content="V Novelties is a trusted manufacturer and supplier of Food Ingredients, Herbal Extracts, Nutraceuticals, Agricultural & Pharmaceutical Raw Materials in India." />
+    <meta property="og:image" content="https://www.vnovelties.com/logo.png" />
+    <meta property="og:url" content="https://www.vnovelties.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Force White Background for All Themes -->
+    <style>
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: white !important; /* Force white in dark mode */
+          color: black !important;
+        }
+      }
+    </style>
+
+    <!-- Schema Markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "V Novelties",
+        "url": "https://www.vnovelties.com",
+        "logo": "https://www.vnovelties.com/logo.png",
+        "description": "V Novelties is a trusted manufacturer and supplier of Food Ingredients, Herbal Extracts, Nutraceuticals, Agricultural & Pharmaceutical Raw Materials in India.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "No:9, GK Cottage, Koodal Nagar",
+          "addressLocality": "Madurai",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "625018",
+          "addressCountry": "India"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-82482 80830",
+          "contactType": "sales",
+          "email": "vnoveltiesmdu@gmail.com"
+        }
+      }
+    </script>
+
+    <title>V Novelties - Food Ingredients & Herbal Extracts Supplier</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="root">
+      <header>
+        <h1>Welcome to V Novelties</h1>
+        <p>Your trusted partner in Food Ingredients, Herbal Extracts, and Nutraceuticals.</p>
+      </header>
+      <section>
+        <h2>About V Novelties</h2>
+        <p>V Novelties is a leading manufacturer and supplier of high-quality Food Ingredients, Herbal Extracts, Nutraceuticals, and Pharmaceutical Raw Materials in India. With a strong commitment to quality and innovation, we serve industries worldwide.</p>
+      </section>
+      <section>
+        <h2>Our Products</h2>
+        <ul>
+          <li>Food Ingredients</li>
+          <li>Herbal Extracts</li>
+          <li>Nutraceuticals</li>
+          <li>Pharmaceutical Raw Materials</li>
+          <li>Agricultural Raw Materials</li>
+        </ul>
+      </section>
+      <footer>
+        <p>Contact us: <a href="mailto:vnoveltiesmdu@gmail.com">vnoveltiesmdu@gmail.com</a> | Phone: +91-82482 80830</p>
+      </footer>
+    </div>
   </body>
 </html>
