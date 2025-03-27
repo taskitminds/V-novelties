@@ -59,6 +59,8 @@ const ContactUs = () => {
         <div className="contact-info-box">
           <h2>Contact Us</h2>
 
+          <p><User size={22} /> &nbsp; &nbsp;P KAMALA KANNAN</p>
+
           {/* Location - Opens Google Maps */}
           <p>
             <a 
@@ -80,8 +82,6 @@ const ContactUs = () => {
               <Mail size={22} /> &nbsp;vnoveltiesmdu@gmail.com
             </a>
           </p>
-
-          <p><User size={22} /> &nbsp; &nbsp;P KAMALA KANNAN</p>
 
           {/* Phone - Opens Dial Pad */}
           <p>

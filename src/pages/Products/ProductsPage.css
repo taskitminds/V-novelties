@@ -1,31 +1,34 @@
 /* Container Styles */
 .productcontainer {
-  max-width: 800px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@400;500&display=swap');
+/* Title Styling */
 .producttitle {
   text-align: center;
-  font-size: 28px; /* Slightly larger for better visibility */
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-top: 20px;
   position: relative;
-  font-family: "Poppins", sans-serif; /* Modern and elegant font */
-  color: #2c6e49; /* Attractive deep green shade */
-  letter-spacing: 1.5px; /* Adds a refined look */
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #2c7a3f;
+  letter-spacing: 1.5px;
 }
 
-/* Optional underline effect */
 .producttitle::after {
   content: "";
   display: block;
   width: 60px;
   height: 3px;
-  background-color: #a2d5ab; /* Soft green accent */
+  background-color: #a2d5ab;
   margin: 10px auto 0;
   border-radius: 5px;
 }
@@ -40,7 +43,7 @@
 }
 
 /* Button Styles */
-.productfield button {
+.productbutton {
   width: 100%;
   text-align: left;
   padding: 12px;
@@ -50,10 +53,12 @@
   background-color: #f1f5e6;
   border: none;
   cursor: pointer;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.productfield button:hover {
+.productbutton:hover {
   background-color: #e3ebd3;
 }
 
@@ -87,4 +92,12 @@
 .productcontent ul li {
   margin-bottom: 5px;
   list-style-type: disc;
+}
+
+/* Subheading */
+.productsubheading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #388e3c;
+  margin-bottom: 10px;
 }

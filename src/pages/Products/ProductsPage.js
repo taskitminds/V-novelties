@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ProductsPage.css"; // Ensure the CSS file is linked
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const herbal_care = [
   {
@@ -618,33 +619,28 @@ const agri_care = [
 ];
 
 export default function DryExtracts() {
-  const [openHerbalIndex, setOpenHerbalIndex] = useState(null);
-  const [openPersonalIndex, setOpenPersonalIndex] = useState(null);
-  const [openAnimalIndex, setOpenAnimalIndex] = useState(null);
-  const [openAgriIndex, setOpenAgriIndex] = useState(null);
+  const [openHerbalIndex, setOpenHerbalIndex] = useState(0);  // Initially open first item
+  const [openPersonalIndex, setOpenPersonalIndex] = useState(0);
+  const [openAnimalIndex, setOpenAnimalIndex] = useState(0);
+  const [openAgriIndex, setOpenAgriIndex] = useState(0);
 
-  const toggleHerbalContent = (index) => {
-    setOpenHerbalIndex(openHerbalIndex === index ? null : index);
-  };
-
-  const togglePersonalContent = (index) => {
-    setOpenPersonalIndex(openPersonalIndex === index ? null : index);
-  };
-
-  const toggleAnimalContent = (index) => {
-    setOpenAnimalIndex(openAnimalIndex === index ? null : index);
-  };
-
-  const toggleAgriContent = (index) => {
-    setOpenAgriIndex(openAgriIndex === index ? null : index);
+  const toggleContent = (index, setIndex, currentIndex) => {
+    setIndex(currentIndex === index ? null : index);
   };
 
   return (
     <div className="productcontainer">
+      {/* HERBAL CARE */}
       <h2 className="producttitle">HERBAL CARE</h2>
       {herbal_care.map((extract, index) => (
         <div key={index} className="productfield">
-          <button onClick={() => toggleHerbalContent(index)}>{extract.title}</button>
+          <button
+            onClick={() => toggleContent(index, setOpenHerbalIndex, openHerbalIndex)}
+            className="productbutton"
+          >
+            {extract.title}
+            {openHerbalIndex === index ? <ChevronUp /> : <ChevronDown />}
+          </button>
           {openHerbalIndex === index && (
             <div className="productcontent active">
               {extract.content.map((section, i) => (
@@ -662,16 +658,22 @@ export default function DryExtracts() {
         </div>
       ))}
 
+      {/* PERSONAL CARE */}
       <h2 className="producttitle">PERSONAL CARE COSMETICS</h2>
       {personal_care_cosemetics.map((extract, index) => (
         <div key={index} className="productfield">
-          <button onClick={() => togglePersonalContent(index)}>{extract.title}</button>
+          <button
+            onClick={() => toggleContent(index, setOpenPersonalIndex, openPersonalIndex)}
+            className="productbutton"
+          >
+            {extract.title}
+            {openPersonalIndex === index ? <ChevronUp /> : <ChevronDown />}
+          </button>
           {openPersonalIndex === index && (
             <div className="productcontent active">
               {extract.content.map((section, i) => (
                 <div key={i}>
                   <h3 className="productheading">{section.heading}</h3>
-                  <h4>{section.subheading}</h4>
                   <ul>
                     {section.points.map((point, j) => (
                       <li key={j}>{point}</li>
@@ -684,10 +686,17 @@ export default function DryExtracts() {
         </div>
       ))}
 
+      {/* ANIMAL CARE */}
       <h2 className="producttitle">ANIMAL CARE</h2>
       {animal_care.map((extract, index) => (
         <div key={index} className="productfield">
-          <button onClick={() => toggleAnimalContent(index)}>{extract.title}</button>
+          <button
+            onClick={() => toggleContent(index, setOpenAnimalIndex, openAnimalIndex)}
+            className="productbutton"
+          >
+            {extract.title}
+            {openAnimalIndex === index ? <ChevronUp /> : <ChevronDown />}
+          </button>
           {openAnimalIndex === index && (
             <div className="productcontent active">
               {extract.content.map((section, i) => (
@@ -705,11 +714,20 @@ export default function DryExtracts() {
         </div>
       ))}
 
+      {/* AGRI CARE */}
       <h2 className="producttitle">AGRI CARE</h2>
-      <center><h3 className="productheading"><b>Green chemistry Greener fields</b></h3></center>
+      <center>
+        <h3 className="productsubheading">Green chemistry Greener fields</h3>
+      </center>
       {agri_care.map((extract, index) => (
         <div key={index} className="productfield">
-          <button onClick={() => toggleAgriContent(index)}>{extract.title}</button>
+          <button
+            onClick={() => toggleContent(index, setOpenAgriIndex, openAgriIndex)}
+            className="productbutton"
+          >
+            {extract.title}
+            {openAgriIndex === index ? <ChevronUp /> : <ChevronDown />}
+          </button>
           {openAgriIndex === index && (
             <div className="productcontent active">
               {extract.content.map((section, i) => (
@@ -729,3 +747,4 @@ export default function DryExtracts() {
     </div>
   );
 }
+

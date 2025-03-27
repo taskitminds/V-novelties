@@ -7,7 +7,10 @@ body {
 
   .appli {
     width: 100%;
+    font-family: "Poppins", sans-serif; /* Modern and elegant font */
    padding: 20px; 
+   position: relative; /* or absolute */
+   z-index: 1; /* Ensures it's above the falling leaves */
   }
   
   /* Container Styling */
@@ -254,4 +257,45 @@ body {
     padding: 10px;
     font-size: 0.85rem;
   }
+}
+
+
+@media (max-width: 768px) {
+  .application-clouds-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .application-cloud {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .application-cards-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .application-flip-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .application-flip-card-inner {
+    height: 300px;
+  }
+
+  .application-flip-card-back {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+
+.nfont{
+  font-family: "Poppins", sans-serif; /* Modern and elegant font */
 }

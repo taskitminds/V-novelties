@@ -48,9 +48,26 @@ const ApplicationPage = () => {
         {/* Banana Leaf Background */}
         <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
           {/* About Us Title */}
-          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
+          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg nfont">
             Application
           </h1>
+        </div>
+        {/* Decorative Falling Leaves */}
+        <div className="absolute inset-0 pointer-events-none">
+          {Array.from({ length: 10 }).map((_, index) => (
+            <span
+              key={index}
+              className="absolute text-green-500 text-xl opacity-70 animate-fall"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`,
+                fontSize: `${Math.random() * 1.5 + 1}rem`,
+              }}
+            >
+              🍃
+              🍂
+            </span>
+          ))}
         </div>
         </div>
 

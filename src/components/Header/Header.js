@@ -7,9 +7,13 @@ const Header = () => {
   return (
     <div className="top-banner">
       <div className="contact-info">
-        <span><FaMailBulk className="icon-header" /> vnoveltiesmdu@gmail.com   </span>
+        <a href="mailto:vnoveltiesmdu@gmail.com" className="contact-link">
+          <FaMailBulk className="icon-header" /> vnoveltiesmdu@gmail.com
+        </a>
         <span>|</span>
-        <span><FaPhoneAlt className="icon-header" />+91-82482 80830</span>
+        <a href="tel:+918248280830" className="contact-link">
+          <FaPhoneAlt className="icon-header" /> +91-82482 80830
+        </a>
       </div>
       <div className="social-icons">
         <a href="#" className="social-link"><FaFacebook /></a>

@@ -68,7 +68,7 @@
     
     font-size: 28px; /* Balanced size for elegance */
     font-weight: 10; /* Extra light for a modern look */
-    font-family: "Poppins", "Inter", sans-serif; /* Clean, geometric modern font */
+    font-family: "Poppins", sans-serif; /* Modern and elegant font */  /* Clean, geometric modern font */
     color: #222; /* Slightly softer black for a premium feel */
     
     letter-spacing: 0.8px; /* Subtle spacing to enhance readability */
@@ -511,7 +511,7 @@ text-align: center;
   padding: 0 15px; 
   padding-bottom: 20px; 
   font-size: 1.4em; /* Increases the text size */
-  line-height: 1.6; /* Increases the height of the text */
+  line-height: 1.4; /* Increases the height of the text */
 }
 
 
@@ -534,7 +534,7 @@ text-align: center;
 } 
 
 .animate-fall {
-  position: absolute;
+  position:absolute;
   top: -10vh; /* Start from outside the viewport */
   animation: fall 6s linear infinite;
 }
@@ -552,7 +552,7 @@ text-align: center;
 }
 
 /* Media query for devices with a screen width between 320px and 485px (small mobile devices) */
-@media only screen and (min-width: 320px) and (max-width: 485px) {
+@media only screen and (min-width: 320px) and (max-width: 786px) {
 
   /* General box sizing settings */
   * {

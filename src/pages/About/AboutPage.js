@@ -12,7 +12,7 @@ const AboutUs = () => {
         {/* Banana Leaf Background */}
         <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
           {/* About Us Title */}
-          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
+          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg nfont">
             About <span className="text-yellow-300">Us</span>
           </h1>
         </div>
@@ -67,7 +67,7 @@ const AboutUs = () => {
         </section>
 
         <section className="mission">
-          <h2>Mission</h2>
+          <h2>Our Mission</h2>
           <p>
             Precisely, extract and isolate the phytochemicals from plants with all its naturalness and preserve the therepeutic and/or health giving properties entirely in order to cherish our customers naturally.
           </p>
