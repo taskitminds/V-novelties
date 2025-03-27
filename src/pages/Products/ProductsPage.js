@@ -669,7 +669,7 @@ export default function DryExtracts() {
         </div>   
     <div className="productcontainer">
       
-      {extracts.map((extract, index) => (
+      {herbal_care.map((extract, index) => (
         <div key={index} className="productfield">
           <button onClick={() => toggleAgriContent(index)}>{extract.title}</button>
           {openAgriIndex === index && (

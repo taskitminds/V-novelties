@@ -7,10 +7,11 @@
     align-items: center;
     max-width: 1300px;
     width: 95vw;
-    margin: auto;
+    margin:auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     padding: 9vh 8vw;
     min-height: 400px;
-    height: auto;
 
     /* Background Image */
     background: 
@@ -63,7 +64,7 @@
     font-family: "Poppins", "Inter", sans-serif;
 
     padding-left: 0; /* Removes default padding */
-    font-size: 2rem; /* Increases text size */
+    font-size: 1.2rem; /* Increases text size */
     line-height: 1.8; /* Better readability */
 }
 
@@ -83,7 +84,7 @@
 /* 🟢 Leaf Icon Styling */
 .rnd-text-container ul li::before {
     content: "🌿";
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #57d169;
     display: inline-block;
     min-width: 20px;

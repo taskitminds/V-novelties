@@ -1,6 +1,7 @@
 /* Container Styles */
 .productcontainer {
-  max-width: 800px;
+  max-width: 690px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 20px;
   font-family: "Poppins", "Inter", sans-serif;
