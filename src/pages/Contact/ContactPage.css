@@ -143,106 +143,8 @@ body {
 
 
 
-/*
-* ✅ Styles for Small Screens (up to 768px) */
- @media (max-width: 768px) {
-   /* Show Menu Icon */
-   .menu-icon {
-     display: block;
-     font-size: 26px;
-     cursor: pointer;
-     color: #333;
-     position: absolute;
-     top: 15px;
-     right: 20px;
-     z-index: 1001;
-   }
- 
-   /* Mobile Navigation Menu */
-   .nav-links {
-     display: flex;
-     flex-direction: column;
-     position: fixed;
-     top: 0;
-     left: -100%;
-     width: 75%;
-     height: 100vh;
-     background: #fff;
-     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
-     transition: left 0.3s ease-in-out;
-     padding-top: 60px;
-     z-index: 1050;
-   }
- 
-   /* When Menu is Open */
-   .nav-links.show {
-     left: 0;
-   }
- 
-   /* Menu Items */
-   .nav-links a {
-     padding: 15px;
-     text-align: center;
-     display: block;
-     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-     font-size: 18px;
-   }
- 
-   /* Overlay Effect */
-   .overlay {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: rgba(0, 0, 0, 0.3);
-     opacity: 0;
-     visibility: hidden;
-     transition: opacity 0.3s ease-in-out;
-     z-index: 900;
-   }
- 
-   .overlay.show {
-     opacity: 1;
-     visibility: visible;
-   }
- 
-   /* Adjust Content Spacing */
-   .about-us {
-     padding: 20px;
-     text-align: center;
-   }
- 
-   section {
-     padding: 30px 3%;
-   }
- 
-   section h2, section h3 {
-     font-size: 20px;
-   }
- 
-   .breadcrumb {
-     padding-top: 80px;
-     padding-left: 15px;
-     font-size: 12px;
-   }
- 
-   .about-image {
-     max-width: 100%;
-     height: auto;
-   }
- 
-   .contact-info, .useful-links, .our-consortium {
-     text-align: center;
-   }
- 
-   footer {
-     font-size: 12px;
-     padding: 15px 0;
-   }
- }
  /* ✅ Styles for Small Screens (up to 768px) */
-@media (max-width: 768px) {
+@media (min-width: 300px)  and (max-width: 768px) {
 
   /* Show Menu Icon */
   .menu-icon {
@@ -350,8 +252,4 @@ body {
     font-size: 12px;
     padding: 15px 0;
   }
-}
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-  /* Styles for very small devices */
-  
 }

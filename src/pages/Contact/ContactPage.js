@@ -67,7 +67,7 @@ const ContactUs = () => {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              <MapPin size={20} /> &nbsp;No: 9, GK Cottage, Koodal Nagar, Madurai-625018.
+              <MapPin size={22} /> &nbsp;No: 9, GK Cottage, Koodal Nagar, Madurai-625018.
             </a>
           </p>
 
@@ -77,11 +77,11 @@ const ContactUs = () => {
               href="mailto:vnoveltiesmdu@gmail.com" 
               className="contact-link"
             >
-              <Mail size={20} /> &nbsp;vnoveltiesmdu@gmail.com
+              <Mail size={22} /> &nbsp;vnoveltiesmdu@gmail.com
             </a>
           </p>
 
-          <p><User size={24} /> &nbsp; P KAMALA KANNAN</p>
+          <p><User size={22} /> &nbsp; &nbsp;P KAMALA KANNAN</p>
 
           {/* Phone - Opens Dial Pad */}
           <p>
@@ -89,7 +89,7 @@ const ContactUs = () => {
               href="tel:+918248280830"
               className="contact-link"
             >
-              <Phone size={24} /> &nbsp; +91-82482 80830
+              <Phone size={22} /> &nbsp;+91-82482 80830
             </a>
           </p>
 
