@@ -8,7 +8,7 @@ const slides = [
     description:
       "Preserving nature's legacy and elegance. Our result-driven products assure the wellness of soil and crops, leading to a green revolution.",
     image:
-      "https://media.istockphoto.com/id/1161321111/photo/farmer-hands-take-care-and-protect-young-little-sprout-plant-in-the-soil-ground.jpg?s=2048x2048&w=is&k=20&c=4XLjHz6peAd-Mww9InvKLx5o6DTzq03cT27HRvWvh2A=",
+      "https://i.pinimg.com/736x/5c/d5/94/5cd5948ebee07a0ee813f56843405089.jpg",
   },
   {
     title: "BRILLIANCE IN ANIMAL CARE",

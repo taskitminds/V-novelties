@@ -14,36 +14,36 @@ const ContactUs = () => {
           <h2>Get in Touch</h2>
           <p>Feel free to drop us a message below!</p>
           <form onSubmit={handleSubmit}>
-            <input 
+            <input
               id="name"
-              type="text" 
-              name="name" 
-              placeholder="Your name" 
-              required 
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
             />
 
-            <input 
+            <input
               id="email"
-              type="email" 
-              name="email" 
-              placeholder="Your email" 
-              required 
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
             />
-            <ValidationError 
-              prefix="Email" 
-              field="email" 
+            <ValidationError
+              prefix="Email"
+              field="email"
               errors={state.errors}
             />
 
-            <textarea 
+            <textarea
               id="message"
-              name="message" 
-              placeholder="Type your message here" 
-              required 
+              name="message"
+              placeholder="Type your message here"
+              required
             />
-            <ValidationError 
-              prefix="Message" 
-              field="message" 
+            <ValidationError
+              prefix="Message"
+              field="message"
               errors={state.errors}
             />
 
@@ -61,22 +61,10 @@ const ContactUs = () => {
 
           <p><User size={22} /> &nbsp; &nbsp;P KAMALA KANNAN</p>
 
-          {/* Location - Opens Google Maps */}
-          <p>
-            <a 
-              href="https://www.google.com/maps/search/?api=1&query=9+GK+Cottage+Koodal+Nagar+Madurai+625018" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
-              <MapPin size={22} /> &nbsp;No: 9, GK Cottage, Koodal Nagar, Madurai-625018.
-            </a>
-          </p>
-
           {/* Mail - Opens Gmail */}
           <p>
-            <a 
-              href="mailto:vnoveltiesmdu@gmail.com" 
+            <a
+              href="mailto:vnoveltiesmdu@gmail.com"
               className="contact-link"
             >
               <Mail size={22} /> &nbsp;vnoveltiesmdu@gmail.com
@@ -85,7 +73,7 @@ const ContactUs = () => {
 
           {/* Phone - Opens Dial Pad */}
           <p>
-            <a 
+            <a
               href="tel:+918248280830"
               className="contact-link"
             >
@@ -93,14 +81,33 @@ const ContactUs = () => {
             </a>
           </p>
 
-          {/* Social Media Links */}
-          <div className="social-links">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-            <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-pinterest"></i></a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+          {/* Location - Opens Google Maps */}
+          <p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9+GK+Cottage+Koodal+Nagar+Madurai+625018"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              <MapPin size={22} /> &nbsp;No: 9, GK Cottage, Koodal Nagar, Madurai-625018.
+            </a>
+          </p>
+
+          {/* Embedded Google Map */}
+          <div className="map-container">
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8160947772517!2d78.09781707478396!3d9.949254273906336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf00389a0af1%3A0x27655d03fd3964c3!2sV%20novelties!5e0!3m2!1sen!2sin!4v1743099824907!5m2!1sen!2sin"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: '8px' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
+
+
         </div>
       </div>
     </div>

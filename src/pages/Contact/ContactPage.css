@@ -95,9 +95,10 @@ body {
 }
 
 .contact-info-box h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
+  color: #ffe600;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 /* Contact Details */
@@ -141,6 +142,14 @@ body {
 .social-links i:hover {
     color: #ccc;
 }
+
+/*google map iframe*/
+.map-container {
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
 
 
 
