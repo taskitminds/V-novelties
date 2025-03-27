@@ -185,8 +185,35 @@ export default function DryExtracts() {
   };
 
   return (
+    <div className="appli">
+      
+      <div className="a relative text-center py-6 overflow-hidden">
+        {/* Banana Leaf Background */}
+        <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
+          {/* About Us Title */}
+          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg nfont">
+            Herbal Care
+          </h1>
+        </div>
+        <div className="absolute inset-0 pointer-events-none">
+          {Array.from({ length: 10 }).map((_, index) => (
+            <span
+              key={index}
+              className="absolute text-green-500 text-xl opacity-70 animate-fall"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`,
+                fontSize: `${Math.random() * 1.5 + 1}rem`,
+              }}
+            >
+              🍃
+              🍂
+            </span>
+          ))}
+        </div>
+        </div>   
     <div className="productcontainer">
-      <h2 className="producttitle">HERBAL CARE</h2>
+      
       {extracts.map((extract, index) => (
         <div key={index} className="productfield">
           <button onClick={() => toggleContent(index)}>{extract.title}</button>
@@ -206,6 +233,8 @@ export default function DryExtracts() {
           )}
         </div>
       ))}
+    </div>
+
     </div>
   );
 }

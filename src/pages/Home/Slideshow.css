@@ -1,0 +1,89 @@
+.slideshow-container {
+    width: 100%;
+    height: 400px; /* Set fixed height */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    animation: backgroundFade 3s infinite alternate;
+    background: linear-gradient(90deg, #e0f7e9, #99e699);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .slide.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  @keyframes backgroundFade {
+    0% {
+      background: linear-gradient(90deg, #e0f7e9, #99e699);
+    }
+    100% {
+      background: linear-gradient(90deg, #99e699, #e0f7e9);
+    }
+  }
+  
+  .slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .slide-image {
+    height: auto;
+    width: 40%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .slide-text {
+    width: 55%;
+    text-align: left;
+    padding-right: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #2a4d14;
+  }
+  
+  h4 {
+    font-size: 18px;
+    color: #3c6e19;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .dots {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #2a4d14;
+  }
+  

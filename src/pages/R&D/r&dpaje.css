@@ -2,7 +2,7 @@
 .rnd-container {
     position: relative; /* Ensures child elements are positioned relative to this parent */
     display: flex;
-   
+   height: 600px;
     justify-content: center;
     align-items: center;
     max-width: 1300px; /* Maximum width of the container */
@@ -75,8 +75,10 @@
 /* List Styling */
 .rnd-text-container ul {
     list-style-type: none;
+    font-family: "Poppins", "Inter", sans-serif;
+
     padding-left: 0; /* Removes default padding */
-    font-size: 1.2rem; /* Increases text size */
+    font-size: 2rem; /* Increases text size */
     line-height: 1.8; /* Better readability */
 }
 

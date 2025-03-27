@@ -12,7 +12,7 @@ const AboutUs = () => {
         {/* Banana Leaf Background */}
         <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
           {/* About Us Title */}
-          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
+          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg nfont">
             About <span className="text-yellow-300">Us</span>
           </h1>
         </div>
