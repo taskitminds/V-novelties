@@ -2,108 +2,104 @@
 .rnd-container {
     position: relative;
     display: flex;
-   height: 600px;
     justify-content: center;
     align-items: center;
-    max-width: 1300px;
     width: 95vw;
-    margin:auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding: 9vh 8vw;
-    min-height: 400px;
-
-    /* Background Image */
-    background: 
-        linear-gradient(115deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
-        url('../../assets/images/home/r&d.webp') center/cover no-repeat;
-    
-    border-radius: 1px;
+    max-width: 1300px;
+    height: auto;
+    min-height: 450px;
+    margin: 5vh auto;
+    padding: 6vh 9vw;
+    border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+    /* Background Image */
+    background: 
+        linear-gradient(115deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+        url('../../assets/images/home/r&d.webp') center/cover no-repeat;
 }
 
 /* 🎨 Glassmorphism Text Container */
 .rnd-text-container {
     position: relative;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
     border-radius: 15px;
     padding: 40px;
     text-align: left;
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    max-width: 95%;
+    max-width: 90%;
     width: 85vw;
     transition: background 0.4s, box-shadow 0.4s, transform 0.3s ease;
 }
 
 .rnd-text-container:hover {
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-5px);
 }
 
 /* 🔥 Stylish Title */
 .rnd-text-container h1 {
-    font-size: clamp(2rem, 5vw, 2.4rem);
-    font-weight: 700;
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: 20px;
     background: linear-gradient(90deg, #2c7a3f, #57d169);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
 }
 
 /* 📝 List Styling */
 .rnd-text-container ul {
-    list-style-type: none;
-    font-family: "Poppins", "Inter", sans-serif;
-
-    padding-left: 0; /* Removes default padding */
-    font-size: 1.2rem; /* Increases text size */
-    line-height: 1.8; /* Better readability */
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    padding-left: 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* 🍃 Animated Bullet Points */
 .rnd-text-container ul li {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 15px;
     transition: transform 0.3s ease-in-out;
 }
 
 .rnd-text-container ul li:hover {
-    transform: translateX(5px);
+    transform: translateX(8px);
 }
 
 /* 🟢 Leaf Icon Styling */
 .rnd-text-container ul li::before {
-    content: "🌿";
-    font-size: 1rem;
+    content: "🍃";
+    font-size: 1.2rem;
     color: #57d169;
     display: inline-block;
-    min-width: 20px;
+    min-width: 22px;
 }
 
-/* 📱 Responsive Styles for Small Screens */
-@media screen and (min-width: 300px) and (max-width: 500px) {
+/* 📱 Responsive Styles */
+@media screen and (max-width: 768px) {
     .rnd-container {
-        padding: 4vh 3vw;
+        padding: 4vh 4vw;
     }
 
     .rnd-text-container {
-        padding: 20px;
-        max-width: 98%;
-        width: 90vw;
+        padding: 25px;
+        width: 95vw;
     }
 
     .rnd-text-container h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .rnd-text-container ul {
