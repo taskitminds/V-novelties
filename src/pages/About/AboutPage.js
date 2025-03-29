@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutPage.css';
+import CoreValues from './CoreValues';
 import "../../assets/images/about/asdf.png";
 import "../../assets/images/about/cimg.png";
 
@@ -9,13 +10,7 @@ const AboutUs = () => {
   return (
     <div className="about-us">
       <div className="a relative text-center py-6 overflow-hidden">
-        {/* Banana Leaf Background */}
-        <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
-          {/* About Us Title */}
-          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg nfont">
-            About <span className="text-yellow-300">Us</span>
-          </h1>
-        </div>
+        <h2 className="valueheading">About Us</h2>
 
         {/* Decorative Falling Leaves */}
         <div className="absolute inset-0 pointer-events-none">
@@ -73,7 +68,9 @@ const AboutUs = () => {
           </p>
         </section>
       </div>
+      <CoreValues/>
     </div>
+    
   );
 };
 

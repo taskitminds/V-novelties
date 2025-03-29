@@ -5,6 +5,18 @@ body {
     background-color: #e0f7fa;
   }
 
+  .application-heading {
+    font-weight: bold;
+    color: #ffe600;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
   .appli {
     width: 100%;
     font-family: "Poppins", sans-serif; /* Modern and elegant font */

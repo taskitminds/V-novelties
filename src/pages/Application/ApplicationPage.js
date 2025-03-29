@@ -45,13 +45,7 @@ const ApplicationPage = () => {
   return (
     <div className="appli">
       <div className="a relative text-center py-6 overflow-hidden">
-        {/* Banana Leaf Background */}
-        <div className="relative inline-block px-10 py-6 bg-green-700 rounded-full shadow-lg leaf-bg">
-          {/* About Us Title */}
-          <h1 className="typing text-5xl font-extrabold text-white tracking-wide drop-shadow-lg nfont">
-            Application
-          </h1>
-        </div>
+      <h2 className="application-heading">Application</h2>
         {/* Decorative Falling Leaves */}
         <div className="absolute inset-0 pointer-events-none">
           {Array.from({ length: 10 }).map((_, index) => (

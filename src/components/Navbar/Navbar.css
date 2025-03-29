@@ -110,6 +110,11 @@
   padding-left: 20px;
   cursor: pointer;
 }
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .logo:hover {
   transition: ease-in-out 0.3s;
@@ -203,7 +208,7 @@
 }
 
 /* ✅ Small Screens Below 426px */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .navbar {
     top: 0;
     padding: 0 10px; /* Adjust padding for a compact look */

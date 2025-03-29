@@ -264,14 +264,16 @@ body {
   font-size: 2rem;
   font-weight: 900;
   color: #30c915;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   animation: fadeIn 1.2s ease-in-out forwards;
 }
 
 /* Paragraph Animation */
 .carousel-content p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #bbbbbb;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   margin: 10px 0;
   animation: fadeIn 1.5s ease-in-out forwards;
 }

@@ -16,7 +16,7 @@ const slides = [
     description:
       "Skillfully formulated premix rich in vitamins, minerals, and essential nutrients for cattle and poultry.",
     image:
-      "https://www.hillspet.hk/content/dam/cp-sites/hills/hills-pet/global/general/thumbnails/HP_about_animalwelfare_section1_md.jpg",
+      "https://imgs.search.brave.com/OiKGikw9FEMrKyGyNtsrnCTXAvSqrXv_wBcpIc-a610/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTA1/MDUyNTkwL3Bob3Rv/L2NoaWNrZW4tYW5k/LWNvdy5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9M28waTRn/NF9fOHBuSW1QUzRB/M3BtWW5XNTUwUV9B/U2hLZzY1MXVSTHNR/ND0",
   },
   {
     title: "EXCELLENCE IN HERBAL SOLUTIONS",

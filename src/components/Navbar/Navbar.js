@@ -30,7 +30,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1 className={`logo ${animate ? "slide-in-left" : ""}`}>
-        <FaLeaf className="icon-nav" /> V novelties
+        <Link to="/">
+          <FaLeaf className="icon-nav" /> V novelties
+        </Link>
       </h1>
 
       {/* Menu Icon for Mobile */}

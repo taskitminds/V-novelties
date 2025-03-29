@@ -102,7 +102,7 @@
   }
 }
 
-@media (max-width: 485px) {
+@media (max-width: 500px) {
   .top-banner {
     display: none;
   }

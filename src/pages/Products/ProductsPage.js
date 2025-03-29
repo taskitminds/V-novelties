@@ -1,9 +1,20 @@
 import { useState } from "react";
 import "./ProductsPage.css"; // Ensure the CSS file is linked
 import { ChevronDown, ChevronUp } from "lucide-react";
+import essential from "../../assets/images/products/essential.webp"
+import hydrosol from "../../assets/images/products/hydrosol.webp"
+import herbal from "../../assets/images/products/herbal.webp"
+import dry from "../../assets/images/products/dry.webp"
+import liquid from "../../assets/images/products/liquid.webp"
+import chicks from "../../assets/images/products/chicks.webp"
+import cow from "../../assets/images/products/cow.webp"
+import crop from "../../assets/images/products/crop.webp"
+import insecticide from "../../assets/images/products/insecticide.webp"
+
 
 const herbal_care = [
   {
+    image: essential,
     title: "Essential oil (Perfumers World of Aroma)",
     content: [
       {
@@ -37,6 +48,7 @@ const herbal_care = [
     ],
   },
   {
+    image: hydrosol,
     title: "Hydrosol",
     content: [
       {
@@ -140,6 +152,7 @@ const herbal_care = [
     ],
   },
   {
+    image: herbal,
     title: "Herbal Extract (Natural, Greeny, Standardized and speciality Extracts)",
     content: [
       {
@@ -372,6 +385,7 @@ const herbal_care = [
 
 const personal_care_cosemetics = [
   {
+    image: dry,
     title: "Dry Powders",
     content: [
       {
@@ -449,7 +463,8 @@ const personal_care_cosemetics = [
     ],
   },
   {
-    title: "Others (Reveal the real)",
+    image: liquid,
+    title: "Gel and Powders",
     content: [
       {
         heading: "Aloe gel",
@@ -491,6 +506,7 @@ const personal_care_cosemetics = [
 
 const animal_care = [
   {
+    image: chicks,
     title: "Chicken (Healthy Chicks; Wealthy Farms)",
     content: [
       {
@@ -520,6 +536,7 @@ const animal_care = [
     ],
   },
   {
+    image: cow,
     title: "Cow",
     content: [
       {
@@ -559,11 +576,12 @@ const animal_care = [
 
 const agri_care = [
   {
+    image: crop,
     title: "Nature's care for crops",
     content: [
       {
         heading: "Humic",
-        points : [],
+        points: [],
       },
       {
         heading: "Micronutrients",
@@ -592,6 +610,7 @@ const agri_care = [
     ],
   },
   {
+    image: insecticide,
     title: "Insecticide",
     content: [
       {
@@ -618,133 +637,142 @@ const agri_care = [
   },
 ];
 
+
 export default function DryExtracts() {
-  const [openHerbalIndex, setOpenHerbalIndex] = useState(0);  // Initially open first item
-  const [openPersonalIndex, setOpenPersonalIndex] = useState(0);
-  const [openAnimalIndex, setOpenAnimalIndex] = useState(0);
-  const [openAgriIndex, setOpenAgriIndex] = useState(0);
+  const [openHerbalIndex, setOpenHerbalIndex] = useState(null);
+  const [openPersonalIndex, setOpenPersonalIndex] = useState(null);
+  const [openAnimalIndex, setOpenAnimalIndex] = useState(null);
+  const [openAgriIndex, setOpenAgriIndex] = useState(null);
 
   const toggleContent = (index, setIndex, currentIndex) => {
     setIndex(currentIndex === index ? null : index);
   };
 
   return (
-    <div className="productcontainer">
-      {/* HERBAL CARE */}
-      <h2 className="producttitle">HERBAL CARE</h2>
-      {herbal_care.map((extract, index) => (
-        <div key={index} className="productfield">
-          <button
-            onClick={() => toggleContent(index, setOpenHerbalIndex, openHerbalIndex)}
-            className="productbutton"
-          >
-            {extract.title}
-            {openHerbalIndex === index ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openHerbalIndex === index && (
-            <div className="productcontent active">
-              {extract.content.map((section, i) => (
-                <div key={i}>
-                  <h3 className="productheading">{section.heading}</h3>
-                  <ul>
-                    {section.points.map((point, j) => (
-                      <li key={j}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+    <div className="body">
+      <div className="productcontainer">
+        {/* HERBAL CARE */}
+        <h2 className="producttitle1">HERBAL CARE</h2>
+        {herbal_care.map((extract, index) => (
+          <div key={index} className="productfield">
+            <button
+              onClick={() => toggleContent(index, setOpenHerbalIndex, openHerbalIndex)}
+              className="productbutton"
+            >
+              <img src={extract.image} alt={extract.title} className="product-image" /> {/* Added Image */}<br />
+              {extract.title}
+              {openHerbalIndex === index ? <ChevronUp /> : <ChevronDown />}
+            </button>
+            {openHerbalIndex === index && (
+              <div className="productcontent active">
+                {extract.content.map((section, i) => (
+                  <div key={i}>
+                    <h3 className="productheading">{section.heading}</h3>
+                    <ul>
+                      {section.points.map((point, j) => (
+                        <li key={j}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
 
-      {/* PERSONAL CARE */}
-      <h2 className="producttitle">PERSONAL CARE COSMETICS</h2>
-      {personal_care_cosemetics.map((extract, index) => (
-        <div key={index} className="productfield">
-          <button
-            onClick={() => toggleContent(index, setOpenPersonalIndex, openPersonalIndex)}
-            className="productbutton"
-          >
-            {extract.title}
-            {openPersonalIndex === index ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openPersonalIndex === index && (
-            <div className="productcontent active">
-              {extract.content.map((section, i) => (
-                <div key={i}>
-                  <h3 className="productheading">{section.heading}</h3>
-                  <ul>
-                    {section.points.map((point, j) => (
-                      <li key={j}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
 
-      {/* ANIMAL CARE */}
-      <h2 className="producttitle">ANIMAL CARE</h2>
-      {animal_care.map((extract, index) => (
-        <div key={index} className="productfield">
-          <button
-            onClick={() => toggleContent(index, setOpenAnimalIndex, openAnimalIndex)}
-            className="productbutton"
-          >
-            {extract.title}
-            {openAnimalIndex === index ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openAnimalIndex === index && (
-            <div className="productcontent active">
-              {extract.content.map((section, i) => (
-                <div key={i}>
-                  <h3 className="productheading">{section.heading}</h3>
-                  <ul>
-                    {section.points.map((point, j) => (
-                      <li key={j}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+        {/* PERSONAL CARE */}
+        <h2 className="producttitle">PERSONAL CARE COSMETICS</h2>
+        {personal_care_cosemetics.map((extract, index) => (
+          <div key={index} className="productfield">
+            <button
+              onClick={() => toggleContent(index, setOpenPersonalIndex, openPersonalIndex)}
+              className="productbutton"
+            >
+              <img src={extract.image} alt={extract.title} className="product-image" /> {/* Added Image */}
+              {extract.title}
+              {openPersonalIndex === index ? <ChevronUp /> : <ChevronDown />}
+            </button>
+            {openPersonalIndex === index && (
+              <div className="productcontent active">
+                {extract.content.map((section, i) => (
+                  <div key={i}>
+                    <h3 className="productheading">{section.heading}</h3>
+                    <ul>
+                      {section.points.map((point, j) => (
+                        <li key={j}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
 
-      {/* AGRI CARE */}
-      <h2 className="producttitle">AGRI CARE</h2>
-      <center>
-        <h3 className="productsubheading">Green chemistry Greener fields</h3>
-      </center>
-      {agri_care.map((extract, index) => (
-        <div key={index} className="productfield">
-          <button
-            onClick={() => toggleContent(index, setOpenAgriIndex, openAgriIndex)}
-            className="productbutton"
-          >
-            {extract.title}
-            {openAgriIndex === index ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openAgriIndex === index && (
-            <div className="productcontent active">
-              {extract.content.map((section, i) => (
-                <div key={i}>
-                  <h3 className="productheading">{section.heading}</h3>
-                  <ul>
-                    {section.points.map((point, j) => (
-                      <li key={j}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+        {/* ANIMAL CARE */}
+        <h2 className="producttitle">ANIMAL CARE</h2>
+        {animal_care.map((extract, index) => (
+          <div key={index} className="productfield">
+            <button
+              onClick={() => toggleContent(index, setOpenAnimalIndex, openAnimalIndex)}
+              className="productbutton"
+            >
+              <img src={extract.image} alt={extract.title} className="product-image" /> {/* Added Image */}
+              {extract.title}
+              {openAnimalIndex === index ? <ChevronUp /> : <ChevronDown />}
+            </button>
+            {openAnimalIndex === index && (
+              <div className="productcontent active">
+                {extract.content.map((section, i) => (
+                  <div key={i}>
+                    <h3 className="productheading">{section.heading}</h3>
+                    <ul>
+                      {section.points.map((point, j) => (
+                        <li key={j}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+
+        {/* AGRI CARE */}
+        <h2 className="producttitle">AGRI CARE</h2>
+        <center>
+          <h3 className="productsubheading">Green chemistry Greener fields</h3>
+        </center>
+        {agri_care.map((extract, index) => (
+          <div key={index} className="productfield">
+            <button
+              onClick={() => toggleContent(index, setOpenAgriIndex, openAgriIndex)}
+              className="productbutton"
+            >
+              <img src={extract.image} alt={extract.title} className="product-image" /> {/* Added Image */}
+              {extract.title}
+              {openAgriIndex === index ? <ChevronUp /> : <ChevronDown />}
+            </button>
+            {openAgriIndex === index && (
+              <div className="productcontent active">
+                {extract.content.map((section, i) => (
+                  <div key={i}>
+                    <h3 className="productheading">{section.heading}</h3>
+                    <ul>
+                      {section.points.map((point, j) => (
+                        <li key={j}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
     </div>
+
   );
 }
-
