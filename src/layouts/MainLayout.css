@@ -1,0 +1,15 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+  }
+  
+@media (max-width: 770px) {
+    .loading-container {
+        margin-top: 15rem;
+        margin-bottom: 20rem;
+    }
+}
