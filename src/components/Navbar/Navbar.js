@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaLeaf, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../../assets/images/home/logo.webp";
 
 const Navbar = () => {
   const [animate, setAnimate] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
     <nav className="navbar">
       <h1 className={`logo ${animate ? "slide-in-left" : ""}`}>
         <Link to="/">
-          <FaLeaf className="icon-nav" /> V novelties
+          <img src={logo} className="icon-nav" /> V novelties
         </Link>
       </h1>
 

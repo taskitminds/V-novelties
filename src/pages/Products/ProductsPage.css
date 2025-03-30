@@ -3,6 +3,22 @@
 
 .body {
   margin-top: -100px;
+  background-image: url('../../assets/images/products/mobile_bg3.webp'); /* Replace with actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Light overlay */
+  z-index: -1;
 }
 
 
@@ -36,6 +52,8 @@
     height: 100px;
     margin-bottom: 5px; /* Add spacing between image and title */
   }
+
+  
 }
 
 /* Title Styling */
@@ -50,8 +68,8 @@
   font-family: 'Black Ops One', sans-serif;
   font-size: 2.2rem;
   letter-spacing: 2px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  color: #F4A62A; /* Warm Gold */
+  text-shadow: 0 0 8px #1478c0, 0 0 10px #5cb0eb;
+  color: #0A3D62;
 }
 
 .producttitle1::after {
@@ -75,8 +93,8 @@
   font-family: 'Black Ops One', sans-serif;
   font-size: 2.2rem;
   letter-spacing: 2px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  color: #F4A62A; /* Warm Gold */
+  text-shadow: 0 0 8px #1478c0, 0 0 10px #5cb0eb;
+  color: #0A3D62;
 }
 
 .producttitle::after {
@@ -179,7 +197,8 @@
 .productsubheading {
   font-size: 22px;
   font-weight: bold;
-  color: #F4A62A; 
+  color: #125484;
+  text-shadow: 0 0 2px #023254, 0 0 4px #0b8dea;
   margin-bottom: 12px;
   text-align: center;
   text-transform: uppercase;

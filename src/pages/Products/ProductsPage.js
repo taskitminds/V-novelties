@@ -649,7 +649,7 @@ export default function DryExtracts() {
   };
 
   return (
-    <div className="body">
+    <div className="body mobile-bg">
       <div className="productcontainer">
         {/* HERBAL CARE */}
         <h2 className="producttitle1">HERBAL CARE</h2>

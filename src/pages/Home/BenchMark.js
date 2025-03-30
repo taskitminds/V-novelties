@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./BenchMark.css";
 import img1 from "./1.jpg";
 import img2 from "./2.jpg";
@@ -17,6 +17,7 @@ const images = [
 const AnimatedImageGallery = () => {
     const headingRef = useRef(null);
     const galleryRef = useRef(null);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     useEffect(() => {
         const observerOptions = {
@@ -49,14 +50,22 @@ const AnimatedImageGallery = () => {
         };
     }, []);
 
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
+
     return (
         <div>
             <h1 ref={headingRef} className="benchmark-heading">BenchMark Products</h1>
-            <center><p className="benchmark-hint">(Place cursor on images for details)</p></center>
+            <center><p className="benchmark-hint">(Click on images for preview)</p></center>
             <div className="gallery-body">
                 <div ref={galleryRef} className="gallery-container">
                     {images.map((image, index) => (
-                        <div key={index} className="gallery-card">
+                        <div key={index} className="gallery-card" onClick={() => handleImageClick(image)}>
                             <img src={image.src} alt={`Gallery ${index + 1}`} />
                             <div className="content">
                                 <h3>{image.title}</h3>
@@ -66,6 +75,18 @@ const AnimatedImageGallery = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Modal Popup */}
+            {selectedImage && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <span className="close-btn" onClick={closeModal}>&times;</span>
+                        <img src={selectedImage.src} alt={selectedImage.title} className="modal-image" />
+                        <h2>{selectedImage.title}</h2>
+                        <p>{selectedImage.description}</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
