@@ -41,7 +41,7 @@ const CoreValues = () => {
         <section className="core-values">
             <h2 className="valueheading">Our Core Values</h2>
             <p className="valuecontent">
-            At Vikarta Herbals, we’re more than just a wholesale supplier, we’re your partner in beauty. Thank you for choosing Vikarta Herbals, let’s make beauty happen together.
+            At V Novelties Herbal Products, we’re more than just a brand—we’re your trusted companion in wellness. Thank you for choosing V Novelties Herbal Products. Let’s embrace nature’s goodness and redefine self-care together!
             </p>
             <div className="values-grid">
                 <div className="value-box">
