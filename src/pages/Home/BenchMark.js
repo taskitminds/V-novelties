@@ -7,11 +7,11 @@ import img4 from "./4.jpg";
 import img5 from "./5.jpg";
 
 const images = [
-    { src: img3, title: "Product 1", description: "High-quality material for durability." },
-    { src: img2, title: "Product 2", description: "Designed for comfort and performance." },
-    { src: img5, title: "Product 3", description: "Innovative design with smart features." },
-    { src: img4, title: "Product 4", description: "Perfect blend of style and function." },
-    { src: img1, title: "Product 5", description: "Premium craftsmanship and quality." }
+    { src: img1, title: "Essential Oils", description: "Lemongrass, Vettiver, Eucalyptus" },
+    { src: img2, title: "Extracts", description: "Blue Pea Flower, Hibiscus Extract, Rose" },
+    { src: img3, title: "Agri Care", description: "Neem Seed, Seaweed Gel, Micro Nutrients" },
+    { src: img4, title: "Personal Care", description: "Aloe Gel, Cucumber Gel, Rose Water" },
+    { src: img5, title: "Animal Care", description: "Cow(Vmilk+), Chicken(Vpro & Vcal)" }
 ];
 
 const AnimatedImageGallery = () => {

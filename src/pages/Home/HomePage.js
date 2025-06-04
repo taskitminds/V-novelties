@@ -4,14 +4,16 @@ import "./HomePage.css"; // Import the main CSS for HomePage
 import h1 from "../../assets/images/home/h1.webp";
 import h2 from "../../assets/images/home/h2.webp";
 import h3 from "../../assets/images/home/h3.webp";
+import h4 from "../../assets/images/home/h4.webp";
 import Slideshow from "./Slideshow";
 import Benchmark from "./BenchMark"
 
 
 const carouselImages = [
-  { image: h1, title: "Crop & Animal Care Products", text: "Crafted for sustainable farming, our products nurture your land and livestock while preserving nature's balance.", position: "left" },
-  { image: h2, title: "Essential Oils & Powders", text: "Our Essential Oils and Powders are crafted from the finest natural sources, ensuring purity and potency.", position: "right" },
-  { image: h3, title: "Natural Herbal Solutions", text: "Our Natural Herbal Solutions offer pure, plant-based remedies for wellness and care.", position: "left" },
+  { image: h1, title: "Animal Care Products", text: "Designed for healthy hens and hardy cattle, our care products support growth, immunity, and comfort — all while respecting the rhythm of nature.", position: "right" },
+  { image: h2, title: "Crop Care Products", text: "Formulated for thriving fields, our crop care solutions protect your harvest and enrich the soil-ensuring growth that’s strong, sustainable, and in harmony with nature.", position: "left" },
+  { image: h3, title: "Herbal Care Products", text: "Our Essential Oils, Dry Powders and Extracts are crafted from the finest natural sources, ensuring purity and potency.", position: "right" },
+  { image: h4, title: "Personal Care Products", text: "Our Natural Herbal Solutions offer pure, plant-based remedies for wellness and care.", position: "left" },
 ];
 
 

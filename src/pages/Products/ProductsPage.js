@@ -559,17 +559,6 @@ const animal_care = [
           "Assured High and quality milk production", "Improved immunity leads growth, productivity and performance", "Supreme SNF, Protein and taste content in milk", "Better udder health",
         ],
       },
-      {
-        heading: "Cucumber gel and liquid",
-        points: [
-          "Vitamin E, which helps to postpone skin ageing, hydrate the face, and stretch wrinkles.",
-          "Antiaging and antiwrinkling",
-          "Antiinflammatory",
-          "Moisturizer",
-          "Nourish, revitalize, rejuvenates skin",
-          "Supple and improves the skin texture",
-        ],
-      },
     ],
   },
 ];

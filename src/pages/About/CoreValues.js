@@ -41,7 +41,7 @@ const CoreValues = () => {
         <section className="core-values">
             <h2 className="valueheading">Our Core Values</h2>
             <p className="valuecontent">
-            At V Novelties Herbal Products, we’re more than just a brand—we’re your trusted companion in wellness. Thank you for choosing V Novelties Herbal Products. Let’s embrace nature’s goodness and redefine self-care together!
+            At V novelties Herbal Products, we’re more than just a brand—we’re your trusted companion in wellness. Thank you for choosing V Novelties Herbal Products. Let’s embrace nature’s goodness and redefine self-care together!
             </p>
             <div className="values-grid">
                 <div className="value-box">
