@@ -45,25 +45,8 @@ const ApplicationPage = () => {
   return (
     <div className="appli">
       <div className="a relative text-center py-6 overflow-hidden">
-      <h2 className="application-heading">Application</h2>
-        {/* Decorative Falling Leaves */}
-        <div className="absolute inset-0 pointer-events-none">
-          {Array.from({ length: 10 }).map((_, index) => (
-            <span
-              key={index}
-              className="absolute text-green-500 text-xl opacity-70 animate-fall"
-              style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 4}s`,
-                fontSize: `${Math.random() * 1.5 + 1}rem`,
-              }}
-            >
-              🍃
-              🍂
-            </span>
-          ))}
-        </div>
-        </div>
+        <h2 className="application-heading">Application</h2>  
+      </div>
 
       {/* Cloud Templates */}
       <motion.div
