@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.73ae1693.css",
-    "main.js": "/static/js/main.2fd2232b.js",
+    "main.css": "/static/css/main.73349161.css",
+    "main.js": "/static/js/main.e81906f7.js",
     "static/js/453.76ffd99f.chunk.js": "/static/js/453.76ffd99f.chunk.js",
     "static/media/r&d.webp": "/static/media/r&d.1d94cc8d535704724f2f.webp",
     "static/media/mobile_bg3.webp": "/static/media/mobile_bg3.1f3951889b09ab5b8b50.webp",
-    "static/media/WhoWeareImage.jpg": "/static/media/WhoWeareImage.6c1d2f3191a9545e0b8b.jpg",
+    "static/media/WhoWeareImage.webp": "/static/media/WhoWeareImage.6c1d2f3191a9545e0b8b.webp",
     "static/media/h3.webp": "/static/media/h3.01e3da38f7b0ac69143e.webp",
     "static/media/hydrosol.webp": "/static/media/hydrosol.5133b777969af5298964.webp",
     "static/media/h4.webp": "/static/media/h4.c58850ede66d7fc0a5d9.webp",
     "static/media/h2.webp": "/static/media/h2.77084888b2fbf60b3696.webp",
     "static/media/essential.webp": "/static/media/essential.eda54c50d8cc636f27a0.webp",
     "static/media/herbal.webp": "/static/media/herbal.6807848902471c4a3ef8.webp",
-    "static/media/aboutbanner.jpg": "/static/media/aboutbanner.b2e94f31cb4cea233937.jpg",
+    "static/media/aboutbanner.webp": "/static/media/aboutbanner.b2e94f31cb4cea233937.webp",
     "static/media/5.jpg": "/static/media/5.c7b905adfe63ccda401e.jpg",
     "static/media/2.jpg": "/static/media/2.97f6436b9ce57775e8e0.jpg",
     "static/media/h1.webp": "/static/media/h1.d681f42dd48d48a39455.webp",
@@ -39,12 +39,12 @@
     "static/media/improvement.webp": "/static/media/improvement.360d03879b444c33a1cc.webp",
     "index.html": "/index.html",
     "static/media/logo.svg": "/static/media/logo.59a0a9d64a8b914b2634367a06484f49.svg",
-    "main.73ae1693.css.map": "/static/css/main.73ae1693.css.map",
-    "main.2fd2232b.js.map": "/static/js/main.2fd2232b.js.map",
+    "main.73349161.css.map": "/static/css/main.73349161.css.map",
+    "main.e81906f7.js.map": "/static/js/main.e81906f7.js.map",
     "453.76ffd99f.chunk.js.map": "/static/js/453.76ffd99f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.73ae1693.css",
-    "static/js/main.2fd2232b.js"
+    "static/css/main.73349161.css",
+    "static/js/main.e81906f7.js"
   ]
 }
