@@ -6,7 +6,7 @@ import './Footer.css'; // Custom styles for footer if needed
 const Footer = () => {
   return (
     <footer className="footer">
-      <p className="footer-text">&copy; 2025 V Novelties. All Rights Reserved.</p>
+      <p className="footer-text">&copy; 2025 Vnovelties. All Rights Reserved.</p>
     </footer>
   );
 };
