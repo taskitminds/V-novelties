@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c38c5de2.css",
+    "main.css": "/static/css/main.3094eda9.css",
     "main.js": "/static/js/main.a85f40e9.js",
     "static/js/453.76ffd99f.chunk.js": "/static/js/453.76ffd99f.chunk.js",
     "static/media/r&d.webp": "/static/media/r&d.1d94cc8d535704724f2f.webp",
@@ -25,7 +25,6 @@
     "static/media/insecticide.webp": "/static/media/insecticide.96325b1236efa273621d.webp",
     "static/media/dry.webp": "/static/media/dry.71813276a28b7dd7a146.webp",
     "static/media/chicks.webp": "/static/media/chicks.16096ff3caf55c1bc729.webp",
-    "static/media/banana_leaf2.webp": "/static/media/banana_leaf2.9868ece469f1e7936c27.webp",
     "static/media/cow.webp": "/static/media/cow.1bdd1689ddaf923cd50d.webp",
     "static/media/liquid.webp": "/static/media/liquid.819d8a1a4067ce73b60a.webp",
     "static/media/customer_focus.webp": "/static/media/customer_focus.36934bca633e0296103b.webp",
@@ -38,12 +37,12 @@
     "static/media/improvement.webp": "/static/media/improvement.360d03879b444c33a1cc.webp",
     "index.html": "/index.html",
     "static/media/logo.svg": "/static/media/logo.59a0a9d64a8b914b2634367a06484f49.svg",
-    "main.c38c5de2.css.map": "/static/css/main.c38c5de2.css.map",
+    "main.3094eda9.css.map": "/static/css/main.3094eda9.css.map",
     "main.a85f40e9.js.map": "/static/js/main.a85f40e9.js.map",
     "453.76ffd99f.chunk.js.map": "/static/js/453.76ffd99f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c38c5de2.css",
+    "static/css/main.3094eda9.css",
     "static/js/main.a85f40e9.js"
   ]
 }

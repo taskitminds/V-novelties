@@ -68,7 +68,7 @@ const AboutUs = () => {
           </p>
         </section>
       </div>
-      <CoreValues/>
+      <CoreValues />
     </div>
     
   );
