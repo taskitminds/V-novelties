@@ -19,7 +19,7 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-  background-image: url('../../assets/images/about/aboutbanner.jpg');
+  background-image: url('../../assets/images/about/aboutbanner.webp');
   background-size: cover;
   background-position: center;
   height: 60vh;

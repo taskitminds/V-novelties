@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutPage.css';
 import CoreValues from './CoreValues';
-import whoImg from '../../assets/images/about/WhoWeareImage.jpg';
+import whoImg from '../../assets/images/about/WhoWeareImage.webp';
 import missionImg from '../../assets/images/about/MissionImage.webp';
 import visionImg from '../../assets/images/about/VisionImages.webp';
 
