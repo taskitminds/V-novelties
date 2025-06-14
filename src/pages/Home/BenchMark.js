@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./BenchMark.css";
-import img1 from "./1.jpg";
+import img1 from "./5.jpg";
 import img2 from "./2.jpg";
 import img3 from "./3.jpg";
 import img4 from "./4.jpg";
-import img5 from "./5.jpg";
+import img5 from "./1.jpg";
 
 const images = [
-    { src: img1, title: "Essential Oils", description: "Lemongrass, Vettiver, Eucalyptus" },
+    { src: img1, title: "Animal Care", description: "Cow(Vmilk+), Chicken(Vpro & Vcal)" },
     { src: img2, title: "Extracts", description: "Blue Pea Flower, Hibiscus Extract, Rose" },
     { src: img3, title: "Agri Care", description: "Neem Seed, Seaweed Gel, Micro Nutrients" },
     { src: img4, title: "Personal Care", description: "Aloe Gel, Cucumber Gel, Rose Water" },
-    { src: img5, title: "Animal Care", description: "Cow(Vmilk+), Chicken(Vpro & Vcal)" }
+    { src: img5, title: "Essential Oils", description: "Lemongrass, Vettiver, Eucalyptus" }
 ];
 
 const AnimatedImageGallery = () => {

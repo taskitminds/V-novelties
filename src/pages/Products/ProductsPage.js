@@ -52,7 +52,7 @@ import thandrikai from "../../assets/images/products/herbal/thandrikai.webp";
 import seenthal from "../../assets/images/products/herbal/seenthal.webp";
 import amukkarakizhangu from "../../assets/images/products/herbal/amukkarakizhangu.webp";
 import ginger from "../../assets/images/products/herbal/ginger.webp";
-
+import Granules_organic from "../../assets/images/products/agri/Granulesorganic.webp";
 /*Personal Care*/
 import aswaganthapowder from "../../assets/images/products/powders/aswaganthapowder.webp";
 import amlapowder from "../../assets/images/products/powders/amla.webp";
@@ -722,6 +722,7 @@ const agri_care = [
       },
       {
         heading: "Granules organic",
+        image: Granules_organic,
         points: [],
       },
       {

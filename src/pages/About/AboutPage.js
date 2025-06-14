@@ -37,8 +37,8 @@ const AboutUs = () => {
           <div className="about-text">
             <h2>Who We Are</h2>
             <p>
-              We focus on the therapeutic importance of medicinal plants renowned in southern India. These are selected, fractionated, and evaluated for their potential to treat specific disorders and uncover mechanisms behind their efficacy.
-            </p>
+              We focus the therapeutic and health giving importance of medicinal plants which is renowned as valuable folkloric medicine in southern parts of India which are selectively cornered, fractionated and evaluated for their potential against particular disorders and validate the possible mechanism behind the action as well.
+                         </p>
           </div>
         </div>
       </section>
@@ -52,7 +52,7 @@ const AboutUs = () => {
           <div className="about-text">
             <h2>Our Vision</h2>
             <p>
-              To isolate bio-active natural products from plants and microorganisms, pioneering diverse applications across key industries.
+              Apparently the intent of mission, to isolate the bio-active natural products from plants and microorganisms which are applied to investigate diverse range of applications being experienced as an exemplary agent in major industrial needs.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ const AboutUs = () => {
           <div className="about-text">
             <h2>Our Mission</h2>
             <p>
-              To extract phytochemicals in their purest form while maintaining their natural therapeutic properties for the benefit of our customers.
+              Precisely, extract and isolate the phytochemicals from plants with all its naturalness and preserve the therepeutic and/or health giving properties entirely in order to cherish our customers naturally.
             </p>
           </div>
         </div>
