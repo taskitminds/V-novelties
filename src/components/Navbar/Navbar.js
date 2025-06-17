@@ -38,7 +38,7 @@ const Navbar = () => {
             <img src={logo} className="icon-nav" alt="V Novelties Logo" />
             <div className="logo-text">
               V novelties
-              <p className="tagline">Naturally in every drop</p>
+              <center><p className="tagline">Naturally in every drop</p></center>
             </div>
           </div>
         </Link>
