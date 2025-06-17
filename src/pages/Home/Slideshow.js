@@ -22,9 +22,17 @@ const slides = [
     title: "EXCELLENCE IN HERBAL SOLUTIONS",
     subtitle: "Finesse With Our Essential Oil, Extracts, And Hydrosol",
     description:
-      "Expertly crafted herbal formulas enriched with bioactives. Standardized extracts and unique formulations transform several industries.",
+      "Expertly crafted herbal formulas enriched with bioactives. Phytoscience guided pure extracts rich in alkaloids, flavanoids, terpenoids and phenolic compounds assisted our customer create significant products.",
     image:
       "https://8151088.fs1.hubspotusercontent-na1.net/hubfs/8151088/Natural%20Beauty_%20A%20Look%20at%20Ancient%20Herbal%20Skincare%20Remedies.png",
+  },
+  {
+    title: "ADORABLE PERSONAL CARE",
+    subtitle: "Let nauture nourish your beauty",
+    description:
+      "Enriched with the goodness of botonical extracts, Promotes healthy hair growth, Strengthen hair, Reduces hairfall by upto 95%, Nourishes scalp and increases blood flow",
+    image:
+      "https://imgs.search.brave.com/GRTT_EJD4dp3q-YUkv4W2uK6Y1ks79fnT42VDp2VWKA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9tb2NrdXAtYmF0/aGluZy1wcm9kdWN0/cy10b3Atdmlldy1m/bGF0LWxheS1zcGEt/cmF6b3ItdG9vdGhw/YXN0ZS1zb2FwLWdl/bC1vdGhlci12YXJp/b3VzLWFjY2Vzc29y/aWVzLWNvc21ldGlj/cy1za2luLWhlYWx0/aC1iYXRoLW1vY2t1/cC15b3VyLWxvZ29f/NzkwNzUtMzAyMTcu/anBnP3NlbXQ9YWlz/X2h5YnJpZCZ3PTc0/MA",
   },
 ];
 

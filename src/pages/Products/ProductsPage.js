@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./ProductsPage.css"; // Ensure the CSS file is linked
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import essential from "../../assets/images/products/essential.webp"
 import hydrosol from "../../assets/images/products/hydrosol.webp"
 import herbal from "../../assets/images/products/herbal.webp"
@@ -9,7 +12,7 @@ import liquid from "../../assets/images/products/liquid.webp"
 import chicks from "../../assets/images/products/chicks.webp"
 import cow from "../../assets/images/products/cow.webp"
 import crop from "../../assets/images/products/crop.webp"
-import insecticide from "../../assets/images/products/insecticide.webp"
+
 
 import lemongrass from "../../assets/images/products/herbal/lemongrass.webp";
 import palmarosa from "../../assets/images/products/herbal/palmarosa.webp";
@@ -79,9 +82,8 @@ import pongamia from "../../assets/images/products/agri/pongamia.webp";
 import aamankku from "../../assets/images/products/agri/aamankku.webp";
 import azardictin from "../../assets/images/products/agri/azardictin.webp";
 import karanja from "../../assets/images/products/agri/karanja.webp";
+import aloeliquid from "../../assets/images/products/powders/aloeLiquid.webp";
 
-
-import { image } from "framer-motion/client";
 
 const herbal_care = [
   {
@@ -590,19 +592,6 @@ const personal_care_cosemetics = [
           "Rich source of vitamin A,B,C,B2", "Good for respiratory issues", "Treatment of anemia, diabetes, indigestion, obesity, kidney problems, and hair and skin problems", "Boost hair growth, adds shine and bounce", "Improves scalp health",
         ],
       },
-    ],
-  },
-  {
-    image: liquid,
-    title: "Gel and Powders",
-    content: [
-      {
-        heading: "Aloe gel",
-        image: aloegel,
-        points: [
-          "Scalp soothing and nourishing",
-        ],
-      },
       {
         heading: "Aloe powder",
         image: aloePowder,
@@ -615,12 +604,12 @@ const personal_care_cosemetics = [
           "Beneficial for after shaving and waxing",
         ],
       },
-      /*{
-        heading: "Aloe liquid",
-        points: [
-          //no details about it
-        ],
-      },*/
+    ],
+  },
+  {
+    image: liquid,
+    title: "Gels",
+    content: [
       {
         heading: "Cucumber gel and liquid",
         image: cucumbergel,
@@ -631,6 +620,20 @@ const personal_care_cosemetics = [
           "Moisturizer",
           "Nourish, revitalize, rejuvenates skin",
           "Supple and improves the skin texture",
+        ],
+      },
+      {
+        heading: "Aloe gel",
+        image: aloegel,
+        points: [
+          "Scalp soothing and nourishing",
+        ],
+      },
+      {
+        heading: "Aloe liquid",
+        image: aloeliquid,
+        points: [
+          //no details about it
         ],
       },
     ],
@@ -709,18 +712,6 @@ const agri_care = [
     title: "Nature's care for crops",
     content: [
       {
-        heading: "Humic",
-        points: [],
-      },
-      {
-        heading: "Micronutrients",
-        points: [],
-      },
-      {
-        heading: "Amino acids",
-        points: [],
-      },
-      {
         heading: "Granules organic",
         image: Granules_organic,
         points: [],
@@ -740,12 +731,7 @@ const agri_care = [
         image: seaweedliquid,
         points: [],
       },
-    ],
-  },
-  {
-    image: insecticide,
-    title: "Insecticide",
-    content: [
+      
       {
         heading: "Neem seed",
         image: neemseed,
@@ -771,12 +757,48 @@ const agri_care = [
         image: karanja,
         points: [],
       },
+      {
+        heading: "Humic",
+        points: [],
+      },
+      {
+        heading: "Micronutrients",
+        points: [],
+      },
+      {
+        heading: "Amino acids",
+        points: [],
+      },
+    
     ],
   },
 ];
 
 
 export default function DryExtracts() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollToCategory = (category) => {
+      const sectionMap = {
+        "Animal Care": "animal-care-section",
+        "Agri Care": "agri-care-section",
+        "Personal Care": "personal-care-section",
+        "Essential Oils": "herbal-care-section",
+        "Extracts": "herbal-care-section", // Or create separate if needed
+      };
+      const sectionId = sectionMap[category];
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    if (location.state?.category) {
+      scrollToCategory(location.state.category);
+    }
+  }, [location.state]);
+
   const [openHerbalIndex, setOpenHerbalIndex] = useState(null);
   const [openPersonalIndex, setOpenPersonalIndex] = useState(null);
   const [openAnimalIndex, setOpenAnimalIndex] = useState(null);
@@ -824,42 +846,10 @@ export default function DryExtracts() {
 
 
   return (
-    <div className="body mobile-bg">
+    <div className="body">
       <div className="productcontainer">
-        {/* HERBAL CARE */}
-        <h2 className="producttitle1">HERBAL CARE</h2>
-        {herbal_care.map((extract, index) => (
-          <div key={index} className="productfield">
-            <button
-              onClick={() => toggleContent(index, setOpenHerbalIndex, openHerbalIndex)}
-              className="productbutton"
-            >
-              <img src={extract.image} alt={extract.title} className="product-image" /><br />
-              {extract.title}
-              {openHerbalIndex === index ? <ChevronUp /> : <ChevronDown />}
-            </button>
-            {openHerbalIndex === index && renderContentGrid(extract)}
-          </div>
-        ))}
-
-        {/* PERSONAL CARE */}
-        <h2 className="producttitle">PERSONAL CARE COSMETICS</h2>
-        {personal_care_cosemetics.map((extract, index) => (
-          <div key={index} className="productfield">
-            <button
-              onClick={() => toggleContent(index, setOpenPersonalIndex, openPersonalIndex)}
-              className="productbutton"
-            >
-              <img src={extract.image} alt={extract.title} className="product-image" />
-              {extract.title}
-              {openPersonalIndex === index ? <ChevronUp /> : <ChevronDown />}
-            </button>
-            {openPersonalIndex === index && renderContentGrid(extract)}
-          </div>
-        ))}
-
         {/* ANIMAL CARE */}
-        <h2 className="producttitle">ANIMAL CARE</h2>
+        <h2 id="animal-care-section" className="producttitle">ANIMAL CARE</h2>
         {animal_care.map((extract, index) => (
           <div key={index} className="productfield">
             <button
@@ -875,7 +865,7 @@ export default function DryExtracts() {
         ))}
 
         {/* AGRI CARE */}
-        <h2 className="producttitle">AGRI CARE</h2>
+        <h2 id="agri-care-section" className="producttitle">AGRI CARE</h2>
         <center>
           <h3 className="productsubheading">Green chemistry Greener fields</h3>
         </center>
@@ -892,6 +882,42 @@ export default function DryExtracts() {
             {openAgriIndex === index && renderContentGrid(extract)}
           </div>
         ))}
+
+        {/* HERBAL CARE */}
+        <h2 id="herbal-care-section" className="producttitle1">HERBAL CARE</h2>
+        {herbal_care.map((extract, index) => (
+          <div key={index} className="productfield">
+            <button
+              onClick={() => toggleContent(index, setOpenHerbalIndex, openHerbalIndex)}
+              className="productbutton"
+            >
+              <img src={extract.image} alt={extract.title} className="product-image" /><br />
+              {extract.title}
+              {openHerbalIndex === index ? <ChevronUp /> : <ChevronDown />}
+            </button>
+            {openHerbalIndex === index && renderContentGrid(extract)}
+          </div>
+        ))}
+        
+
+        {/* PERSONAL CARE */}
+        <h2 id="personal-care-section" className="producttitle">PERSONAL CARE COSMETICS</h2>
+        {personal_care_cosemetics.map((extract, index) => (
+          <div key={index} className="productfield">
+            <button
+              onClick={() => toggleContent(index, setOpenPersonalIndex, openPersonalIndex)}
+              className="productbutton"
+            >
+              <img src={extract.image} alt={extract.title} className="product-image" />
+              {extract.title}
+              {openPersonalIndex === index ? <ChevronUp /> : <ChevronDown />}
+            </button>
+            {openPersonalIndex === index && renderContentGrid(extract)}
+          </div>
+        ))}
+
+
+        
       </div>
     </div>
   );

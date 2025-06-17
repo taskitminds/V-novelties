@@ -7,10 +7,11 @@ import h3 from "../../assets/images/home/h3.webp";
 import h4 from "../../assets/images/home/h4.webp";
 import Slideshow from "./Slideshow";
 import Benchmark from "./BenchMark"
+import home from "../../assets/images/home/logo.webp"
 
 
 const carouselImages = [
-  { image: h1, title: "Animal Care Products", text: "Designed for healthy hens and hardy cattle, our care products support growth, immunity, and comfort — all while respecting the rhythm of nature.", position: "right" },
+  { image: h1, title: "Animal Care Products", text: "Especially for beloved pets and poultry cattle care. Profitable poultry / health and performance booster.", position: "right" },
   { image: h2, title: "Crop Care Products", text: "Formulated for thriving fields, our crop care solutions protect your harvest and enrich the soil-ensuring growth that’s strong, sustainable, and in harmony with nature.", position: "left" },
   { image: h3, title: "Herbal Care Products", text: "Our Essential Oils, Dry Powders and Extracts are crafted from the finest natural sources, ensuring purity and potency.", position: "right" },
   { image: h4, title: "Personal Care Products", text: "Our Natural Herbal Solutions offer pure, plant-based remedies for wellness and care.", position: "left" },
@@ -85,18 +86,27 @@ const HomePage = () => {
       {/* Who we are section */}
       <section className="about" ref={ref}>
         <h3 className="section-title typing-animation">{typedText}</h3>
-        <p className="about-description">
-          Since 2022, V novelties is dedicated to offer you the services as where your product search ends.  Our professionalism lies in manufacturing of products available in distinct customized specifications as per the requirements of clients / enduser.           V novelties is a competently governed firm committed in trading and manufacturing of Food Ingredients, Herbal extracts, Nutraceuticals, Agricultural& Pharmaceutical raw materials and final products
-          <br/>
-          We at V novelties preserve good business relationships with compliance to ethical business policies so as to maximize our patrons.
-          Our enlightenments into the market have sustained us to perform the industry better.
-        </p>
+        <div className="about-columns">
+          <div className="about-image">
+            <img src={home} ></img>
+          </div>
+          <div className="about-column">
+            <p>
+              Since 2022, V novelties is dedicated to offer you the services as where your product search ends.
+              Our professionalism lies in manufacturing of products available in distinct customized specifications as per the requirements of clients/enduser.
+              V novelties is a competently governed firm committed in trading and manufacturing of Food Ingredients, Herbal extracts, Nutraceuticals, Agricultural & Pharmaceutical raw materials and final products.
+              We at V novelties preserve good business relationships with compliance to ethical business policies so as to maximize our patrons.
+              Our enlightenments into the market have sustained us to perform the industry better.
+            </p>
+          </div>
+        </div>
+
       </section>
       <hr />
 
       {/* Templates of slides section*/}
-      <Slideshow/>
-      {/*benchmark products*/}    
+      <Slideshow />
+      {/*benchmark products*/}
       <Benchmark />
 
     </div>
@@ -105,12 +115,3 @@ const HomePage = () => {
 
 
 export default HomePage; // Export HomePage component as default
-
-
-
-
-
-
-
-/*<Product img="https://i.pinimg.com/236x/bf/58/96/bf5896dc6968b3f82e24de4b03791e8e.jpg" title='Tulasi' discr='This is tulasi'/> */
-

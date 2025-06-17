@@ -7,16 +7,19 @@ import AboutPage from "../pages/About/AboutPage";
 import ProductsPage from "../pages/Products/ProductsPage";
 import ApplicationPage from "../pages/Application/ApplicationPage";
 import ContactPage from "../pages/Contact/ContactPage";
-import Header from "../components/Header/Header";
 import RandD from "../pages/R&D/r&dpaje";
 import "./MainLayout.css";
 import loading from "../logo.svg"
 
 const LoadingScreen = () => (
-  <div className="loading-container flex justify-center items-center h-screen">
-    <img src={loading} alt="Loading..." className="w-16 h-16" />
+  <div className="loading-container">
+    <div className="loading-content">
+      <img src={loading} alt="Loading..." className="loading-logo" />
+      <p className="loading-text">Naturally in every drop</p>
+    </div>
   </div>
 );
+
 
 const MainLayout = () => {
   const location = useLocation();
@@ -30,7 +33,6 @@ const MainLayout = () => {
 
   return (
     <>
-      <Header />
       <Navbar />
       {loading ? (
         <LoadingScreen />

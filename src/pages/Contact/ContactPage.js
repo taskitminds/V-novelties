@@ -2,6 +2,7 @@ import React from 'react';
 import './ContactPage.css';
 import { Mail, MapPin, Phone, User } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const ContactUs = () => {
   const [state, handleSubmit] = useForm("xeoaeayb");  // Your Formspree form ID
@@ -110,6 +111,22 @@ const ContactUs = () => {
 
         </div>
       </div>
+      {/* Follow Us Section */}
+        <div className="follow-us-section">
+          <h2>Stay Connected with Us</h2>
+          <p>Follow us on social media for latest updates and products!</p>
+          <div className="social-icons">
+            <a href="https://www.facebook.com/share/166SEiPp6h/" className="social-link" target="_blank" rel="noreferrer">
+              <FaFacebook />
+            </a>
+            <a href="https://www.instagram.com/vnoveltiesmdu?igsh=MWJvZDZxNzZob20yOQ==" className="social-link slstyle" target="_blank" rel="noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/in/v-novelties-7b904935a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="social-link" target="_blank" rel="noreferrer">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
     </div>
   );
 };

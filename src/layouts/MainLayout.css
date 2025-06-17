@@ -1,15 +1,40 @@
 .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin-top: 10rem;
+  margin-bottom: 30rem;
+}
+
+.loading-content {
+  text-align: center;
+  position: relative;
+}
+
+.loading-logo {
+  width: 700px;  /* Increased from 4rem */
+  height: 700px; /* Increased from 4rem */
+  margin-bottom: -300px; /* Adjusted to center the logo */
+}
+
+
+.loading-text {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #4b5563;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@media (max-width: 770px) {
+  .loading-container {
+    margin-top: 15rem;
     margin-bottom: 20rem;
   }
-  
-@media (max-width: 770px) {
-    .loading-container {
-        margin-top: 15rem;
-        margin-bottom: 20rem;
-    }
+
+  .loading-text {
+    font-size: 0.9rem;
+  }
 }

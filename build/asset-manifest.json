@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.02d7f0d0.css",
-    "main.js": "/static/js/main.0933a696.js",
+    "main.css": "/static/css/main.03c8fdeb.css",
+    "main.js": "/static/js/main.0c777f64.js",
     "static/js/453.b2d5d5d5.chunk.js": "/static/js/453.b2d5d5d5.chunk.js",
     "static/media/r&d.webp": "/static/media/r&d.1d94cc8d535704724f2f.webp",
     "static/media/mobile_bg3.webp": "/static/media/mobile_bg3.1f3951889b09ab5b8b50.webp",
@@ -44,7 +44,6 @@
     "static/media/blackcumin.webp": "/static/media/blackcumin.eb666a620712193674a0.webp",
     "static/media/sikakai.webp": "/static/media/sikakai.60788b487e5e510dd9c6.webp",
     "static/media/poondikottai.webp": "/static/media/poondikottai.05c523c7d6279597b4af.webp",
-    "static/media/insecticide.webp": "/static/media/insecticide.96325b1236efa273621d.webp",
     "static/media/aswaganthapowder.webp": "/static/media/aswaganthapowder.8259feb1326b3876d09a.webp",
     "static/media/dry.webp": "/static/media/dry.71813276a28b7dd7a146.webp",
     "static/media/thandrikai.webp": "/static/media/thandrikai.bb4b06fcfd1fe310fc6e.webp",
@@ -59,6 +58,7 @@
     "static/media/brahmi.webp": "/static/media/brahmi.d31fb5fa09cca18d5570.webp",
     "static/media/lemongrass.webp": "/static/media/lemongrass.c72a8126e91a69c58ff3.webp",
     "static/media/vettiver.webp": "/static/media/vettiver.5b204a96d6e038e6fc17.webp",
+    "static/media/Granulesorganic.webp": "/static/media/Granulesorganic.d61820b00c18cd86bd00.webp",
     "static/media/henna.webp": "/static/media/henna.6fd8d5d58e24d500b398.webp",
     "static/media/moringa.webp": "/static/media/moringa.59d21b7404d17311e48d.webp",
     "static/media/rosepetal.webp": "/static/media/rosepetal.ce6a338503abf5a96564.webp",
@@ -93,16 +93,17 @@
     "static/media/teamwork.webp": "/static/media/teamwork.c2b844249fa0c457fcd0.webp",
     "static/media/improvement.webp": "/static/media/improvement.360d03879b444c33a1cc.webp",
     "static/media/azardictin.webp": "/static/media/azardictin.212dba76d92331296e41.webp",
+    "static/media/aloeLiquid.webp": "/static/media/aloeLiquid.1c0cc140f8cd257b01bc.webp",
     "static/media/seenthal.webp": "/static/media/seenthal.d2f7caf3580edcffa6bc.webp",
     "static/media/jasmine.webp": "/static/media/jasmine.bb07af0ea18a0237ddeb.webp",
     "index.html": "/index.html",
     "static/media/logo.svg": "/static/media/logo.59a0a9d64a8b914b2634367a06484f49.svg",
-    "main.02d7f0d0.css.map": "/static/css/main.02d7f0d0.css.map",
-    "main.0933a696.js.map": "/static/js/main.0933a696.js.map",
+    "main.03c8fdeb.css.map": "/static/css/main.03c8fdeb.css.map",
+    "main.0c777f64.js.map": "/static/js/main.0c777f64.js.map",
     "453.b2d5d5d5.chunk.js.map": "/static/js/453.b2d5d5d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02d7f0d0.css",
-    "static/js/main.0933a696.js"
+    "static/css/main.03c8fdeb.css",
+    "static/js/main.0c777f64.js"
   ]
 }

@@ -26,6 +26,52 @@ body {
   margin: 0 auto;
 }
 
+.about-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-column p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  text-align: justify;
+}
+
+.about-column img {
+  padding-top: 50px;
+  width: 400px;
+  height: 300px
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    display: none;
+  }
+
+  .about-columns {
+    flex-direction: column;
+  }
+   .about-column {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .about-column p {
+    font-size: 0.95rem;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@400;500&display=swap');
 
 .section-title {
