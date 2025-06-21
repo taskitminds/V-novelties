@@ -38,7 +38,7 @@ const AboutUs = () => {
             <h2>Who We Are</h2>
             <p>
               We focus the therapeutic and health giving importance of medicinal plants which is renowned as valuable folkloric medicine in southern parts of India which are selectively cornered, fractionated and evaluated for their potential against particular disorders and validate the possible mechanism behind the action as well.
-                         </p>
+            </p>
           </div>
         </div>
       </section>

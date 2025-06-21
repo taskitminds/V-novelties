@@ -9,6 +9,22 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-page">
+      {/* Follow Us Section */}
+        <div className="follow-us-section">
+          <h2>Stay Connected with Us</h2>
+          <p>Follow us on social media for latest updates and products!</p>
+          <div className="social-icons">
+            <a href="https://www.facebook.com/share/166SEiPp6h/" className="social-link" target="_blank" rel="noreferrer">
+              <FaFacebook />
+            </a>
+            <a href="https://www.instagram.com/vnoveltiesmdu?igsh=MWJvZDZxNzZob20yOQ==" className="social-link slstyle" target="_blank" rel="noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/in/v-novelties-7b904935a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="social-link" target="_blank" rel="noreferrer">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
       <div className="contact-content">
         {/* Form Section */}
         <div className="contact-form-container">
@@ -60,7 +76,7 @@ const ContactUs = () => {
         <div className="contact-info-box">
           <h2>Contact Us</h2>
 
-          <p><User size={22} /> &nbsp; &nbsp;P KAMALA KANNAN</p>
+          <p><User size={22} /> &nbsp; &nbsp;P. KAMALA KANNAN</p>
 
           {/* Mail - Opens Gmail */}
           <p>
@@ -111,22 +127,6 @@ const ContactUs = () => {
 
         </div>
       </div>
-      {/* Follow Us Section */}
-        <div className="follow-us-section">
-          <h2>Stay Connected with Us</h2>
-          <p>Follow us on social media for latest updates and products!</p>
-          <div className="social-icons">
-            <a href="https://www.facebook.com/share/166SEiPp6h/" className="social-link" target="_blank" rel="noreferrer">
-              <FaFacebook />
-            </a>
-            <a href="https://www.instagram.com/vnoveltiesmdu?igsh=MWJvZDZxNzZob20yOQ==" className="social-link slstyle" target="_blank" rel="noreferrer">
-              <FaInstagram />
-            </a>
-            <a href="https://www.linkedin.com/in/v-novelties-7b904935a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="social-link" target="_blank" rel="noreferrer">
-              <FaLinkedin />
-            </a>
-          </div>
-        </div>
     </div>
   );
 };

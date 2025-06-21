@@ -41,7 +41,7 @@ body {
 }
 
 .about-column p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Della Respira', serif;
   font-size: 1.1rem;
   line-height: 1.8;
   color: #4b5563;
@@ -316,6 +316,7 @@ body {
 
 /* Paragraph Animation */
 .carousel-content p {
+  font-family: 'Della Respira', serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: #f8f9fa;

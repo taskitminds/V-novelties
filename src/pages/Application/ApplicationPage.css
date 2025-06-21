@@ -121,6 +121,7 @@ body {
   }
   
   .application-flip-card-back {
+    font-family: 'Della Respira', serif;
     background-color: white;
     color: black;
     display: flex;
@@ -262,6 +263,7 @@ body {
   }
 
   .application-flip-card-back {
+    font-family: 'Della Respira', serif;
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
@@ -302,12 +304,14 @@ body {
   }
 
   .application-flip-card-back {
+    font-family: 'Della Respira', serif;
     font-size: 1rem;
     padding: 15px;
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
 
 .nfont{
-  font-family: "Poppins", sans-serif; /* Modern and elegant font */
+  font-family: 'Della Respira', serif;
 }

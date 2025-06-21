@@ -11,7 +11,7 @@ import home from "../../assets/images/home/logo.webp"
 
 
 const carouselImages = [
-  { image: h1, title: "Animal Care Products", text: "Especially for beloved pets and poultry cattle care. Profitable poultry / health and performance booster.", position: "right" },
+  { image: h1, title: "Animal Care Products", text: "Especially for beloved pets and poultry cattle care. Health and performance booster / Profitable poultry.", position: "right" },
   { image: h2, title: "Crop Care Products", text: "Formulated for thriving fields, our crop care solutions protect your harvest and enrich the soil-ensuring growth that’s strong, sustainable, and in harmony with nature.", position: "left" },
   { image: h3, title: "Herbal Care Products", text: "Our Essential Oils, Dry Powders and Extracts are crafted from the finest natural sources, ensuring purity and potency.", position: "right" },
   { image: h4, title: "Personal Care Products", text: "Our Natural Herbal Solutions offer pure, plant-based remedies for wellness and care.", position: "left" },
